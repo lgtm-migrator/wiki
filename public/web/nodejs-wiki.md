@@ -1,10 +1,7 @@
 # 利用NodeJS和MDWiki快速搭建一个Wiki站点
 
-很多时候我们不需要强大的Web服务器和Wiki
-只是想要一个简单的站点
-来存放我们的文档和教程
-以下给出一个方案
-通过NodeJS和MDWiki实现简易的Wiki站点搭建
+很多时候我们不需要强大的Web服务器和Wiki，只是需要一个简单的站点，来存放我们的文档和教程
+以下给出一个方案，通过NodeJS和MDWiki实现简易的Wiki站点搭建
 教程使用Win7系统
 
 ## 搭建NodeJS环境
@@ -93,8 +90,7 @@ npm start
 ## 完善你的首页
 
 * 添加导航栏
-
-在public目录下创建一个navigation.md
+  在public目录下创建一个navigation.md
 
 ```markdown
 # Wiki的标题

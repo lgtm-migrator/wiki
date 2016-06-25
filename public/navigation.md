@@ -34,4 +34,4 @@
   * [EasyAOP -- Java面向切面框架](https://github.com/Soontao/EasyAOP)
   * [NBlog -- 基于NodeJS的MD风格博客](https://github.com/Soontao/nblog)
 
-[资源推荐](resources.md)
+[Resources](resources.md)
