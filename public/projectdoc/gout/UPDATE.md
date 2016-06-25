@@ -1,5 +1,9 @@
 # 更新日志
 
+## Update - 2016-6-25
+代理服务器更换为Caddy，现在全站已经变成安全的HTTPS链接
+文档位置迁移到 https://wiki.suntao.science/projectdoc/gout/
+
 ## Update - 2016-5-30 
 
 **日常更新**
@@ -106,7 +110,7 @@ https://gout.suntao.science/
 触发器由张俊晨贡献
 当user表中插入数据时,当该条数据的用户类型为10,同时将在patientdetail表中插入一条相应空数据
 
-<pre>
+```sql
 delimiter #
 create trigger trigger_user after insert
 on user for each row
@@ -117,7 +121,7 @@ begin
     end if;
 end;#
 delimiter ;
-</pre>
+```
 
 **Java 主项目更新**
 

@@ -1,4 +1,7 @@
+[gimmick:theme](flatly)
+
 # Wiki
+
 [About](index.md)
 
 [UPDATE](UPDATE.md)
