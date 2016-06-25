@@ -1,0 +1,267 @@
+
+# API
+
+除了根路径下的API,其他API调用时都可能出现no auth
+<pre>{\"message\":\"no auth\",\"type\":\"err message\",\"success\":false}</pre>
+
+
+## 根路径
+
+* 登录
+
+> URL : /login
+> 需求权限 : 否
+> 方法 : POST
+> 参数 : 字段名 : jsondata 类型 : 字符串 格式 : {username:'user\'s name',password:'user\'s password'}
+> 返回值(典型):
+> > 成功 : <pre>{"success":true,"message":"3c05c75fb0794dcc812298fe90004018","type":"token"}</pre>
+> > 失败 param error <pre>{\"successs\":false,\"message\":\"param error\",\"type\":\"err message\"}</pre>
+> > 失败 password error or no such user
+
+* 患者注册
+
+> URL : /signin
+> 需求权限 : 无
+> 方法 : POST
+> 参数 : 字段名 : jsondata 类型 : 字符串 格式 : { ... } 用户实体的json字符串 至少包含username和password两个字段
+> 其他 : 注册用户类型被强制设定为10 
+> 返回值(典型): 
+> > 成功 (返回添加的对象,userdetail是另外一个表的实体,在新建患者的时候自动新建一个对应的记录) : <pre> {"message":{"userid":4,"usertypeid":10,"username":"wangwu","realname":null,"token":null,"registerdate":null,"userdetail":{"id":2,"patientid":4,"userdocterid":null,"gender":null,"height":null,"weight":null,"age":null,"nation":null,"nativeplace":null,"job":null,"phonenumber":null,"email":null,"firstvisitdate":null,"isrelativegout":null}},"type":"obejct","success":true}</pre>
+> > 失败 (参数错误)
+> > 失败 (未授权)
+
+* 用户名检验
+
+> URL : /hasuser
+> 需求权限 : 无
+> 方法 : POST
+> 参数 : jsondata = '{username : 'xxxxyyyy'}'
+> 返回值(典型):
+>> 成功(有用户) : <pre>{\"message\":true,\"type\":\"boolean hasuser\",\"success\":true}</pre>
+>> 成功(无用户) : <pre>{\"message\":false,\"type\":\"boolean hasuser\",\"success\":true}</pre>
+>>  失败(参数错误)
+
+ <span id="user"/>
+## User路径
+
+* 当前用户
+
+> URL : /admin/users/currentuser
+> 需求权限 : 1 5 10
+> 方法 : ALL
+> 参数 : 无
+> 返回值(典型):
+> > 成功 : <pre>{"message":{"userid":2,"usertypeid":10,"username":"zhangsan","realname":"张三","token":"3c05c75fb0794dcc812298fe90004018","registerdate":"2016-04-21T07:37:22.000Z"},"type":"obejct","success":true}</pre>
+> > 失败(未认证) : <pre>{\"message\":\"no auth\",\"type\":\"err message\",\"success\":false}</pre>
+
+* 获取用户
+
+> URL : /admin/users/getuser
+> 需求权限 : 1
+> 方法 : POST
+> 参数 : username
+> 返回值(典型) : 
+> > 成功 : <pre>{\"message\":{\"userid\":1,\"username\":\"doc1\",\"password\":\"admin\",\"usertype\":5,\"token\":\"\"},\"type\":\"object\",\"success\":true}</pre>
+> > 失败(无权限) : 
+> > 失败(不存在) : <pre>{\"message\":\"no such user\",\"type\":\"err message\",\"success\":false}</pre>
+
+
+* 所有用户
+
+> URL : /admin/users/allusers
+> 需求权限 : 1
+> 方法 : ALL
+> 参数 : 无
+> 返回值(典型) : 
+> > 成功 : 
+> > <pre>{\"message\":[{\"userid\":1,\"username\":\"doc1\",\"password\":\"admin\",\"usertype\":5,\"token\":\"\"},{\"userid\":2,\"username\":\"admin1\",\"password\":\"admin\",\"usertype\":1,\"token\":\"77dca769b21f416587ed66dafb6e7078\"}],\"type\":\"obejctlist\",\"success\":true}</pre>
+> > 失败(未认证)
+
+
+
+
+* 获取指定患者详细信息
+
+> URL : /admin/users/getpatientdetail
+> 需求权限 : <= 5
+> 方法 : POST
+> 参数 jsondata = patientdetail实体,该实体patientid不能为空 示例 : <pre>jsondata:{"patientid":"2"}</pre>
+> 返回值 :
+> > 成功 : <pre>{"message":{"id":1,"patientid":2,"docterid":null,"gender":0,"height":null,"weight":null,"age":null,"nation":null,"nativeplace":null,"job":"教师","phonenumber":null,"email":null,"firstvisitdate":null,"isrelativegout":1},"type":"obejct","success":true}</pre>
+> > 失败 : 未授权
+> > 失败 : 无此患者
+
+* 获取当前患者详细信息(移动端)
+
+> URL : /admin/users/getcurrentpatientdetail
+> 需求权限 : 10
+> 方法 : ALL
+> 参数 : 无
+> 返回值 :
+> > 成功 : <pre>{"message":{"id":1,"patientid":2,"docterid":null,"gender":0,"height":null,"weight":null,"age":null,"nation":null,"nativeplace":null,"job":"教师","phonenumber":null,"email":null,"firstvisitdate":null,"isrelativegout":1},"type":"obejct","success":true}</pre>
+> > 失败 : 未授权
+
+* 修改指定患者信息
+
+> URL: /admin/users/updatepatientdetail
+> 需求权限 :  1 5
+> 方法 : POST
+> 参数 : jsondata,至少需要一个patientid参数指定修改的患者id,其他字段参看数据库
+> 其他 : 
+> 返回值:
+> > 成功 
+> > 失败 : param error 缺少jsondata 或者jsondata缺少patientid
+> > 失败 : no such patient 根据patientid查找不到该患者
+
+* 修改当前患者信息(移动端)
+
+> URL: /admin/users/updatecurrentpatientdetail
+> 需求权限 :  10
+> 方法 : POST
+> 参数 : jsondata=patientdetail实体,不需要指定patientid和id(指定也没用),后台会自动根据token判断
+> 返回值:
+> > 成功 
+> > 失败 : no such patient 根据patientid查找不到该患者
+
+* 修改当前用户密码
+
+> URL : /admin/users/updatecurrentuserpassword
+> 需求权限 : 登录
+> 方法 : POST
+> 参数 : jsondata 对应一个User实体,实体需要password字段
+> 返回值 : 
+> > 成功 : <pre>{"success":true,"type":"string","message":"token has be reset"}</pre>
+> > 失败 : 未授权
+> > 失败 : 参数错误
+
+* 所有患者
+
+> URL: /admin/users/allpatients
+> 需求权限 : 1 5
+> 方法 : ALL
+> 参数 : 
+> 返回值同 获取所有用户
+
+* 所有患者总数
+
+> URL : /admin/users/allpatientscount
+> 需求权限 : 1 5
+> 方法 : ALL
+> 参数 : keyword 可选 存在时会对realname字段进行like检索
+> 返回值
+> 成功 : <pre>{"message":4,"type":"integer","success":true}</pre>
+> 失败 未授权
+
+* 按页获取患者列表(网页) **2016-5-14已修改**
+
+> URL: /admin/users/getpatientsdetailbypage
+> 需求权限 : 1 5
+> 方法 : ALL
+> 参数(可选) : jsondata = {startindex : '开始值',endindex : '结束值',ordercol : '排序列名字'} 默认值为 0 10 userid,即以userid排序的前十条数据
+> 其他 : 对应SQL语句 <pre>SELECT u1.userid, u1.usertypeid, u1.username, patientdetail.realname ,u2.username as 'doctorname', gender, height, weight, age, nation, nativeplace, job, phonenumber, email, firstvisitdate, isrelativegout FROM user as u1 inner join patientdetail on u1.userid = patientdetail.patientid left join user as u2 on u2.userid = patientdetail.docterid where u1.usertypeid = 10 order by ? limit ? , ? </pre>
+> > 成功 : 返回一个列表 这个列表不是标准的数据库实体
+> > <pre>{"message":[{"userid":3,"usertypeid":10,"username":"zhangsan","realname":"张三","doctorname":"zhouqiao","gender":1,"height":10,"weight":130,"age":null,"nation":"1","nativeplace":"1","job":"教师","phonenumber":null,"email":"1","firstvisitdate":null,"isrelativegout":1},{"userid":4,"usertypeid":10,"username":"duzhekai7","realname":"杜哲凯","doctorname":null,"gender":1,"height":175,"weight":66,"age":20,"nation":"汉","nativeplace":"浙江慈溪","job":null,"phonenumber":"13402889510","email":"646424878@qq.com","firstvisitdate":null,"isrelativegout":0},{"userid":6,"usertypeid":10,"username":"xhen","realname":"xhen很好","doctorname":null,"gender":1,"height":100,"weight":1,"age":null,"nation":"1","nativeplace":"1","job":"1","phonenumber":null,"email":"1","firstvisitdate":null,"isrelativegout":null},{"userid":59,"usertypeid":10,"username":"duzhekai11","realname":"杜泽楷fdhakjf","doctorname":null,"gender":null,"height":null,"weight":null,"age":null,"nation":null,"nativeplace":null,"job":null,"phonenumber":null,"email":null,"firstvisitdate":null,"isrelativegout":null}],"type":"object list","success":true}</pre>
+> > 失败 : 未授权
+
+
+
+* 注销
+
+> URL : /admin/users/logout
+> 需求权限 : 登录
+> 方法 : ALL
+> 参数 : 无
+> 返回值 : 
+>> 成功 : <pre>{\"successs\":true,\"message\":\"user admin logout\",\"type\":\"string\"}</pre>
+>> 失败(未授权)
+
+*** 
+
+ <span id="record"/>
+## record路径
+
+* 添加每周习惯记录
+
+> URL : /admin/records/addcurrentuserweekrecord
+> 需求权限 10
+> 方法 : ALL
+> 参数 : weekhabit实体对应的jsondata 不需要habitid和userid
+> 返回值
+>> 成功 {"success":true}
+>> 失败 参数错误 未授权 
+
+
+* 修改每周习惯记录
+
+> URL : /admin/records/updateuserweekrecord
+> 需求权限 1 5 10
+> 方法 : ALL
+> 参数 : weekhabit实体对应的jsondata **至少需要habitid**
+> 返回值
+>> 成功 {"success":true}
+>> 失败 参数错误 未授权 
+
+* 每周习惯列表
+
+> URL : /admin/records/getcurrentuserweekrecordlist
+> 需求权限 10
+> 方法 : ALL
+> 参数 :  data = {'jsondata':'{"top":3}'} top默认值为5
+> 返回值 
+>> 成功 <pre> '{"message":[{"habitid":6,"userid":4,"staplefood":1,"staplefoodamount":2,"taste":2,"dietarypreference":5,"drinktype":2,"fishpd":2,"seafoodpd":3,"beefpd":4,"porkpd":2,"poultrypd":3,"visceralpd":4,"vegetablepd":3,"beanpd":2,"eggpd":5,"nutpd":4,"fruitpd":4,"saltpd":null,"beerpd":2,"milkpd":3,"liquorpd":2,"wirepd":3,"teatype":null,"teapd":3},{"habitid":7,"userid":4,"staplefood":1,"staplefoodamount":2,"taste":2,"dietarypreference":5,"drinktype":2,"fishpd":2,"seafoodpd":3,"beefpd":4,"porkpd":2,"poultrypd":3,"visceralpd":4,"vegetablepd":3,"beanpd":2,"eggpd":5,"nutpd":4,"fruitpd":4,"saltpd":null,"beerpd":2,"milkpd":3,"liquorpd":2,"wirepd":3,"teatype":null,"teapd":3},{"habitid":8,"userid":4,"staplefood":1,"staplefoodamount":2,"taste":2,"dietarypreference":5,"drinktype":2,"fishpd":2,"seafoodpd":3,"beefpd":4,"porkpd":2,"poultrypd":3,"visceralpd":4,"vegetablepd":3,"beanpd":2,"eggpd":5,"nutpd":4,"fruitpd":4,"saltpd":null,"beerpd":2,"milkpd":3,"liquorpd":2,"wirepd":3,"teatype":null,"teapd":3}],"success":true,"type":"object list"}'</pre>
+>> 失败 未授权
+
+* 个人每周习惯列表获取
+
+> URL: /admin/records/gettargetuserweekrecordlist
+> 需求权限 : 1 5
+> 方法 : ALL
+> 参数 : 
+>> jsondata = {"start":0,"end":1,"ordercol":"createtime","order":"asc","userid":1};
+>> 所有字段可选,默认值为0 10 createtime desc 当前用户
+> 返回值
+>> 成功 <pre>{"message":[{"habitid":1,"userid":1,"staplefood":1,"staplefoodamount":2,"taste":null,"dietarypreference":null,"drinktype":null,"fishpd":null,"seafoodpd":null,"beefpd":null,"porkpd":null,"poultrypd":null,"visceralpd":null,"vegetablepd":null,"beanpd":null,"eggpd":null,"nutpd":null,"fruitpd":null,"saltpd":null,"beerpd":null,"milkpd":null,"liquorpd":null,"wirepd":null,"teatype":null,"teapd":null,"createtime":"0000-00-00 00:00:00","modifytime":null}],"success":true,"type":"object list"}
+</pre>
+>> 失败 未授权
+
+* 获取指定habitid的每周习惯记录
+
+> URL : /admin/records/getweekrecord
+> 需求权限 : 1 5
+> 方法 POST
+> 参数  : jsondata={"habitid":16} habitid必选
+> 返回值
+>> 成功 <pre>{"message":{"habitid":16,"userid":4,"staplefood":2,"staplefoodamount":3,"taste":3,"dietarypreference":3,"drinktype":3,"fishpd":null,"seafoodpd":2,"beefpd":4,"porkpd":4,"poultrypd":4,"visceralpd":4,"vegetablepd":4,"beanpd":4,"eggpd":4,"nutpd":4,"fruitpd":5,"saltpd":5,"beerpd":null,"milkpd":2,"liquorpd":3,"wirepd":2,"teatype":6,"teapd":2,"createtime":"2016-05-19T12:27:38.000Z","modifytime":"2016-05-22T09:54:34.000Z"},"success":true,"type":"object"}</pre>
+>> 失败 参数错误 未授权
+
+* 添加当前用户每月化验数据
+
+> URL :  /admin/records/addcurrentusermonthlyrecord
+> 需求权限 : 1 5 10
+> 方法 POST
+> 参数 : jaondata = monthyassay实体 请务必保证实体的完整性
+> 返回值 
+>> 成功 返回添加的记录 <pre>{"message":[{"assayid":1,"userid":4,"assay_docid":null,"diseasecourse":null,"isjointpain":null,"painpart":null,"isjointswelling":null,"swellingpart":null,"isdietchange":null,"isexercise":null,"esr":null,"crp":1,"ua":null,"ganyousanzhi":null,"totalcholesterol":null,"tmdasajzym":null,"basajzym":null,"cr":null,"cbc":null,"havetophus":null,"b_modeus":null,"havehypertension":null,"havediabetes":null,"haveheartdisease":null,"havehlp":null,"haveotherdisease":null,"hypertensionmedicine":null,"diabetesmedicine":null,"heartdiseasemedicine":null,"hlpmedicine":null,"otherdiseasemedicine":null,"gcsdosage":null,"colcdosage":null,"allopurinoldosage":null,"benzbromaronedosage":null,"nsaiddosage":null,"febuxostatdosage":null,"createtime":"2016-05-23T06:30:42.136Z","modifytime":"2016-05-23T06:30:42.136Z"}],"success":true,"type":"added model"}</pre>
+>> 失败 参数错误 未授权
+
+* 修改每月化验信息
+
+> URL : /admin/records/updateusermonthlyrecord
+> 需求权限 : 1 5 10 
+> 方法 : POST
+> 参数 : jsondata = monthyassay实体 至少需要指定assayid
+> 返回值 
+>> 成功 : <pre>{"success":true}</pre>
+>> 失败 : 参数错误 未授权
+
+* 获取每月化验信息列表
+
+> URL : /admin/records/gettargetusermonthlyrecordlist
+> 方法 : POST
+> 参数 : 
+>> jsondata = {"start":0,"end":1,"ordercol":"createtime","order":"asc","userid":4};
+>> 所有字段可选,默认值为0 5 createtime desc 当前用户
+
+> 返回值
+>> 成功 : <pre>{"message":[{"assayid":1,"userid":4,"assay_docid":null,"diseasecourse":null,"isjointpain":null,"painpart":null,"isjointswelling":null,"swellingpart":null,"isdietchange":null,"isexercise":null,"esr":1,"crp":1,"ua":1,"ganyousanzhi":null,"totalcholesterol":null,"tmdasajzym":null,"basajzym":null,"cr":null,"cbc":null,"havetophus":null,"b_modeus":null,"havehypertension":null,"havediabetes":null,"haveheartdisease":null,"havehlp":null,"haveotherdisease":null,"hypertensionmedicine":null,"diabetesmedicine":null,"heartdiseasemedicine":null,"hlpmedicine":null,"otherdiseasemedicine":null,"gcsdosage":null,"colcdosage":null,"allopurinoldosage":null,"benzbromaronedosage":null,"nsaiddosage":null,"febuxostatdosage":null,"createtime":"2016-05-23T06:30:42.000Z","modifytime":"2016-05-30T09:22:36.457Z"}],"success":true,"type":"object list"}</pre>
+>> 失败 : 参数错误 未授权
