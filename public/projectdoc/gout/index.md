@@ -9,12 +9,14 @@
 ### 系统角色
 
 usertype 1     管理员
+
 usertype 5     医生用户
+
 usertype 10   普通用户 患者
 
 ### API 的使用
 
-需要传值的地方,通常是new一个实体,将需要的字段set后
+需要传值的地方,通常是new一个实体,填充所需字段后
 将它转化成json字符串,以jsondata为key的形式,封装在HTTP实体部中
 
 ***
@@ -48,7 +50,6 @@ JSON简介 :
 需要登录的对象,都是User对象,患者的详情记录在PatientDetail表中
 test项目中的org.uestc.gout.model对象是Java可以传递的实体
 移动端需要在每一个请求中附上token
-
 
 ## 测试数据
 

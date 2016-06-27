@@ -1,6 +1,12 @@
 # 更新日志
 
+## Update - 2016-6-27
+
+删除原型项目下的文档
+修改根路径，重定向至此文档
+
 ## Update - 2016-6-25
+
 代理服务器更换为Caddy，现在全站已经变成安全的HTTPS链接
 文档位置迁移到 https://wiki.suntao.science/projectdoc/gout/
 
