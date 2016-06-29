@@ -10,7 +10,7 @@
 [Web]()
 
   * # J2EE
-  * [TODO 利用Spring Boot快速创建J2EE应用]()
+  * [利用Spring Boot快速创建J2EE应用](web/spring-boot.md)
   - - - -
   * # NodeJS
   * [使用Node和MDWiki创建Wiki](web/nodejs-wiki.md)
@@ -20,7 +20,6 @@
 
 [Tools]()
 
-  * [TODO Git SSH认证配置]()
   * [TortoiseGit 基础使用](tools/ttsgit-install.md)
 
 [Course]()
