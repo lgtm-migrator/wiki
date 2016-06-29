@@ -12,7 +12,7 @@ Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署L
 
 直接运行caddy.exe(或者./caddy)
 
-当年目录为Web文件目录，端口为80(Linux下可能需要Root权限)
+当前目录为Web文件目录，端口为80(Linux下可能需要Root权限)
 
 ```
 sudo ./caddy -port 80 -root .
