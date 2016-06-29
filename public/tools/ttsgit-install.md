@@ -14,13 +14,15 @@ TortoiseGit和TortoiseSVN差不多，都是版本控制的GUI接口
 
 类似于SVN的Checkout，从远程仓库拉取一个仓库
 
+只用执行一次
+
 ## Commit And Push
 
 对于Git来说，Commit和Push是两个操作
 
 Commit是将改动提交到**本地仓库**
 
-Push是本地仓库推送到**远程仓库**
+Push是将本地仓库推送到**远程仓库**
 
 TortoiseGit在Commit的时候，直接提供Commit && Push
 
