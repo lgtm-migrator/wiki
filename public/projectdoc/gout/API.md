@@ -163,6 +163,17 @@
 > > 失败 : 未授权
 
 
+* 获取patientview视图对应的表格文件
+
+> 获取所有患者的信息
+> URL : /admin/users/patientdetail/gets/sheet
+> 方法 : ALL
+> 需求权限 : 1 5 10
+> 参数 : 无
+> 返回值
+>> 成功 : 下载patientview.xlsx文件
+>> 失败 : 参数错误 未授权
+
 
 * 注销
 
@@ -263,4 +274,14 @@
 
 > 返回值
 >> 成功 : <pre>{"message":[{"assayid":1,"userid":4,"assay_docid":null,"diseasecourse":null,"isjointpain":null,"painpart":null,"isjointswelling":null,"swellingpart":null,"isdietchange":null,"isexercise":null,"esr":1,"crp":1,"ua":1,"ganyousanzhi":null,"totalcholesterol":null,"tmdasajzym":null,"basajzym":null,"cr":null,"cbc":null,"havetophus":null,"b_modeus":null,"havehypertension":null,"havediabetes":null,"haveheartdisease":null,"havehlp":null,"haveotherdisease":null,"hypertensionmedicine":null,"diabetesmedicine":null,"heartdiseasemedicine":null,"hlpmedicine":null,"otherdiseasemedicine":null,"gcsdosage":null,"colcdosage":null,"allopurinoldosage":null,"benzbromaronedosage":null,"nsaiddosage":null,"febuxostatdosage":null,"createtime":"2016-05-23T06:30:42.000Z","modifytime":"2016-05-30T09:22:36.457Z"}],"success":true,"type":"object list"}</pre>
+>> 失败 : 参数错误 未授权
+
+* 获取monthview对应的Excel表格文件
+
+> select \* from monthview
+> URL : /monthview/gets/sheet/:patientid
+> 方法 : ALL
+> 需求权限 : 1 5 10
+> 参数 : .../sheet/**参数** 值为需要查询的patientid，例如/monthview/gets/sheet/4就是查询id为4的患者每月表格
+>> 成功 : 下载 每月信息-id-id.xlsx 文件
 >> 失败 : 参数错误 未授权

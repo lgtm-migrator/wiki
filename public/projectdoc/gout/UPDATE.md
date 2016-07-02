@@ -1,5 +1,14 @@
 # 更新日志
 
+## Update - 2016-7-2
+
+更新两个API表格文件下载API
+
+/admin/users/patientdetail/gets/sheet
+/admin/records/monthview/gets/sheet/:patientid
+/admin/records/week/gets/sheet //可不用
+/admin/records/month/gets/sheet //可不用
+
 ## Update - 2016-6-27
 
 删除原型项目下的文档
