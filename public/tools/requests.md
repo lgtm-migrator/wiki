@@ -36,7 +36,7 @@ print res2.content
 
 # post with jsondata=......
 # transfer a form 
-# jsondata = JSON.parse(data)
+# jsondata = JSON.toJSONString(data)
 res3 = requests.post("http://localhost:3000/needjson",{'jsondata': demjson.encode(data)})
 print res3.content
 
