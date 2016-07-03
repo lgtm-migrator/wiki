@@ -21,6 +21,7 @@
 [Tools]()
 
   * [TortoiseGit 基础使用](tools/ttsgit-install.md)
+  * [Python requests 基础教程](tools/requests.md)
 
 [Course]()
 

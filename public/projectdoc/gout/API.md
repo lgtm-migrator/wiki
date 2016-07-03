@@ -1,8 +1,11 @@
 # API
 
-除了根路径下的API,其他API调用时都可能出现no auth
-<pre>{\"message\":\"no auth\",\"type\":\"err message\",\"success\":false}</pre>
+除了根路径下的API, 其他API调用时都可能出现no auth
+这是因为无权限/未登录
 
+```json
+{"message":"no auth","type":"err message","success":false}
+```
 
 ## 根路径
 
@@ -13,8 +16,16 @@
 > 方法 : POST
 > 参数 : 字段名 : jsondata 类型 : 字符串 格式 : {username:'user\'s name',password:'user\'s password'}
 > 返回值(典型):
-> > 成功 : <pre>{"success":true,"message":"3c05c75fb0794dcc812298fe90004018","type":"token"}</pre>
-> > 失败 param error <pre>{\"successs\":false,\"message\":\"param error\",\"type\":\"err message\"}</pre>
+> > 成功 : 
+
+```json
+{"success":true,"message":"3c05c75fb0794dcc812298fe90004018","type":"token"}
+```
+> > 失败 param error 
+
+```json
+{"successs":false,"message":"param error","type":"err message"}
+```
 > > 失败 password error or no such user
 
 * 患者注册
@@ -25,7 +36,11 @@
 > 参数 : 字段名 : jsondata 类型 : 字符串 格式 : { ... } 用户实体的json字符串 至少包含username和password两个字段
 > 其他 : 注册用户类型被强制设定为10 
 > 返回值(典型): 
-> > 成功 (返回添加的对象,userdetail是另外一个表的实体,在新建患者的时候自动新建一个对应的记录) : <pre> {"message":{"userid":4,"usertypeid":10,"username":"wangwu","realname":null,"token":null,"registerdate":null,"userdetail":{"id":2,"patientid":4,"userdocterid":null,"gender":null,"height":null,"weight":null,"age":null,"nation":null,"nativeplace":null,"job":null,"phonenumber":null,"email":null,"firstvisitdate":null,"isrelativegout":null}},"type":"obejct","success":true}</pre>
+> > 成功 (返回添加的对象,userdetail是另外一个表的实体,在新建患者的时候自动新建一个对应的记录) : 
+
+```json
+ {"message":{"userid":4,"usertypeid":10,"username":"wangwu","realname":null,"token":null,"registerdate":null,"userdetail":{"id":2,"patientid":4,"userdocterid":null,"gender":null,"height":null,"weight":null,"age":null,"nation":null,"nativeplace":null,"job":null,"phonenumber":null,"email":null,"firstvisitdate":null,"isrelativegout":null}},"type":"obejct","success":true}
+```
 > > 失败 (参数错误)
 > > 失败 (未授权)
 
@@ -40,7 +55,31 @@
 >> 成功(无用户) : <pre>{\"message\":false,\"type\":\"boolean hasuser\",\"success\":true}</pre>
 >>  失败(参数错误)
 
- <span id="user"/>
+* 最新APP版本
+
+> URL : /app/current/version
+> 需求权限 : 无
+> 方法 : ALL
+> 返回值
+
+```json
+{"success":true,"type":"current version","message":"1"}
+```
+
+* 最新APP下载地址
+
+> URL : /app/current/updateurl
+> 需求权限 : 无
+> 方法 : ALL
+> 返回值
+
+```json
+{"success":true,"type":"URL","message":"http://gout.suntao.science/app/current/download"}
+```
+
+
+
+
 ## user路径
 
 * 当前用户

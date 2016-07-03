@@ -1,5 +1,18 @@
 # 更新日志
 
+## Update - 2016-7-3
+
+添加两个APP相关的API
+/app/current/version
+/app/current/updateurl
+
+
+添加三个记录相关的API
+/admin/records/weekview/gets/sheet/:patientid
+/admin/records/monthview/gets/:patientid/:start/:end
+/admin/records/weekview/gets/:patientid/:start/:end
+
+
 ## Update - 2016-7-2
 
 更新两个API表格文件下载API
