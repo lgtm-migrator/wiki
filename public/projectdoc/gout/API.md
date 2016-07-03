@@ -41,7 +41,7 @@
 >>  失败(参数错误)
 
  <span id="user"/>
-## User路径
+## user路径
 
 * 当前用户
 
@@ -273,15 +273,58 @@
 >> 所有字段可选,默认值为0 5 createtime desc 当前用户
 
 > 返回值
->> 成功 : <pre>{"message":[{"assayid":1,"userid":4,"assay_docid":null,"diseasecourse":null,"isjointpain":null,"painpart":null,"isjointswelling":null,"swellingpart":null,"isdietchange":null,"isexercise":null,"esr":1,"crp":1,"ua":1,"ganyousanzhi":null,"totalcholesterol":null,"tmdasajzym":null,"basajzym":null,"cr":null,"cbc":null,"havetophus":null,"b_modeus":null,"havehypertension":null,"havediabetes":null,"haveheartdisease":null,"havehlp":null,"haveotherdisease":null,"hypertensionmedicine":null,"diabetesmedicine":null,"heartdiseasemedicine":null,"hlpmedicine":null,"otherdiseasemedicine":null,"gcsdosage":null,"colcdosage":null,"allopurinoldosage":null,"benzbromaronedosage":null,"nsaiddosage":null,"febuxostatdosage":null,"createtime":"2016-05-23T06:30:42.000Z","modifytime":"2016-05-30T09:22:36.457Z"}],"success":true,"type":"object list"}</pre>
+>> 成功 : 
+
+```json
+{"message":[{"assayid":1,"userid":4,"assay_docid":null,"diseasecourse":null,"isjointpain":null,"painpart":null,"isjointswelling":null,"swellingpart":null,"isdietchange":null,"isexercise":null,"esr":1,"crp":1,"ua":1,"ganyousanzhi":null,"totalcholesterol":null,"tmdasajzym":null,"basajzym":null,"cr":null,"cbc":null,"havetophus":null,"b_modeus":null,"havehypertension":null,"havediabetes":null,"haveheartdisease":null,"havehlp":null,"haveotherdisease":null,"hypertensionmedicine":null,"diabetesmedicine":null,"heartdiseasemedicine":null,"hlpmedicine":null,"otherdiseasemedicine":null,"gcsdosage":null,"colcdosage":null,"allopurinoldosage":null,"benzbromaronedosage":null,"nsaiddosage":null,"febuxostatdosage":null,"createtime":"2016-05-23T06:30:42.000Z","modifytime":"2016-05-30T09:22:36.457Z"}],"success":true,"type":"object list"}
+```
 >> 失败 : 参数错误 未授权
+
+* 获取monthview对应的json
+
+> URL : /admin/records/monthview/gets/:patientid/:start/:end
+> 方法 : ALL
+> 需求权限 : 1 5
+> 参数 : /:patientid/:start/:end
+>> 成功 get("http://localhost:2999/admin/records/monthview/gets/4/0/2?token=73abbcf9657844e5b3e36b46fab01e6c");
+>> 
+
+```json
+ {"message":[{"患者ID":4,"患者姓名":"杜哲凯","医生姓名":"zhouqiao","病程(天)":1,"是否关节痛":"否","疼痛部位":"1","是否肿胀":"否","肿胀部位":"2","发作前是否有饮食变化":"否","发作前是否运动":"否","血沉（mm/h）":2,"C反应蛋白（mg/dL）":2,"尿酸（umol/L）":3,"甘油三酯（mmol/L）":3,"总胆固醇（mmol/L）":4,"天门冬氨酸氨基转移酶（U/L）":4,"丙氨酸氨基转移酶（U/L）":5,"肌酐（umol/L）":6,"血常规":"7","有无痛风石形成":"未定义","有无泌尿结石":"未定义","有无高血压":"否","有无糖尿病":"否","有无心脏病":"否","有无高脂血症":"否","有无其他未提及疾病":"否","高血压药物":"7","糖尿病药物":"7","心脏病药物":"6","高脂血症药物":"54","其他病症药物":"3","糖皮质激素剂量":1,"秋水仙碱剂量":1,"别嘌醇剂量":1,"苯溴马隆剂量":1,"非甾体抗炎药剂量":2,"非布司他剂量":3,"创建时间":"2016-06-02T02:55:35.000Z"},{"患者ID":4,"患者姓名":"杜哲凯","医生姓名":"zhouqiao","病程(天)":0,"是否关节痛":"否","疼痛部位":"","是否肿胀":"否","肿胀部位":"","发作前是否有饮食变化":"否","发作前是否运动":"否","血沉（mm/h）":0,"C反应蛋白（mg/dL）":0,"尿酸（umol/L）":0,"甘油三酯（mmol/L）":0,"总胆固醇（mmol/L）":0,"天门冬氨酸氨基转移酶（U/L）":0,"丙氨酸氨基转移酶（U/L）":0,"肌酐（umol/L）":0,"血常规":"","有无痛风石形成":"否","有无泌尿结石":"否","有无高血压":"否","有无糖尿病":"否","有无心脏病":"否","有无高脂血症":"否","有无其他未提及疾病":"否","高血压药物":"","糖尿病药物":"","心脏病药物":"","高脂血症药物":"","其他病症药物":"","糖皮质激素剂量":0,"秋水仙碱剂量":0,"别嘌醇剂量":0,"苯溴马隆剂量":0,"非甾体抗炎药剂量":0,"非布司他剂量":0,"创建时间":"2016-06-01T11:11:58.000Z"}],"success":true,"type":"object list"}
+```
+
 
 * 获取monthview对应的Excel表格文件
 
 > select \* from monthview
 > URL : /monthview/gets/sheet/:patientid
 > 方法 : ALL
-> 需求权限 : 1 5 10
+> 需求权限 : 1 5
 > 参数 : .../sheet/**参数** 值为需要查询的patientid，例如/monthview/gets/sheet/4就是查询id为4的患者每月表格
 >> 成功 : 下载 每月信息-id-id.xlsx 文件
 >> 失败 : 参数错误 未授权
+
+
+
+
+* 获取weekview对应的json
+
+> URL : /admin/records/weekview/gets/:patientid/:start/:end
+> 方法 : ALL
+> 需求权限 : 1 5
+> 参数 : /:patientid/:start/:end
+>> 成功 get("http://localhost:2999/admin/records/weekview/gets/4/0/2?token=73abbcf9657844e5b3e36b46fab01e6c");
+>> 
+
+```json
+{"message":[{"患者ID":4,"患者姓名":"杜哲凯","主食":"面","主食量":">500g","口味习惯":"中辣","饮食偏好":"豆类","饮酒习惯":"红酒","每日鱼肉":"undefined","每日海鲜":"251-500g","每日牛肉":"undefined","每日猪肉":"undefined","每日家禽":"undefined","每日内脏":"undefined","每日蔬菜":"undefined","每日豆制品":"undefined","每日鸡蛋":"3个","每日坚果":"301-400g","每日水果":"4个","每日食盐":"undefined","每日啤酒":"undefined","每日奶制品":"251-500ml","每日白酒":"51-100g","每日红酒":"1-50g","饮茶种类":"普洱茶","每日饮茶":"1杯","创建时间":"2016-05-19T12:27:38.000Z"},{"患者ID":4,"患者姓名":"杜哲凯","主食":"粥","主食量":"251-500g","口味习惯":"微辣","饮食偏好":"蔬菜","饮酒习惯":"白酒","每日鱼肉":"251-500g","每日海鲜":">500g","每日牛肉":"undefined","每日猪肉":"251-500g","每日家禽":">500g","每日内脏":"undefined","每日蔬菜":">500g","每日豆制品":"251-500g","每日鸡蛋":"4个","每日坚果":"301-400g","每日水果":"3个","每日食盐":"undefined","每日啤酒":"1-500ml","每日奶制品":">500ml","每日白酒":"1-50g","每日红酒":"51-100g","饮茶种类":"undefined","每日饮茶":"2杯","创建时间":"2016-05-14T14:27:58.000Z"}],"success":true,"type":"object list"}
+```
+
+* 获取weekview对应的xls文件
+
+> URL : /admin/records/weekview/gets/sheet/:patientid
+> 方法 : ALL
+> 需求权限 : 1 5 
+> 参数 : /:patientid
+> 成功 : http://localhost:2999/admin/records/weekview/gets/sheet/4?token=73abbcf9657844e5b3e36b46fab01e6c
+> 传输文件 每周信息-id-4.xlsx

@@ -2,7 +2,7 @@
 
 ## Auth 权限管理
 
-/admin/路径下(以及所有子路径下)API受到权限管理,如果没有登录全部会返回no auth
+/admin/路径下(以及所有子路径下)API受到权限管理,如果没有登录全部会返回未授权json
 
 每个用户有1个token字段,url中使用token会恢复session,当新的token启用之后,以前的token自动失效
 
@@ -57,5 +57,5 @@ test项目中的org.uestc.gout.model对象是Java可以传递的实体
 
 > 请连接suntao.science 数据库 gout查看
 > admin admin
-> zhouqiao 666666799
-> zhangsan 666666799
+> zhouqiao 666666799 token=73abbcf9657844e5b3e36b46fab01e6c
+> duzhekai7 666666799  token=b76eee254d1445e585885df8416da282
