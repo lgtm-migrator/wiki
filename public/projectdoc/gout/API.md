@@ -190,27 +190,58 @@
 > 成功 : <pre>{"message":4,"type":"integer","success":true}</pre>
 > 失败 未授权
 
-* 按页获取患者列表(网页) **2016-5-14已修改**
+* 按页获取患者列表(网页) **2016-7-4已修改**
 
 > URL: /admin/users/getpatientsdetailbypage
 > 需求权限 : 1 5
 > 方法 : ALL
 > 参数(可选) : jsondata = {startindex : '开始值',endindex : '结束值',ordercol : '排序列名字'} 默认值为 0 10 userid,即以userid排序的前十条数据
-> 其他 : 对应SQL语句 <pre>SELECT u1.userid, u1.usertypeid, u1.username, patientdetail.realname ,u2.username as 'doctorname', gender, height, weight, age, nation, nativeplace, job, phonenumber, email, firstvisitdate, isrelativegout FROM user as u1 inner join patientdetail on u1.userid = patientdetail.patientid left join user as u2 on u2.userid = patientdetail.docterid where u1.usertypeid = 10 order by ? limit ? , ? </pre>
+> 其他 : 对应SQL语句 
+
+```sql
+SELECT * from patientengview where usertypeid = 10 and realname like keyword order by ? limit ? , ? 
+```
 > > 成功 : 返回一个列表 这个列表不是标准的数据库实体
-> > <pre>{"message":[{"userid":3,"usertypeid":10,"username":"zhangsan","realname":"张三","doctorname":"zhouqiao","gender":1,"height":10,"weight":130,"age":null,"nation":"1","nativeplace":"1","job":"教师","phonenumber":null,"email":"1","firstvisitdate":null,"isrelativegout":1},{"userid":4,"usertypeid":10,"username":"duzhekai7","realname":"杜哲凯","doctorname":null,"gender":1,"height":175,"weight":66,"age":20,"nation":"汉","nativeplace":"浙江慈溪","job":null,"phonenumber":"13402889510","email":"646424878@qq.com","firstvisitdate":null,"isrelativegout":0},{"userid":6,"usertypeid":10,"username":"xhen","realname":"xhen很好","doctorname":null,"gender":1,"height":100,"weight":1,"age":null,"nation":"1","nativeplace":"1","job":"1","phonenumber":null,"email":"1","firstvisitdate":null,"isrelativegout":null},{"userid":59,"usertypeid":10,"username":"duzhekai11","realname":"杜泽楷fdhakjf","doctorname":null,"gender":null,"height":null,"weight":null,"age":null,"nation":null,"nativeplace":null,"job":null,"phonenumber":null,"email":null,"firstvisitdate":null,"isrelativegout":null}],"type":"object list","success":true}</pre>
+> > 
+
+```json
+{"message":[{"userid":3,"usertypeid":10,"username":"zhangsan","realname":"张三","doctorname":"zhouqiao","gender":1,"height":10,"weight":130,"age":null,"nation":"1","nativeplace":"1","job":"教师","phonenumber":null,"email":"1","firstvisitdate":null,"isrelativegout":1},{"userid":4,"usertypeid":10,"username":"duzhekai7","realname":"杜哲凯","doctorname":null,"gender":1,"height":175,"weight":66,"age":20,"nation":"汉","nativeplace":"浙江慈溪","job":null,"phonenumber":"13402889510","email":"646424878@qq.com","firstvisitdate":null,"isrelativegout":0},{"userid":6,"usertypeid":10,"username":"xhen","realname":"xhen很好","doctorname":null,"gender":1,"height":100,"weight":1,"age":null,"nation":"1","nativeplace":"1","job":"1","phonenumber":null,"email":"1","firstvisitdate":null,"isrelativegout":null},{"userid":59,"usertypeid":10,"username":"duzhekai11","realname":"杜泽楷fdhakjf","doctorname":null,"gender":null,"height":null,"weight":null,"age":null,"nation":null,"nativeplace":null,"job":null,"phonenumber":null,"email":null,"firstvisitdate":null,"isrelativegout":null}],"type":"object list","success":true}
+```
 > > 失败 : 未授权
 
-
-* 获取patientview视图对应的表格文件
+* 获取patientengview视图对应的表格文件
 
 > 获取所有患者的信息
-> URL : /admin/users/patientdetail/gets/sheet
+> URL : /admin/users/patientview/gets/sheet
 > 方法 : ALL
 > 需求权限 : 1 5 10
 > 参数 : 无
 > 返回值
 >> 成功 : 下载patientview.xlsx文件
+>> 失败 : 参数错误 未授权
+
+
+* 获取patientengview视图对应json
+
+> 获取所有患者的信息
+> URL : /admin/users/patientengview/gets/:keyword/:order/:start/:end
+> URL : /admin/users/patientengview/gets/:order/:start/:end
+> 方法 : ALL
+> 需求权限 : 1 5
+> 参数 : [:keyword(可选),:order,:start,:end]
+> 返回值
+>> 成功 : 
+
+```python
+# 查找realname中有 泽 这个字的人
+url = "http://localhost:2999/"+"admin/users/patientengview/gets/泽/userid/0/10" +"?token="+token
+r=requests.get(url);
+print r.content
+```
+
+```json
+{"message":[{"userid":59,"usertypeid":10,"username":"duzhekai11","realname":"杜泽楷fdhakjf","doctorname":null,"gender":null,"height":null,"weight":null,"age":null,"nation":null,"nativeplace":null,"job":null,"phonenumber":null,"email":null,"firstvisitdate":null,"isrelativegout":null}],"type":"object list","success":true}
+```
 >> 失败 : 参数错误 未授权
 
 
@@ -282,6 +313,25 @@
 > 返回值
 >> 成功 <pre>{"message":{"habitid":16,"userid":4,"staplefood":2,"staplefoodamount":3,"taste":3,"dietarypreference":3,"drinktype":3,"fishpd":null,"seafoodpd":2,"beefpd":4,"porkpd":4,"poultrypd":4,"visceralpd":4,"vegetablepd":4,"beanpd":4,"eggpd":4,"nutpd":4,"fruitpd":5,"saltpd":5,"beerpd":null,"milkpd":2,"liquorpd":3,"wirepd":2,"teatype":6,"teapd":2,"createtime":"2016-05-19T12:27:38.000Z","modifytime":"2016-05-22T09:54:34.000Z"},"success":true,"type":"object"}</pre>
 >> 失败 参数错误 未授权
+
+* 获取指定assayid的每月习惯记录
+
+> URL : /admin/records/month/get/:assayid
+> 方法 ALL
+-- 或者
+> URL : /admin/records/getmonthrecord
+> 方法 POST
+> 参数  : jsondata={"assayid":16} assayid必选
+--
+> 返回值
+>> 成功 
+
+```json
+{"message":{"assayid":5,"userid":4,"assay_docid":2,"diseasecourse":0,"isjointpain":0,"painpart":"","isjointswelling":0,"swellingpart":"","isdietchange":0,"isexercise":0,"esr":0,"crp":0,"ua":0,"ganyousanzhi":0,"totalcholesterol":0,"tmdasajzym":0,"basajzym":0,"cr":0,"cbc":"","havetophus":0,"b_modeus":0,"havehypertension":0,"havediabetes":0,"haveheartdisease":0,"havehlp":0,"haveotherdisease":0,"hypertensionmedicine":"","diabetesmedicine":"","heartdiseasemedicine":"","hlpmedicine":"","otherdiseasemedicine":"","gcsdosage":0,"colcdosage":0,"allopurinoldosage":0,"benzbromaronedosage":0,"nsaiddosage":0,"febuxostatdosage":0,"createtime":"2016-06-01T11:07:53.000Z","modifytime":"2016-06-01T11:07:53.000Z"},"success":true,"type":"object"}
+```
+>> 失败 参数错误 未授权
+
+
 
 * 添加当前用户每月化验数据
 

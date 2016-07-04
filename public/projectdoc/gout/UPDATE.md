@@ -17,7 +17,7 @@
 
 更新两个API表格文件下载API
 
-/admin/users/patientdetail/gets/sheet
+/admin/users/patientview/gets/sheet
 /admin/records/monthview/gets/sheet/:patientid
 /admin/records/week/gets/sheet //可不用
 /admin/records/month/gets/sheet //可不用
