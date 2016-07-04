@@ -1,5 +1,18 @@
 # 更新日志
 
+## Update - 2016-7-4
+
+添加三个与APP新闻列表有关的API
+添加一个新闻列表页面/app/news/render/新闻id
+访问[这里](http://gout.suntao.science/app/news/render/1)查看实例
+
+添加
+/admin/records/month/get/:assayid
+/admin/records/getmonthrecord
+/admin/users/patientengview/gets/:keyword/:order/:start/:end
+/admin/users/patientengview/gets/:order/:start/:end
+
+
 ## Update - 2016-7-3
 
 添加两个APP相关的API

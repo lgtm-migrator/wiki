@@ -7,7 +7,7 @@
 {"message":"no auth","type":"err message","success":false}
 ```
 
-## 根路径
+## / 根路径
 
 * 登录
 
@@ -55,6 +55,8 @@
 >> 成功(无用户) : <pre>{\"message\":false,\"type\":\"boolean hasuser\",\"success\":true}</pre>
 >>  失败(参数错误)
 
+## /app 路径
+
 * 最新APP版本
 
 > URL : /app/current/version
@@ -77,10 +79,52 @@
 {"success":true,"type":"URL","message":"http://gout.suntao.science/app/current/download"}
 ```
 
+* 分页获取appnews表的数据
+
+> URL: /app/news/gets/:page
+> 需求权限 无
+> 方法 : ALL
+> 返回值 
+
+```json
+{"success":true,"type":"object list","message":[{"id":1,"title":"第一篇文章","intro":"这一片文章并没有内容","content":"<p>我走过山时，山不说话，<br/>我路过海时，海不说话，<br/>小毛驴滴滴答答，倚天剑伴我走天涯。<br/>大家都说我因为爱着杨过大侠，才在峨眉山上出了家，<br/>其实我只是爱上了峨眉山上的云和霞，<br/>像极了十六岁那年的烟花。</p>","url":"/app/news/first","createdate":"2016-07-04T01:20:51.000Z"},{"id":2,"title":"第二篇文章","intro":"这一篇并没有文章","content":"","url":"/app/news/2","createdate":"2016-07-04T01:21:24.000Z"},{"id":3,"title":"插入测试","intro":null,"content":null,"url":null,"createdate":"2016-07-04T06:34:55.000Z"},{"id":4,"title":"插入测试","intro":null,"content":null,"url":null,"createdate":"2016-07-04T07:02:54.000Z"}]}
+```
+
+
+* 获取单条新闻的准确信息
+
+> URL: /app/news/get/:newid
+> 需求权限 无
+> 方法 : ALL
+> 返回值 
+
+```json
+{"success":true,"type":"object","message":{"id":2,"title":"第二篇文章","intro":"这一篇并没有文章","content":"","url":"/app/news/2","createdate":"2016-07-04T01:21:24.000Z"}}
+```
+
+* 获取渲染的页面
+
+> URL: /app/news/render/:newid
+> 需求权限 无
+> 方法 : ALL
+> 返回值  一个页面
+
+
+* 插入一条文章appnews
+
+> URL: /app/news/add
+> 需求权限 1 5
+> 方法 : POST
+> 返回值 
+
+```json
+{"success":true,"type":"object list","message":[{"id":4,"title":"插入测试","intro":null,"content":null,"url":null,"createdate":null}]}
+```
 
 
 
-## user路径
+
+## /admin/users路径
 
 * 当前用户
 
@@ -257,8 +301,7 @@ print r.content
 
 *** 
 
- <span id="record"/>
-## record路径
+## /admin/records路径
 
 * 添加每周习惯记录
 
