@@ -151,15 +151,16 @@
 * update [/:id]
 * insert 
 * delete [/:id]
+* gets
 
-> 参数 jsondata table对应的实体
+> 参数  table对应的实体 不需要转化成jsondata
 
-为EasyUI提供的视图查询API
+为EasyUI提供的视图查询API(table 也可以)
 > URL : /admin/db/:view/gets
 > 方法 POST
 > 参数 
 >> rows page (EasyUI会自动传递)
->> :view 指定视图名
+>> :view 指定view名/table名
 > 示例参看/html/pdp.html
 
 
