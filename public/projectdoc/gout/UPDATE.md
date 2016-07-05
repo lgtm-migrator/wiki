@@ -1,5 +1,10 @@
 # 更新日志
 
+## Update - 2016-7-5
+
+/admin/db/:view/gets
+/admin/db/:table/:op[/:id]
+
 ## Update - 2016-7-4
 
 添加三个与APP新闻列表有关的API

@@ -121,7 +121,46 @@
 {"success":true,"type":"object list","message":[{"id":4,"title":"插入测试","intro":null,"content":null,"url":null,"createdate":null}]}
 ```
 
+* 删除一条文章
 
+> URL : /app/new/delete/:newid
+> 需求权限 1 5
+> 方法 ALL
+> 返回值 成功
+1
+```json
+{"success":true}
+```
+> 失败
+
+```json
+{"success":false,"type":"err message","message":"no such record"}
+```
+
+## /admin路径
+
+> URL : /admin/db/:table/:op[/:id]
+> :table
+
+* 数据库中的table
+
+> :op
+
+* select [/:id]
+* selects 
+* update [/:id]
+* insert 
+* delete [/:id]
+
+> 参数 jsondata table对应的实体
+
+为EasyUI提供的视图查询API
+> URL : /admin/db/:view/gets
+> 方法 POST
+> 参数 
+>> rows page (EasyUI会自动传递)
+>> :view 指定视图名
+> 示例参看/html/pdp.html
 
 
 ## /admin/users路径
