@@ -140,22 +140,22 @@
 ## /admin路径
 
 > URL : /admin/db/:table/:op[/:id]
-> :table
-
-* 数据库中的table
+> :table   数据库中的table名称
 
 > :op
 
-* select [/:id]
-* selects 
-* update [/:id]
-* insert 
-* delete [/:id]
-* gets
+* /select/:id
+* /selects
+* /update/:id
+* /insert 
+* /delete/:id
 
-> 参数  table对应的实体 不需要转化成jsondata
+> 参数  
+>> table对应的实体 不需要转化成jsondata 
+>> id需要注意一定是那个表的主键
 
-为EasyUI提供的视图查询API(table 也可以)
+* 为EasyUI提供的视图查询API(table 也可以)
+
 > URL : /admin/db/:view/gets
 > 方法 POST
 > 参数 

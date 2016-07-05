@@ -8,6 +8,4 @@
 
 [API](API.md)
 
-[ISSUE](ISSUE.md)
-
 [RESOURCE](RESOURCE.md)

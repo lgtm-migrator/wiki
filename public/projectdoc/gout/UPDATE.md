@@ -2,8 +2,10 @@
 
 ## Update - 2016-7-5
 
-/admin/db/:view/gets
-/admin/db/:table/:op[/:id]
+/admin/db/:view/gets 数据库访问
+/admin/db/:table/:op[/:id] 视图访问
+
+/html/userinfo.html 查看用户信息
 
 ## Update - 2016-7-4
 
