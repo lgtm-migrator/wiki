@@ -1,5 +1,12 @@
 # 更新日志
 
+## Update - 2016-7-6 
+
+开始编写单元测试
+添加了/admin/db/:view/gets/:col/:value
+将安卓项目纳入到版本管理，安卓开发IDE转化为Android Studio
+修改了userinfo.html
+
 ## Update - 2016-7-5
 
 /admin/db/:view/gets 数据库访问
