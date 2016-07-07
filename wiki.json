@@ -2,8 +2,8 @@
     "apps": [{
         "name": "wiki",
         "script": "bin/www",
-        "cwd": "/home/suntao/repo/wiki/",
         "watch": false,
+        "cwd": "./",
         "env": {
             "NODE_ENV": "production",
             "PORT": 3000
