@@ -2,6 +2,7 @@
     "apps": [{
         "name": "wiki",
         "script": "bin/www",
+        "cwd": "/home/suntao/repo/wiki/",
         "watch": false,
         "env": {
             "NODE_ENV": "production",
