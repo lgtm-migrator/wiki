@@ -156,11 +156,13 @@
 
 * 为EasyUI提供的视图查询API(table 也可以)
 
-> URL : /admin/db/:view/gets
+> URL : /admin/db/:view/gets[/:col/:value]/[/sheet]
 > 方法 POST
 > 参数 
 >> rows page (EasyUI会自动传递)
 >> :view 指定view名/table名
+>> 如果添加[/col/value]将会在SQL中附上where col == value
+>> 如果添加[/sheet]将会变成对应表格文件下载(所有行)
 > 示例参看/html/pdp.html
 
 
