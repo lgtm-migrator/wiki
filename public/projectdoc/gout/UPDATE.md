@@ -1,11 +1,25 @@
 # 更新日志
 
+## Update - 2016-7-8 
+
+/db/....../sheet 可以获取对应的表格文件
+
+**重要**
+彻底修改权限管理模块
+权限管理精确到API
+认证用户如果出现no auth 
+请参看数据库中的authsview，看是否有相应权限
+
+添加了新闻的CRUD界面
+添加个人信息的修改界面
+
 ## Update - 2016-7-6 
 
 开始编写单元测试
 添加了/admin/db/:view/gets/:col/:value
 将安卓项目纳入到版本管理，安卓开发IDE转化为Android Studio
 修改了userinfo.html
+添加了各视图的查看下载
 
 ## Update - 2016-7-5
 

@@ -3,6 +3,7 @@
         "name": "wiki",
         "script": "bin/www",
         "watch": false,
+        "cwd": "./",
         "env": {
             "NODE_ENV": "production",
             "PORT": 3000
