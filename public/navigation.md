@@ -10,7 +10,7 @@
 [Web]()
 
   * # J2EE
-  * [利用Spring Boot快速创建J2EE应用](web/spring-boot.md)
+  * [**unfinished** 利用Spring Boot快速创建J2EE应用](web/spring-boot.md)
   - - - -
   * # NodeJS
   * [使用Node和MDWiki创建Wiki](web/nodejs-wiki.md)
@@ -36,6 +36,10 @@
   * # 其它
   * [英国文学与文化](course/blc.md)
   * [John Dewey](course/john_dewey.md)
+
+[Other]()
+
+  * [2016年暑假新成员学习](other/summer-study.md)
 
 [Projects]()
 
