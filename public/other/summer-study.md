@@ -114,9 +114,13 @@
 
 * [伯乐在线](http://blog.jobbole.com/) -- 很多文章
 * [开源中国](http://www.oschina.net/) -- 知名开源网站
+* [w3cschool](http://www.w3school.com.cn/) -- 知名Web技术教程
 * [StackOverFlow](http://stackoverflow.com/) -- 知名技术问答网站
 * [Github](https://github.com/) -- 知名git托管仓库
 * [开发者头条](http://toutiao.io/) -- 一些最新的技术，有APP
+* [一分钟学会写markdown文档](https://www.zhuyingda.com/blog/article.html?id=10&origin=gold)
+* [30分钟git命令入门到放弃](http://www.w3ctrain.com/2016/06/26/learn-git-in-30-minutes/)
+* [Web 的 26 项基本概念和技术](https://gold.xitu.io/entry/577a92a91532bc005fd5e50a)
 
 ## 最后
 
