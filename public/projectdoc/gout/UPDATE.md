@@ -1,5 +1,13 @@
 # 更新日志
 
+## Update - 2016-7-14 
+
+服务器gzip
+简化html应用
+使用easyui layout修改布局
+
+APP引入天气
+
 ## Update - 2016-7-8 
 
 /db/....../sheet 可以获取对应的表格文件
