@@ -165,6 +165,16 @@
 >> 如果添加[/sheet]将会变成对应表格文件下载(所有行)
 > 示例参看/html/pdp.html
 
+* 获取天气信息
+
+> URL : /app/weather/:location
+> 方法 : ALL
+>> 例如 /app/weather/北京
+>> 返回值
+
+```json
+{"date":"周三 07月20日 (实时：22℃)","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/baoyu.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/zhongyu.png","weather":"暴雨转小到中雨","wind":"东北风3-4级","temperature":"23 ~ 21℃"}
+```
 
 ## /admin/users路径
 
