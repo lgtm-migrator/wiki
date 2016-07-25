@@ -263,19 +263,6 @@
 > 需求权限 : 登录
 > 方法 : POST
 > 参数 : jsondata {oldpassword, password}
-
-```js
-request.post('http://localhost:2999/admin/users/updatecurrentuserpassword?token=c5cc0e68f2b143a198c5e1efda7b9f57', {
-    form: {
-        jsondata: JSON.stringify({
-            oldpassword: "123456",
-            password: "666666"
-        })  
-    }
-}, (error, response, body) => {
-        console.log(body);
-})
-```
 > 返回值 : 
 > > 成功 : 
 
