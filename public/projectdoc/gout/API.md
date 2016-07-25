@@ -262,11 +262,27 @@
 > URL : /admin/users/updatecurrentuserpassword
 > 需求权限 : 登录
 > 方法 : POST
-> 参数 : jsondata 对应一个User实体,实体需要password字段
+> 参数 : jsondata {oldpassword, password}
+
+```js
+request.post('http://localhost:2999/admin/users/updatecurrentuserpassword?token=c5cc0e68f2b143a198c5e1efda7b9f57', {
+    form: {
+        jsondata: JSON.stringify({
+            oldpassword: "123456",
+            password: "666666"
+        })  
+    }
+}, (error, response, body) => {
+        console.log(body);
+})
+```
 > 返回值 : 
-> > 成功 : <pre>{"success":true,"type":"string","message":"token has be reset"}</pre>
-> > 失败 : 未授权
-> > 失败 : 参数错误
+> > 成功 : 
+
+```json
+{"success":true,"type":"string","message":"token has be reset"}
+```
+> > 失败 : no auth, oldpassword wrong,param error
 
 * 所有患者
 
