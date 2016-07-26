@@ -6,6 +6,7 @@
   * # Java
   - - - -
   * # Javascript
+  * [斐波那契](language/js-fibonacci.md)
 
 [Web]()
 
@@ -46,9 +47,11 @@
   * # 学校项目
   * [GOUT -- 痛风随访系统文档](/projectdoc/gout)
   ----
-  * # 个人项目GitHub
+  * # 个人项目
   * [EasyORM -- Java持久化框架](https://github.com/Soontao/EasyORM)
   * [EasyAOP -- Java面向切面框架](https://github.com/Soontao/EasyAOP)
   * [NBlog -- 基于NodeJS的MD风格博客](https://github.com/Soontao/nblog)
+  * [SSNEWS -- UESTC-SS学院新闻爬虫/API](https://git.suntao.science/suntao/ss-news)
+  * [js-ml -- javascript machine learning](https://git.suntao.science/suntao/js-ml)
 
 [Resources](resources.md)

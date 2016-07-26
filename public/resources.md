@@ -22,7 +22,16 @@
 #### [PM2 -- NodeJS守护进程](https://www.npmjs.com/package/pm2)
 NodeJS守护进程，提供部署，检测，自动重启和日志功能。
 
-## Code
+#### [VS code -- 足够重量级的编辑器](https://code.visualstudio.com)
+用来调试nodejs很方便
+
+#### [reveal.js -- 用HTML写PPT](http://lab.hakim.se/reveal-js/)
+ssnews项目的首页就是用这个写的
+
 
 
 ## Games
+
+#### [FF10/10-2](http://baike.baidu.com/link?url=nQgnVhJb-_NfC8rxHADdsEUZRVBovyz78bH-mQhQK5qFwd-1a9vNwFpQwmgy6jnnPAgneh3mIjEX93laEupqxq)
+
+最终幻想经典
