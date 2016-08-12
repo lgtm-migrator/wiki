@@ -27,7 +27,9 @@ usertype 99     未登录
 
 ## 其他事项
 
-带有'是否'的字段,约定 0 为 false ,1 为 true,不要使用bool值
+约定 
+0false 1true
+0女 1男
 需要登录的对象,都是User对象,患者的详情记录在PatientDetail表中
 test项目中的org.uestc.gout.model对象是Java可以传递的实体
 移动端需要在每一个请求中附上token
@@ -37,6 +39,3 @@ test项目中的org.uestc.gout.model对象是Java可以传递的实体
 *  用户
 
 > 请连接suntao.science 数据库 gout查看
-> admin 666666799
-> zhouqiao 666666799 
-> duzhekai7 666666799  

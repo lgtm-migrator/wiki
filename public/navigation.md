@@ -3,10 +3,11 @@
 
 [Language]()
 
-  * # Java
-  - - - -
   * # Javascript
   * [斐波那契](language/js-fibonacci.md)
+  - - - -
+  * # Python
+  * [利用Py爬取学校信息门户](language/reptile_demo.md)
 
 [Web]()
 
