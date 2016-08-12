@@ -1,5 +1,3 @@
-[gimmick:theme](flatly)
-
 # Wiki
 
 [About](index.md)
