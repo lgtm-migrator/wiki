@@ -24,6 +24,7 @@
 
   * [TortoiseGit 基础使用](tools/ttsgit-install.md)
   * [Python requests 基础教程](tools/requests.md)
+  * [Httpie 使用](tools/httpie.md)
 
 [Course]()
 
@@ -41,7 +42,7 @@
 
 [Other]()
 
-  * [2016年暑假新成员学习](other/summer-study.md)
+  * [学习资源](other/summer-study.md)
 
 [Projects]()
 
