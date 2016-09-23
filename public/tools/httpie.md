@@ -9,35 +9,34 @@
 将以下api作为测试目标
 
 ```json
-{
+[{
     "type": "post",
     "url": "/api/echo",
-    "parameter": {
-        "省略":"......"
-    },
+    "params":"......"
 },
 {
     "type": "get",
     "url": "/api/echo",
-}
+}]
 ```
 
 ## 安装
 
-```bash
+```
 [sudo] pip instal httpie
 ```
+
 python27 或者pyhon3x都可以
 
 ## GET
 
-```bash
+```
 http :3000/api/echo
 ```
 
 或者指明get方法
 
-```bash
+```
 http get :3000/api/echo
 ```
 
@@ -45,7 +44,7 @@ http get :3000/api/echo
 
 Example
 
-```html
+```
 > http :3000/api/echo
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -93,9 +92,10 @@ http :3000/api/echo param1=value1 param2=value2
 或者也可指明方法
 
 ---
+
 Example
 
-```json
+```
 > http :3000/api/echo param1=value1 param2=value2
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -113,7 +113,7 @@ X-Powered-By: Express
 
 ## OTHER
 
-```bash
+```
 > http [METHOD] URL [REQUEST_ITEM ...]
 ```
 
