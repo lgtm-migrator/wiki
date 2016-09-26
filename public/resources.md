@@ -21,6 +21,9 @@
 #### [邪恶十六进制](http://www.evil0x.com/)
 安全与攻击网站，包括但不限于Web，物联网，Wifi攻击
 
+#### [稀土资源](https://xituqu.com/resource)
+很多资源，在百度盘上，需要关注他们的公众号获取密码
+
 ## Tools
 
 #### [PM2 -- NodeJS守护进程](https://www.npmjs.com/package/pm2)
