@@ -5,14 +5,17 @@
 
   * # Javascript
   * [斐波那契](language/js-fibonacci.md)
+  * [LRU缓存Function](language/js-lru-func.md)
   - - - -
   * # Python
-  * [利用Py爬取学校信息门户](language/reptile_demo.md)
+  * [Python爬取信息门户](language/reptile_demo.md)
+  * [Python实现的DI原型](language/di-proto.md)
+
 
 [Web]()
 
   * # J2EE
-  * [**unfinished** 利用Spring Boot快速创建J2EE应用](web/spring-boot.md)
+  * [Spring Boot创建J2EE应用](web/spring-boot.md)
   - - - -
   * # NodeJS
   * [使用Node和MDWiki创建Wiki](web/nodejs-wiki.md)

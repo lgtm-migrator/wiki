@@ -44,12 +44,17 @@ Windwos下的node版本管理工具，有安装包，可用性好
 加速node依赖下载
 
 
+#### [MARP -- Markdown Presentation Writer](https://yhatt.github.io/marp/)
+
+使用markdown编写presentation，并可导出为
+
+
 ## Games
 
 #### [FF10/10-2](http://baike.baidu.com/link?url=nQgnVhJb-_NfC8rxHADdsEUZRVBovyz78bH-mQhQK5qFwd-1a9vNwFpQwmgy6jnnPAgneh3mIjEX93laEupqxq)
 
 最终幻想经典
 
-#### [Hand of fate -- 加入动作元素的地下城游戏](https://en.wikipedia.org/wiki/Hand_of_Fate_(video_game))
+#### [Hand of fate -- 加入动作元素的地下城游戏](http://t.cn/RcdZ1mu)
 
 有些新意，可玩度不错
