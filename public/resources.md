@@ -43,10 +43,11 @@ Windwos下的node版本管理工具，有安装包，可用性好
 
 加速node依赖下载
 
-
 #### [MARP -- Markdown Presentation Writer](https://yhatt.github.io/marp/)
 
-使用markdown编写presentation，并可导出为
+使用markdown编写presentation，并可导出为PDF，用作演示
+
+也可直接在编辑界面演示
 
 
 ## Games
