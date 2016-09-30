@@ -27,6 +27,18 @@ Root Directory选择刚刚解压的目录
 
 ## 数据库配置
 
+省略
+
 ## 创建Rest服务
 
+省略
+
 ## 运行
+
+省略
+
+---
+
+这份wiki被省略
+
+示例可参看[这里](https://github.com/Soontao/dbtest)，导入maven项目就可以了

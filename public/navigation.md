@@ -5,14 +5,17 @@
 
   * # Javascript
   * [斐波那契](language/js-fibonacci.md)
+  * [LRU缓存Function](language/js-lru-func.md)
   - - - -
   * # Python
-  * [利用Py爬取学校信息门户](language/reptile_demo.md)
+  * [Python爬取信息门户](language/reptile_demo.md)
+  * [Python实现的DI原型](language/di-proto.md)
+
 
 [Web]()
 
   * # J2EE
-  * [**unfinished** 利用Spring Boot快速创建J2EE应用](web/spring-boot.md)
+  * [Spring Boot创建J2EE应用](web/spring-boot.md)
   - - - -
   * # NodeJS
   * [使用Node和MDWiki创建Wiki](web/nodejs-wiki.md)
@@ -24,6 +27,7 @@
 
   * [TortoiseGit 基础使用](tools/ttsgit-install.md)
   * [Python requests 基础教程](tools/requests.md)
+  * [Httpie 使用](tools/httpie.md)
 
 [Course]()
 
@@ -41,7 +45,7 @@
 
 [Other]()
 
-  * [2016年暑假新成员学习](other/summer-study.md)
+  * [学习资源](other/summer-study.md)
   * [2016-09](other/2016-9.md)
 
 [Projects]()
