@@ -42,6 +42,7 @@
 [Other]()
 
   * [2016年暑假新成员学习](other/summer-study.md)
+  * [2016-09](other/2016-9.md)
 
 [Projects]()
 
