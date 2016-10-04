@@ -1,6 +1,8 @@
-# Caddy和反向代理
+# Caddy Server
 
 Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署Let's Encrypt，也就是轻易从HTTP切换到HTTPS协议
+
+配置文件十分简单，性能也还不错，推荐个人应用全部使用Caddy
 
 ## 安装
 
@@ -15,7 +17,7 @@ Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署L
 当前目录为Web文件目录，端口为80(Linux下可能需要Root权限)
 
 ```
-sudo ./caddy -port 80 -root .
+[sudo] ./caddy -port 80 -root .
 ```
 
 这样caddy目录下的所有文件都可以被访问了
@@ -24,15 +26,17 @@ sudo ./caddy -port 80 -root .
 
 ## 反向代理
 
+首先要确认域名已经指向了部署caddy的服务器
+
 在caddy目录下创建Caddyfile文件，写下反向代理配置（如果文件不与caddy二进制文件同目录，后面的-conf参数需要修改Caddyfile的路径）
 
-```json
-subname.example.com {
+```
+subname.domain.com {
     proxy / localhost:PORT
 }
 ```
 
-将subname.example.com下的所有连接全部反向代理到本机的PORT端口
+将subname.domain.com下的所有连接全部反向代理到本机的PORT端口
 
 例如本网站，就是利用caddy反向代理wiki.xxxxx.xxx到了本地的3000端口。
 
@@ -42,15 +46,35 @@ subname.example.com {
 sudo ./caddy -conf 'Caddyfile'
 ```
 
-可以发现caddy的配置比Apache2简单多了
+即可使用二级域名访问
+
+
+## FastCGI
+
+支持各种fastcgi，以wordpress为例，安装php5fpm，然后下载caddy
+
+然后在Caddyfile中配置如下几行
+
+```
+yourserverdomain.com {
+    root /var/wp
+    fastcgi / /var/run/php5-fpm.sock php
+}
+```
+
+括号中的第一行指定wordpress路径，第二行配置了fastcgi，根据不同情况，可以选择unix socket或者一般的socket
+
+更多高级配置请参看官方文档
 
 ## Let's Encrypt
 
 在可能的情况下，caddy会将http自动切换到https
 
-**因为证书是颁发给域名的，所以在本机测试(localhost/127.x.x.x)的时候，是无法切换到HTTPS的**
+**因为证书是颁发给域名的，所以在使用ip的时候的时候，是无法切换到HTTPS的**
 
-当部署到远程的服务器上时，就可以了
+**另外需要注意，首先需要修改DNS，让域名指向Caddy部署的服务器，因为启动Caddy的时候会，验证域名是否指向本机**
+
+如果只想使用http协议的话，在域名前加上'http://'即可
 
 ## 后台运行
 
@@ -60,6 +84,12 @@ linux下
 sudo nohup ./caddy -conf 'Caddyfile' &
 ```
 
-## 官方文档
+---
 
-此页面只是作抛砖引玉用，[官方文档](https://caddyserver.com/docs)在此处，Caddy有很多功能，包括支持PHP，喜欢新鲜的朋友不妨尝试一下
+现在caddy提供了相应的linux服务文件，可以参看下载包中的文档
+
+## 其他
+
+默认情况下，caddy会读取当前路径中，名为Caddyfile的文件，默认端口是80
+
+此页面只是作抛砖引玉用，[官方文档](https://caddyserver.com/docs)在此处

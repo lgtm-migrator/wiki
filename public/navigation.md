@@ -21,7 +21,7 @@
   * [使用Node和MDWiki创建Wiki](web/nodejs-wiki.md)
   - - - -
   * # Web Servers
-  * [Caddy和反向代理](web/caddy.md)
+  * [Caddy Server](web/caddy.md)
 
 [Tools]()
 
