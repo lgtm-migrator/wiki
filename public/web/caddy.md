@@ -12,9 +12,9 @@ Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署L
 
 ## 静态文件服务器
 
-直接运行caddy.exe(或者./caddy)
+如果只是简单的静态服务器，直接运行caddy.exe(或者./caddy)就可以了
 
-当前目录为Web文件目录，端口为80(Linux下可能需要Root权限)
+默认情况下，当前目录为Web文件目录，端口为80(Linux下可能需要Root权限)
 
 ```
 [sudo] ./caddy -port 80 -root .
@@ -70,7 +70,7 @@ yourserverdomain.com {
 
 在可能的情况下，caddy会将http自动切换到https
 
-**因为证书是颁发给域名的，所以在使用ip的时候的时候，是无法切换到HTTPS的**
+**因为证书是颁发给域名的，所以在使用ip地址访问的时候，是无法切换到HTTPS的**
 
 **另外需要注意，首先需要修改DNS，让域名指向Caddy部署的服务器，因为启动Caddy的时候会，验证域名是否指向本机**
 
@@ -92,4 +92,6 @@ sudo nohup ./caddy -conf 'Caddyfile' &
 
 默认情况下，caddy会读取当前路径中，名为Caddyfile的文件，默认端口是80
 
-此页面只是作抛砖引玉用，[官方文档](https://caddyserver.com/docs)在此处
+第一次启动的时候推荐前台运行，看看获取证书时，有没有什么问题
+
+此页面只是一个示例，[官方文档](https://caddyserver.com/docs)在此处，有更多模块的用法
