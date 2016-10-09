@@ -58,6 +58,5 @@
   * [EasyAOP -- Java面向切面框架](https://github.com/Soontao/EasyAOP)
   * [NBlog -- 基于NodeJS的MD风格博客](https://github.com/Soontao/nblog)
   * [SSNEWS -- UESTC-SS学院新闻爬虫/API](https://git.suntao.science/suntao/ss-news)
-  * [js-ml -- javascript machine learning](https://git.suntao.science/suntao/js-ml)
 
 [Resources](resources.md)
