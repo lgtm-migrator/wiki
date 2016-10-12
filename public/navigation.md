@@ -11,18 +11,17 @@
   * [Python爬取信息门户](language/reptile_demo.md)
   * [Python实现的DI原型](language/di-proto.md)
 
-
 [Web]()
 
   * # J2EE
   * [Spring Boot创建J2EE应用](web/spring-boot.md)
   - - - -
   * # NodeJS
-  * [使用Node和MDWiki创建Wiki](web/nodejs-wiki.md)
+  * [使用MDWiki创建Wiki](web/nodejs-wiki.md)
   - - - -
   * # Web Servers
   * [Caddy Server](web/caddy.md)
-  * [caddy和zentao](web/caddy-zentao.md)
+  * [Caddy和Zentao](web/caddy-zentao.md)
 
 [Tools]()
 
@@ -47,7 +46,7 @@
 [Other]()
 
   * [学习资源](other/summer-study.md)
-  * [2016-09](other/2016-9.md)
+  * [2016-09 日记](other/2016-9.md)
 
 [Projects]()
 
@@ -59,5 +58,8 @@
   * [EasyAOP -- Java面向切面框架](https://github.com/Soontao/EasyAOP)
   * [NBlog -- 基于NodeJS的MD风格博客](https://github.com/Soontao/nblog)
   * [SSNEWS -- UESTC-SS学院新闻爬虫/API](https://git.suntao.science/suntao/ss-news)
+  ----
+  * # 其它
+  * [stray-bird -- 飞鸟集的一片](https://git.suntao.science/suntao/stray-bird)
 
 [Resources](resources.md)

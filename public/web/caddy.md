@@ -49,14 +49,14 @@ sudo ./caddy -conf 'Caddyfile'
 即可使用二级域名访问
 
 
-## FastCGI
+## FastCGI PHP
 
 支持各种fastcgi，以wordpress为例，安装php5fpm，然后下载caddy
 
 然后在Caddyfile中配置如下几行
 
 ```
-yourserverdomain.com {
+domain.com {
     root /var/wp
     fastcgi / /var/run/php5-fpm.sock php
 }
