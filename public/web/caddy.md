@@ -88,6 +88,10 @@ sudo nohup ./caddy -conf 'Caddyfile' &
 
 现在caddy提供了相应的linux服务文件，可以参看下载包中的文档
 
+## 官方示例
+
+在https://github.com/caddyserver/examples/tree/master/markdown有几个官方的配置文件，包括wp，dokuwiki等
+
 ## 其他
 
 默认情况下，caddy会读取当前路径中，名为Caddyfile的文件，默认端口是80
