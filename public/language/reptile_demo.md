@@ -113,7 +113,8 @@ c = d(".gridtable:last tbody tr")
 for tr in c:
     line = {}
     for td,i in zip(tr.getchildren(),h):
-        line[i.text]=td.text.strip()
+        if td.text is not None :
+            line[i.text]=td.text.strip()
     table.append(line)
 ```
 
