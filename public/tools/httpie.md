@@ -22,11 +22,15 @@
 
 ## 安装
 
+需要安装Python，python2.7 或者pyhon3.x都可以
+
+然后使用pip安装httpie
+
 ```
 [sudo] pip instal httpie
 ```
 
-python27 或者pyhon3x都可以
+
 
 ## GET
 
@@ -40,9 +44,15 @@ http :3000/api/echo
 http get :3000/api/echo
 ```
 
+如果使用query string
+
+```
+http :3000/api/echo param1==value1
+```
+
 ---
 
-Example
+GET请求示例
 
 ```
 > http :3000/api/echo
@@ -64,22 +74,8 @@ X-Powered-By: Express
     <script src="/lib/jquery/dist/jquery.min.js"></script>
     <script src="/lib/semantic/dist/semantic.min.js"></script>
 </head>
+......
 
-<body>
-    <h1>Login-Echo</h1>
-
-
-<form action="/api/echo" method="post">
-    Username
-    <br><input name="username" type="text"><br><br>
-    Password
-    <br><input type="password" name="password"><br><br>
-    <input type="submit">
-</form>
-
-</body>
-
-</html>
 ```
 
 
@@ -91,9 +87,13 @@ http :3000/api/echo param1=value1 param2=value2
 
 或者也可指明方法
 
+```
+http post :3000/api/echo param1=value1 param2=value2
+```
+
 ---
 
-Example
+POST请求示例
 
 ```
 > http :3000/api/echo param1=value1 param2=value2
@@ -112,6 +112,8 @@ X-Powered-By: Express
 ```
 
 ## OTHER
+
+命令详解
 
 ```
 > http [METHOD] URL [REQUEST_ITEM ...]
