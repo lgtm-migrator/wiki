@@ -5,11 +5,12 @@
 
   * # Javascript
   * [斐波那契](language/js-fibonacci.md)
-  * [LRU缓存Function](language/js-lru-func.md)
+  * [LRU缓存](language/js-lru-func.md)
   - - - -
   * # Python
   * [Python爬取信息门户](language/reptile_demo.md)
-  * [Python实现的DI原型](language/di-proto.md)
+  * [一个依赖注入的原型](language/di-proto.md)
+  * [一个AOP的原型](language/aop-proto.md)
 
 [Web]()
 
@@ -50,16 +51,15 @@
 
 [Projects]()
 
-  * # 学校项目
-  * [GOUT -- 痛风随访系统文档](/projectdoc/gout)
-  ----
   * # 个人项目
   * [EasyORM -- Java持久化框架](https://github.com/Soontao/EasyORM)
   * [EasyAOP -- Java面向切面框架](https://github.com/Soontao/EasyAOP)
   * [NBlog -- 基于NodeJS的MD风格博客](https://github.com/Soontao/nblog)
+  * [FBlog -- 基于Python的简单博客](https://git.suntao.science/suntao/fblog)
   * [SSNEWS -- UESTC-SS学院新闻爬虫/API](https://git.suntao.science/suntao/ss-news)
   ----
   * # 其它
   * [stray-bird -- 飞鸟集的一片](https://git.suntao.science/suntao/stray-bird)
+  * [AOP -- 面向切面编程演讲ppt及code](https://git.suntao.science/suntao/Aspect-Oriented-Programming)
 
 [Resources](resources.md)
