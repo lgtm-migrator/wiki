@@ -39,6 +39,7 @@
   * [大型主机](course/mainframe.md)
   * [数据库系统](course/dbs.md)
   * [计算机网络](course/network.md)
+  * [系统分析与设计](course/sys-ana-design.md)
   - - - -
   * # 其它
   * [英国文学与文化](course/blc.md)
