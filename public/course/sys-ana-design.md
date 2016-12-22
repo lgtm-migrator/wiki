@@ -11,7 +11,6 @@
 * opportunities 机会
 * threats 威胁
 
-
 ### 三级管理系统
 
 * 策略级 - 知识处理系统

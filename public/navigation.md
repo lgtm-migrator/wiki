@@ -48,7 +48,6 @@
 [Other]()
 
   * [学习资源](other/summer-study.md)
-  * [2016-09 日记](other/2016-9.md)
 
 [Projects]()
 
@@ -60,7 +59,7 @@
   * [SSNEWS -- UESTC-SS学院新闻爬虫/API](https://git.suntao.science/suntao/ss-news)
   ----
   * # 其它
-  * [stray-bird -- 飞鸟集的一片](https://git.suntao.science/suntao/stray-bird)
+  * [stray-bird -- 飞鸟集的一片](https://page.suntao.tech/straybirds/)
   * [AOP -- 面向切面编程演讲ppt及code](https://git.suntao.science/suntao/Aspect-Oriented-Programming)
 
 [Resources](resources.md)
