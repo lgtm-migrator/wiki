@@ -19,7 +19,7 @@
 
 ### Region 区域
 
-类似于进程概念，拥有相应资源
+类似于进程概念，拥有相应资源，有执行线程的地址空间
 
 ### 开发语言
 
@@ -133,7 +133,7 @@ IF RESP = DFHRESP(NOTFND)
 
 ### 概念
 
-* 事务，CICS运行的基本单位
+* 事务，CICS启动的单位，终端和数据库的一次交换
 * 任务，事务的一次运行
 
 
@@ -175,6 +175,14 @@ EXEC CICS RECEIVE MAP('MAPNAME') MAPSET('SETA') RESP(RESP) END-EXEC
 * ESDS 进入顺序数据集
 * KSDS 键顺序数据集
 * RRDS 相对记录数据集
+
+#### CLUSTER
+
+VSAM使用三个编目描述一个CLUSTER
+
+* 一个CLUSTER项，把CLUSTER描述为一个部件
+* 一个数据项描述CLUSTER的数据部件
+* 一个索引项描述一个索引部件
 
 #### CI - VSAM访问单位
 
