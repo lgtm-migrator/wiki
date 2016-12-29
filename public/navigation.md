@@ -40,7 +40,8 @@
   * [数据库系统](course/dbs.md)
   * [计算机网络](course/network.md)
   * [系统分析与设计](course/sys-ana-design.md)
-  * [CICS交易中间件](course/cics.md)
+  * [CICS 交易中间件](course/cics.md)
+  * [DB2 数据库系统](course/db2.md)
   - - - -
   * # 其它
   * [英国文学与文化](course/blc.md)
