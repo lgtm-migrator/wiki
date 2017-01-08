@@ -36,6 +36,7 @@
   * [COBOL](course/cobol.md)
   * [操作系统](course/os.md)
   * [软件工程](course/software.md)
+  * [信息安全工程](course/info-sec.md)
   * [大型主机](course/mainframe.md)
   * [数据库系统](course/dbs.md)
   * [计算机网络](course/network.md)
