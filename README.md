@@ -4,5 +4,6 @@
 
 用于维护我的一些教程和文章
 
-使用nano-server做测试，服务器端使用caddy反向代理的
+使用nano-server做测试，以前使用静态服务器反代，现在部署于CloudFoundry
+
 

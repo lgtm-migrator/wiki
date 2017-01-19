@@ -1,0 +1,10 @@
+deploy:
+  provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: mrls@live.cn
+  password:
+    secure: Og7bRKvXGamJnU/6RlysWDqo+1/zawOOpUnXkxLGeaH+meMKIlDVXYTKj3ikvpsM21EooCiamTcV90TidT82B8g2Piy6PKlUuppvjzzaQzBTF80PeiAKuaVFYJRZnJrn0lMdnTF+YZAkEBMLMEXPpiFRBHUykvZS1e146mKx9cag52Fy9n+G8r+fVz6zyCYDm43n9e38XtcFRpNLyhxtxD1k9Ruhjew7KYYzAz7CLUWsuO6+MO+GIx5EgmhetFAocJeHEh2O5qyWCi/iUOPP/9kxb37Ccd1e9HSYY9/onan5OFGA0Zf+DQn3P2b2MsJlGEOKHaAoRodqf18/XdE2lndrfyQJTGqNCAn62wnzMdY5uyKHHZaqxXzRnvbt1Vd19aOZVdXa8pKHL1GIip8qDaqabwtzfNZ2B0iqpA34RvuKxPigqK88DQLWfscf6lcO+QjMJlLfKaJ3la3fJSKYieswkRvg5sSNwEkdZJluiYqNK1TYBRfNo3qnaJPr7qvVrpqZorxhE1LLv1Sk3vyIQZZ1RFBGSkMkh6e2XnecDt3TfA7R5kF1JI2dg5l6M2NBJUFjNolJ6cvlZ93dqgthCMizO4HhUWOdR8Yd2b8Z/TR0FDbnNX1OcRHnNxSWRMNtFiadrnimxtGYJ08mYAli5Sjv0HJRZYNarfUWuVqKX0E=
+  organization: mrls-org
+  space: development
+  on:
+    repo: Soontao/wiki
