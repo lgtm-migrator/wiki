@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/nano-server/nano-server 3000 ./public"
+    "start": "node node_modules/nano-server/nano-server 3000 ./web"
   },
   "dependencies": {
     "nano-server": "0.5.3"
