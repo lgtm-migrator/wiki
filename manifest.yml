@@ -2,4 +2,5 @@
 applications:
 -   name: wiki-theo
     memory: 64M
+    disk_quota: 128M
     buildpack: staticfile_buildpack
