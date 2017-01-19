@@ -1,5 +1,7 @@
 # 如何在Cloud Foundry上强制使用https
 
+## Content
+
 Cloud Foundry平台一般都提供http/https两种协议，但是某些时候我们只想使用https，这时候我们就可以通过cf提供的```x_forwarded_proto```来处理
 
 以Flask为例，在应用中加上如下语句即可
