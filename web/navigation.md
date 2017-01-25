@@ -23,10 +23,12 @@
   * # Web Servers
   * [Caddy Server](web/caddy.md)
   * [Caddy和Zentao](web/caddy-zentao.md)
-  - - - - 
-  * # Web Related
-  * [如何在CF中强制使用https](web/cf-https.md)
 
+[Cloud]()
+
+  * # Cloud Foundy
+  * [如何在CF中强制使用https](cloud/cf-https.md)
+  
 [Tools]()
 
   * [TortoiseGit 基础使用](tools/ttsgit-install.md)
@@ -61,11 +63,11 @@
   * [EasyORM -- Java持久化框架](https://github.com/Soontao/EasyORM)
   * [EasyAOP -- Java面向切面框架](https://github.com/Soontao/EasyAOP)
   * [NBlog -- 基于NodeJS的MD风格博客](https://github.com/Soontao/nblog)
-  * [FBlog -- 基于Python的简单博客](https://git.suntao.science/suntao/fblog)
-  * [SSNEWS -- UESTC-SS学院新闻爬虫/API](https://git.suntao.science/suntao/ss-news)
+  * [FBlog -- 基于Python的简单博客](https://github.com/Soontao/flask_blog)
+  * [SS-News -- UESTC-SS学院新闻爬虫/API](https://github.com/Soontao/uestc_ss_news_spider)
   ----
   * # 其它
-  * [stray-bird -- 飞鸟集的一片](https://page.suntao.tech/straybirds/)
+  * [stray-bird -- 飞鸟集的一片](https://soontao.github.io/straybirds/)
   * [AOP -- 面向切面编程演讲ppt及code](https://git.suntao.science/suntao/Aspect-Oriented-Programming)
 
 [Resources](resources.md)
