@@ -114,15 +114,15 @@ Space:          development
 
 首先，进入[spring initializr](https://start.spring.io/)，**在右边Dependencies输入并选择Web**，(其它比如group和artifact不建议更改，如果更改的话，后面的package和路径需要小心)
 
-![spring boot dep](../img/spring-boot-web.PNG)
+![spring boot dep](../img/springbootweb.png)
 
 然后点下面的generate project
 
 将下载下来的压缩包解压，然后修改其中的DemoApplication.java
 
-![spring demo file tree](../img/spring-demo-tree.png)
+![spring demo file tree](../img/springdemotree.png)
 
-建议直接复制代码，这个App在'/'下映射了一个方法，返回一个json字符串
+建议直接复制代码，这个App在'/'路径下映射了一个方法，返回一个json字符串
 
 ```java
 package com.example;
@@ -164,7 +164,7 @@ mvnw.cmd package
 
 如果构建成功(如下图)，就可以开始准备上传了
 
-![mvn build success](../img/mvn-build-success.png)
+![mvn build success](../img/mvnbuildsuccess.png)
 
 ## manifest.yml - 上传配置
 
@@ -197,7 +197,7 @@ applications:
 
 使用```cf push```命令上传
 
-```
+```bash
 > cf push
 Using manifest file \home\xxx\demo\manifest.yml
 
@@ -220,28 +220,8 @@ Starting app spring-boot-demo in org mrls-org / space development as mrls@live.c
 Downloading java_buildpack...
 Downloaded java_buildpack
 Creating container
-Successfully created container
-Downloading app package...
-Downloaded app package (12.1M)
-Staging...
------> Java Buildpack Version: v3.12 (offline) | https://github.com/cloudfoundry/java-buildpack.git#6f25b7e
------> Downloading Open Jdk JRE 1.8.0_121 from https://java-buildpack.cloudfoundry.org/openjdk/trusty/x86_64/openjdk-1.8.0_121.tar.gz (found in cache)
-       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.1s)
------> Downloading Open JDK Like Memory Calculator 2.0.2_RELEASE from https://java-buildpack.cloudfoundry.org/memory-calculator/trusty/x86_64/memory-calculator-2.0.2_RELEASE.tar.gz (found in cache)
-       Memory Settings: -XX:MetaspaceSize=104857K -XX:MaxMetaspaceSize=104857K -Xss349K -Xmx681574K -Xms681574K
------> Downloading Container Certificate Trust Store 1.0.0_RELEASE from https://java-buildpack.cloudfoundry.org/container-certificate-trust-store/container-certificate-trust-store-1.0.0_RELEASE.jar (found in cache)
-       Adding certificates to .java-buildpack/container_certificate_trust_store/truststore.jks (0.5s)
------> Downloading Spring Auto Reconfiguration 1.10.0_RELEASE from https://java-buildpack.cloudfoundry.org/auto-reconfiguration/auto-reconfiguration-1.10.0_RELEASE.jar (found in cache)
-Staging complete
-Uploading build artifacts cache...
-Exit status 0
-Uploading droplet, build artifacts cache...
-Uploading droplet...
-Uploaded build artifacts cache (109B)
-Uploaded droplet (57.4M)
-Uploading complete
-Destroying container
-Successfully destroyed container
+
+# 这里跳过了一些log
 
 0 of 1 instances running, 1 starting
 1 of 1 instances running
