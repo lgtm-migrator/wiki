@@ -33,7 +33,9 @@ server.listen(port);
 
 > Pivotal公司是由EMC和VMware联合成立的一家新公司
 
-提供CloudFoundry平台，并提供为免费账户提供2GB内存使用，所以，在开始我们的Course之前，先注册一个账户吧。
+Pivotal提供CloudFoundry平台，并提供**为免费账户提供2GB内存使用**
+
+所以，在开始我们的Course之前，先注册一个账户吧。
 
 [点击这里注册Pivotal账户](https://pivotal.io/get-started)，注册完毕之后，到[这里登陆](https://console.run.pivotal.io/)
 
@@ -41,9 +43,11 @@ server.listen(port);
 
 当org和space都创建完毕之后，就可以进入下一步了
 
-## 安装 [CF Cli](https://github.com/cloudfoundry/cli)
+## 安装Cloud Foundry Cli [(CF Cli)](https://github.com/cloudfoundry/cli)
 
-Cloud Foundry官方的Command Line Client，去[github](https://github.com/cloudfoundry/cli/releases)上，选择相应版本下载即可，Windows下载Installer - Windows 32/64 bit
+Cloud Foundry官方的Command Line Client，去[github](https://github.com/cloudfoundry/cli/releases)上，选择相应版本下载即可
+
+Windows下载Installer - Windows 32/64 bit
 
 然后使用cmd/terminal测试一下
 
@@ -277,7 +281,14 @@ Binding spring-boot-demo-unplumed-bn.cfapps.io to spring-boot-demo...
 
 ## 其它
 
+以上差不多就是整个上传流程了，除了java之外，cf还支持所有主流的语言，包括node，go，python等
+
+cf也可以和一些CI服务器集成，比如这个wiki就是放在github上，使用travis-ci build，然后打包上传到CF
+
+以下是一些你可能需要的命令
+
 * 使用```cf apps```查看当前space的所有应用信息，包括它们的url
+* 使用```cf app spring-boot-demo```查看这个应用的详细信息
 * 使用```cf delete spring-boot-demo```删除刚刚建立的应用
 
 ## 参考项目结构
