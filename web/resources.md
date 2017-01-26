@@ -32,6 +32,16 @@
 #### [稀土资源](https://xituqu.com/resource)
 很多资源，在百度盘上，需要关注他们的公众号获取密码
 
+## Services
+
+#### [Host1Plus](https://www.host1plus.com/)
+海外的VPS服务提供商，只要2刀就可以提供一个256M的VPS，最大的优点是支持支付宝
+
+#### [Pivotal](https://pivotal.io/)
+Cloud Foundry服务提供商，注册就提供2G内存使用，如果不是Java的话，可以部署非常多的应用上去。唯一的弱点是在大陆访问可能延迟有些高，但是用于CI&CD的测试是完全足够了
+
+CF真的是很好用的云平台，得入此门，万念皆空
+
 ## Tools
 
 #### [PM2 -- NodeJS守护进程](https://www.npmjs.com/package/pm2)
