@@ -1,12 +1,14 @@
 # 资源推荐
 
+以下都是我自己用过，并且使用体验很好的资源，推荐给大家
+
 ## Web
 
 #### [Caddy -- The HTTP/2 web server with automatic HTTPS](https://caddyserver.com/)
 
 基于Go集成Let's Encrypt的Web服务器
 
-极端简易的Web服务器，简化的配置文件，轻松实现反向代理/HTTPS加密
+极易使用的Web服务器，简化的配置文件，轻松实现反向代理/HTTPS加密
 
 提供linux守护进程文件
 
@@ -16,13 +18,12 @@
 
 这里有一个[教程](http://blog.csdn.net/iloveyin/article/details/21444613)
 
-#### [Httpie -- HTTPie is a command line HTTP client with an intuitive UI](https://httpie.org/)
-
-命令行中快速调试Web API
 
 #### [BootCDN -- 国内的免费cdn服务](http://www.bootcdn.cn/)
 
 常用类库的免费CDN服务，支持https
+
+---
 
 ## Site
 
@@ -35,12 +36,20 @@
 ## Services
 
 #### [Host1Plus](https://www.host1plus.com/)
-海外的VPS服务提供商，只要2刀就可以提供一个256M的VPS，最大的优点是支持支付宝
+海外的VPS服务提供商，只要2刀就可以提供一个256M的VPS，用于shadowsock足够了
+
+最大的优点是支持支付宝
 
 #### [Pivotal](https://pivotal.io/)
-Cloud Foundry服务提供商，注册就提供2G内存使用，如果不是Java的话，可以部署非常多的应用上去。唯一的弱点是在大陆访问可能延迟有些高，但是用于CI&CD的测试是完全足够了
+Cloud Foundry服务提供商，注册就提供2G内存使用，可以部署非常多的小应用上去。
+
+唯一的弱点是，在大陆访问可能延迟有些高，但是用于CI&CD的测试是完全足够了
+
+和travis-ci搭配使用，效果很好
 
 CF真的是很好用的云平台，得入此门，万念皆空
+
+---
 
 ## Tools
 
@@ -55,6 +64,10 @@ NodeJS守护进程，提供部署，检测，自动重启和日志功能。
 
 方便集成各种插件，乃至build，package都支持
 
+#### [Httpie -- HTTPie is a command line HTTP client with an intuitive UI](https://httpie.org/)
+
+命令行中快速调试Web API
+
 #### [reveal.js -- 用HTML写PPT](http://lab.hakim.se/reveal-js/)
 ssnews项目的首页就是用这个写的
 
@@ -64,9 +77,13 @@ Windwos下的node版本管理工具，有安装包，可用性好
 
 win7-win10可用，win7好像有一些问题
 
-#### [CNPM -- npm 中国镜像](https://npm.taobao.org/)
+#### [~~cnpm -- npm 中国镜像~~](https://npm.taobao.org/)
 
-加速node依赖下载
+~~加速node依赖下载~~
+
+现在不再推荐使用，在我使用的过程中总是会出现问题，尤其当需要gyp包的时候
+
+现在推荐使用npm@4或者yarn
 
 #### [MARP -- Markdown Presentation Writer](https://yhatt.github.io/marp/)
 
@@ -74,6 +91,7 @@ win7-win10可用，win7好像有一些问题
 
 也可直接在编辑界面演示
 
+---
 
 ## Games
 
