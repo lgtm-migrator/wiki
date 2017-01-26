@@ -27,6 +27,7 @@
 [Cloud]()
 
   * # Cloud Foundy
+  * [CF 快速入门](cloud/cf-course-1.md)
   * [如何在CF中强制使用https](cloud/cf-https.md)
   
 [Tools]()
@@ -34,6 +35,7 @@
   * [TortoiseGit 基础使用](tools/ttsgit-install.md)
   * [Python requests 基础教程](tools/requests.md)
   * [Httpie 使用](tools/httpie.md)
+  * [ShadowSocks 某科学的上网方法](tools/shadowsocks.md)
 
 [Course]()
 
