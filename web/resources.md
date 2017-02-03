@@ -33,6 +33,8 @@
 #### [稀土资源](https://xituqu.com/resource)
 很多资源，在百度盘上，需要关注他们的公众号获取密码
 
+---
+
 ## Services
 
 #### [Host1Plus](https://www.host1plus.com/)
