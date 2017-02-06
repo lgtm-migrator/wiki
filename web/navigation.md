@@ -29,6 +29,8 @@
   * # Cloud Foundy
   * [CF 快速入门](cloud/cf-course-1.md)
   * [如何在CF中强制使用https](cloud/cf-https.md)
+  * # Docker
+  * [使用Docker测试JShell](cloud/jshell-docker.md)
   
 [Tools]()
 
