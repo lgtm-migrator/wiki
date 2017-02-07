@@ -114,13 +114,21 @@ Space:          development
 
 首先，进入[spring initializr](https://start.spring.io/)，**在右边Dependencies输入并选择Web**，(其它比如group和artifact不建议更改，如果更改的话，后面的package和路径需要小心)
 
-![spring boot dep](../img/springbootweb.png)
+<br>
+<p align="center">
+    <img src="../img/springbootweb.png" />
+</p>
+<br>
 
 然后点下面的generate project
 
 将下载下来的压缩包解压，然后修改其中的DemoApplication.java
 
-![spring demo file tree](../img/springdemotree.png)
+<br>
+<p align="center">
+    <img src="../img/springdemotree.png" />
+</p>
+<br>
 
 建议直接复制代码，这个App在'/'路径下映射了一个方法，返回一个json字符串
 
@@ -164,7 +172,12 @@ mvnw.cmd package
 
 如果构建成功(如下图)，就可以开始准备上传了
 
-![mvn build success](../img/mvnbuildsuccess.png)
+<br>
+<p align="center">
+    <img src="../img/mvnbuildsuccess.png" />
+</p>
+<br>
+
 
 ## manifest.yml - 上传配置
 
