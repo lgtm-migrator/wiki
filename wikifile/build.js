@@ -1,18 +1,87 @@
-'use strict';
+const dirTree = require('directory-tree');
+const fs = require('fs');
+const os = require('os')
+const _ = require('lodash');
+const capitalize = require('capitalize');
 
-const version = 'v20160440';
+const getFilesFromDir = node => _.filter(node.children, item => item.extension ? true : false)
+
+const getDirsFromDir = node => _.filter(node.children, item => !item.extension && item.children.length > 0 ? true : false)
+
+const upper = str => capitalize.words(str)
+
+const writeLine = (line) => {
+  if (fs.existsSync(targetNavigationFilePath))
+    fs.appendFileSync(targetNavigationFilePath, (line || "") + os.EOL)
+  else
+    fs.writeFileSync(targetNavigationFilePath, (line || "") + os.EOL);
+}
+
+/**
+ * make a markdown format link
+ * 
+ * @param {Object} item
+ * @returns {string}
+ */
+const makeLink = (item) => {
+  if (item.extension)
+    return `[${upper(getMdTitle(item.path))}](${item.path.replace(/\\/g, '/')})`
+  else
+    return upper(`[${item.name}]()`)
+}
+
+/**
+ * get a title from an existed md file
+ * 
+ * @param {string} filepath
+ * @returns {string}
+ */
+const getMdTitle = filepath => {
+  const file = fs.readFileSync(filepath).toString();
+  const firstline = file.split('\n')[0];
+  const result = firstline.split('#')[1]
+  if (!result) throw new Error(`file ${filepath} should have a title in first line`)
+  return result.trim()
+}
+
+
+
+const writeNavigationFile = () => {
+  // start write new navigation
+  writeLine("# wiki")
+  writeLine()
+  getFilesFromDir(tree).forEach(item => item.name == 'navigation.md' ? writeLine() : writeLine(makeLink(item)) & writeLine())
+  getDirsFromDir(tree).forEach((dir) => {
+    // if a directory not have any file, will be skiped
+    if (!dir.extension && dir.children.length < 1)
+      return
+    writeLine(makeLink(dir)) & writeLine()
+    getFilesFromDir(dir).forEach(article => writeLine(`* ${makeLink(article)}`))
+    getDirsFromDir(dir).forEach((dir, idx, arr) => {
+      writeLine(`* # ${upper(dir.name)}`)
+      getFilesFromDir(dir).forEach(article => writeLine(`* ${makeLink(article)}`))
+      if (arr.length - 1 != idx) writeLine('---')
+    })
+    writeLine()
+  })
+
+  console.log('navigation generate finished')
+}
+
+
+
+const sw_str = `'use strict';
+
+const version = "${(new Date()).toLocaleString()}";
 const __DEVELOPMENT__ = false;
 const __DEBUG__ = false;
 const offlineResources = [
-  '/#!index.md',
-  '/#!resources.md'
+  '/index.md',
+  '/resources.md',
+  '/navigation.md'
 ];
 
 const ignoreFetch = [
-  /https?:\/\/static.duoshuo.com\//,
-  /https?:\/\/www.google-analytics.com\//,
-  /https?:\/\/dn-lbstatics.qbox.me\//,
-  /https?:\/\/ajax.cloudflare.com\//,
 ];
 
 
@@ -171,3 +240,25 @@ self.addEventListener('install', onInstall);
 self.addEventListener('fetch', onFetch);
 
 self.addEventListener("activate", onActivate);
+`
+
+const tree = dirTree('.', '.md')
+const targetNavigationFilePath = 'navigation.md';
+const targetSWFilePath = 'sw.js'
+
+if (fs.existsSync(targetNavigationFilePath)) {
+  fs.unlinkSync(targetNavigationFilePath);
+  console.log('deleted old navigation');
+}
+
+writeNavigationFile()
+
+if (fs.existsSync(targetSWFilePath)) {
+  fs.unlinkSync(targetSWFilePath);
+  console.log('deleted old sw.js')
+}
+
+fs.writeFileSync(targetSWFilePath, sw_str);
+console.log('regenerate sw.js')
+
+console.log('build success!')

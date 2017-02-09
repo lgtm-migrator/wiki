@@ -4,9 +4,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/nano-server/nano-server 3000 ./web"
+    "start": "node node_modules/nano-server/nano-server 3000 ./wikifile",
+    "postinstall": "cd wikifile &&node build.js"
   },
   "dependencies": {
+    "capitalize": "^1.0.0",
+    "directory-tree": "^1.2.0",
+    "lodash": "^4.17.4",
     "nano-server": "0.5.3"
   }
 }
