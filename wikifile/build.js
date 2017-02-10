@@ -72,7 +72,7 @@ const writeNavigationFile = () => {
 
 const sw_str = `'use strict';
 
-const version = "${(new Date()).toLocaleString()}";
+const version = "${(new Date()).toISOString()}";
 const __DEVELOPMENT__ = false;
 const __DEBUG__ = false;
 const offlineResources = [
@@ -82,6 +82,7 @@ const offlineResources = [
 ];
 
 const ignoreFetch = [
+  '/sw.js'
 ];
 
 
