@@ -8,6 +8,9 @@ const getFilesFromDir = node => _.filter(node.children, item => item.extension ?
 
 const getDirsFromDir = node => _.filter(node.children, item => !item.extension && item.children.length > 0 ? true : false)
 
+/**
+ * make every words first character upper
+ */
 const upper = str => capitalize.words(str)
 
 const writeLine = (line) => {
@@ -25,7 +28,7 @@ const writeLine = (line) => {
  */
 const makeLink = (item) => {
   if (item.extension)
-    return `[${upper(getMdTitle(item.path))}](${item.path.replace(/\\/g, '/')})`
+    return `[${getMdTitle(item.path)}](${item.path.replace(/\\/g, '/')})`
   else
     return upper(`[${item.name}]()`)
 }
@@ -72,13 +75,12 @@ const writeNavigationFile = () => {
 
 const sw_str = `'use strict';
 
-const version = "${(new Date()).toISOString()}";
+const version = "${(new Date()).toLocaleString()}";
 const __DEVELOPMENT__ = false;
 const __DEBUG__ = false;
 const offlineResources = [
-  '/index.md',
-  '/resources.md',
-  '/navigation.md'
+  "/",
+  "/index.html"
 ];
 
 const ignoreFetch = [

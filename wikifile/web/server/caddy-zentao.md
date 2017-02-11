@@ -1,6 +1,6 @@
-# 如何使用caddy和php-fpm 配置一个禅道项目管理软件
+# 如何在Caddy中使用PHP
 
-##  准备工作
+## prepare caddy
 
 下载安装caddy server
 
@@ -8,13 +8,13 @@
 
 安装mariadb或者mysql，并且配置好相应的root账户访问
 
-## 准备工作2
+## addtional prepare
 
 caddy server中有相应的linux daemon配置文件，可以放入相应的文件夹中，简化服务的配置。
 
 推荐在数据库中，创建一个新的zentao账户和zentao数据库，并授予zentao账户相关数据库的权限，以避免直接使用root账户。
 
-## 下载zentao源码
+## download the sources of Zentao
 
 从[官网](http://www.zentao.net/download.html)下载开源版的源码包，[8.2.6版本点此下载](http://dl.cnezsoft.com/zentao/8.2.6/ZenTaoPMS.8.2.6.zip)
 
