@@ -116,7 +116,7 @@ Space:          development
 
 <br>
 <p align="center">
-    <img src="../img/springbootweb.png" />
+    <img src="../../img/springbootweb.png" />
 </p>
 <br>
 
@@ -126,7 +126,7 @@ Space:          development
 
 <br>
 <p align="center">
-    <img src="../img/springdemotree.png" />
+    <img src="../../img/springdemotree.png" />
 </p>
 <br>
 
@@ -174,7 +174,7 @@ mvnw.cmd package
 
 <br>
 <p align="center">
-    <img src="../img/mvnbuildsuccess.png" />
+    <img src="../../img/mvnbuildsuccess.png" />
 </p>
 <br>
 
@@ -223,16 +223,7 @@ OK
 Binding spring-boot-demo-unplumed-bn.cfapps.io to spring-boot-demo...
 OK
 
-Uploading spring-boot-demo...
-Uploading app files from: C:\Users\xxxxxx\AppData\Local\Temp\unzipped-app245412799
-Uploading 457.5K, 88 files
-Done uploading
-OK
-
-Starting app spring-boot-demo in org mrls-org / space development as mrls@live.cn...
-Downloading java_buildpack...
-Downloaded java_buildpack
-Creating container
+# infos
 
 # 这里跳过了一些log
 
@@ -244,10 +235,7 @@ App started
 
 OK
 
-App spring-boot-demo was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-2.0.2_RELEASE -memorySizes=metaspace:64m..,stack:228k.. -memoryWeights=heap:65,metaspace:10,native:15,stack:10 -memoryInitials=heap:100%,metaspace:100% -stackThreads=300 -totMemory=$MEMORY_LIMIT) && JAVA_OPTS="-Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh $CALCULATED_MEMORY -Djavax.net.ssl.trustStore=$PWD/.java-buildpack/container_certificate_trust_store/truststore.jks -Djavax.net.ssl.trustStorePassword=java-buildpack-trust-store-password" && SERVER_PORT=$PORT eval exec $PWD/.java-buildpack/open_jdk_jre/bin/java $JAVA_OPTS -cp $PWD/. org.springframework.boot.loader.JarLauncher`
-
-Showing health and status for app spring-boot-demo in org mrls-org / space development as mrls@live.cn...
-OK
+# infos
 
 requested state: started
 instances: 1/1
