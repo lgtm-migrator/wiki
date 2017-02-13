@@ -79,12 +79,9 @@ const version = "${(new Date()).toLocaleString()}";
 const __DEVELOPMENT__ = false;
 const __DEBUG__ = false;
 const offlineResources = [
-  "/",
-  "/index.html"
 ];
 
 const ignoreFetch = [
-  '/sw.js'
 ];
 
 
