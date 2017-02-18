@@ -90,7 +90,7 @@ const ignoreFetch = [
 //////////
 function onInstall(event) {
   log('install event in progress.');
-
+  self.skipWaiting();
   event.waitUntil(updateStaticCache());
 }
 
