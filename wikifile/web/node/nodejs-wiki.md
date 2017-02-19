@@ -15,11 +15,13 @@
 (Linux需要sudo)
 npm install express-generator -g
 ```
+
 * 使用express生成器搭建一个项目
 
 ```bash
 express wiki
 ```
+
 系统会显示
 
 ```bash
@@ -50,7 +52,7 @@ express wiki
 
 * 初始化项目
 
-```
+```bash
 cd wiki && npm install
 ```
 
@@ -60,6 +62,7 @@ cd wiki && npm install
 * 提取zip中的mdwiki.html到wiki/public目录下(并改名为index.html)
 
 ## 开始编写你的Wiki
+
 （在wiki/public目录下）
 
 * 创建一个index.md文件，在新建的index.md中编写我们的首页
@@ -75,6 +78,7 @@ cd wiki && npm install
 
 * 轻松愉快
 ```
+
 * 保存的时候请注意保存为UTF-8编码，否则会出现乱码
 
 
@@ -85,6 +89,7 @@ cd wiki && npm install
 ```bash
 npm start
 ```
+
 * 使用浏览器打开http://localhost:3000
 
 ## 完善你的首页

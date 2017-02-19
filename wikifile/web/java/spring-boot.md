@@ -13,6 +13,7 @@ Dependencies -- Web JPA
 然后点击Generate Project，保存文件，解压缩该文件
 
 ## 导入初始项目到Eclipse
+
 其实导入到Eclipse或者IDEA都差不多
 
 这里用Eclipse做示例

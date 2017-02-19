@@ -1,6 +1,6 @@
-# 使用python实现的DI原型
+# 依赖注入原型
 
-DI依赖注入是IoC控制反转的一种实现。
+DI依赖注入是IoC控制反转的一种实现(另外一种是依赖查找)。
 
 控制反转的思想不再赘述，以下是一个python实现的DI原型，实现了函数参数的注入
 
@@ -26,22 +26,24 @@ def inject(func):
         return result
     return wrapper
 
-# 注册对象到上下文容器           
+# 注册对象到上下文容器
 def register(name,value):
     context[name]=value
- 
+
 @inject
 def welcome(username=None,date=None):
     print ("hello %s,time is %s"%(username,date))
- 
+
 # 注册对象到容器
 register('date', datetime.datetime.today())
 register('username','suntao')
 
 welcome()
 ```
+
 output
-```
+
+```bash
 hello suntao,time is 2016-09-29 23:02:00.928413
 ```
 
@@ -55,6 +57,10 @@ hello suntao,time is 2016-09-29 23:02:00.928413
 通过字典实现简单的上下文
 
 通过inspect模块获取函数的参数名，再从context中获取实例，最后调用原函数
+
+## More
+
+如果想使注入透明，可以对容器进行改造，使之在构造没有的对象的时候，也使用注入即可，这样的话，只用获取一次代理就行了
 
 
 ## 其他

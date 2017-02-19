@@ -13,6 +13,20 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 如果针对内容，你发现了问题/想要提出建议，或者希望寻求一定的帮助，欢迎联系我
 
+## Learning Log
+
+### 2017-2-19 11:00:51
+
+这一个多月，在研究Spring Cloud，Cloud Foundry，微服务，CI
+
+用Spring Cloud()组织了一个简单的，含有生产者消费者服务发现的App，本地运行没有问题，但是在部署到CF上时，出现了一些问题，待以后解决
+
+在CF上部署了Python，Node，Java，Static File和二进制文件
+
+将travis-ci和cf集成，效果真的不错，比想象中灵活
+
+在host1plus上部署了一个shadowsock server，延迟300ms左右，使用adblock语法去做user rules
+
 ## Contact
 
 邮箱 <mrls@live.cn>

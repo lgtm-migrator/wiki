@@ -123,10 +123,14 @@ for line in table:
     print "%s \t%.10s" % (line[u"课程名称"],line[u"最终"])
 ```
 
-```
+```bash
     高级英语读写 	74
     .....
 ```
+
+## Update
+
+我将查询成绩的api放在了github上,[点击这里](https://github.com/Soontao/uestc-score-query)访问源码
 
 ## 结语
 

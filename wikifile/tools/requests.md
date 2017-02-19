@@ -5,13 +5,16 @@ Requests: HTTP for Humans
 **注意python版本为2.7**
 
 ## 安装requests
+
 安装requests和demjson，一个用于http，一个用于转换json
 
 ```bash
 pip install requests
 pip install demjson
 ```
+
 ## 编写脚本
+
 新建一个sample.py文件
 打开编辑
 
@@ -39,12 +42,11 @@ print res2.content
 # jsondata = JSON.toJSONString(data)
 res3 = requests.post("http://localhost:3000/needjson",{'jsondata': demjson.encode(data)})
 print res3.content
-
 ```
 
 ## 执行
 
-```python
+```bash
 python sample.py
 ```
 
