@@ -57,8 +57,15 @@ CF真的是很好用的云平台，得入此门，万念皆空
 
 ## Tools
 
+一些好用的工具
+
 #### [PM2 -- NodeJS守护进程](https://www.npmjs.com/package/pm2)
-NodeJS守护进程，提供部署，检测，自动重启和日志功能。
+
+NodeJS实现的守护进程，提供部署，检测，自动重启和日志功能。不止nodejs可以使用。
+
+#### [UptimeRobot -- Downtime Happens. Get Notified!](https://uptimerobot.com/)
+
+简单易用的服务器状态检测工具，free版提供50条检测规则，提醒以及公开页面
 
 #### [VS code -- 足够重量级的编辑器](https://code.visualstudio.com)
 
@@ -72,22 +79,11 @@ NodeJS守护进程，提供部署，检测，自动重启和日志功能。
 
 命令行中快速调试Web API
 
-#### [reveal.js -- 用HTML写PPT](http://lab.hakim.se/reveal-js/)
-ssnews项目的首页就是用这个写的
-
 #### [nvm-windwos -- windows下nodejs版本管理](https://github.com/coreybutler/nvm-windows)
 
 Windwos下的node版本管理工具，有安装包，可用性好
 
 win7-win10可用，win7好像有一些问题
-
-#### [~~cnpm -- npm 中国镜像~~](https://npm.taobao.org/)
-
-~~加速node依赖下载~~
-
-现在不再推荐使用，在我使用的过程中总是会出现问题，尤其当需要gyp包的时候
-
-现在推荐使用npm@4或者yarn
 
 #### [MARP -- Markdown Presentation Writer](https://yhatt.github.io/marp/)
 
@@ -101,7 +97,7 @@ win7-win10可用，win7好像有一些问题
 
 #### [FF10/10-2](http://baike.baidu.com/link?url=nQgnVhJb-_NfC8rxHADdsEUZRVBovyz78bH-mQhQK5qFwd-1a9vNwFpQwmgy6jnnPAgneh3mIjEX93laEupqxq)
 
-最终幻想经典
+最终幻想10，经典
 
 #### [Hand of fate -- 加入动作元素的地下城游戏](http://t.cn/RcdZ1mu)
 
