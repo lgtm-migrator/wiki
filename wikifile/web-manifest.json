@@ -1,0 +1,13 @@
+{
+  "name": "Wiki-Theo",
+  "short_name": "Wiki",
+  "start_url": "/",
+  "display": "standalone",
+  "description": "WIKI of Theo Sun",
+  "icons": [{
+    "src": "/wiki.png",
+    "type": "image/png",
+    "sizes": "256x256"
+  }],
+  "orientation": "portrait"
+}
