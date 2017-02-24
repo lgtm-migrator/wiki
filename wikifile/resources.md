@@ -28,9 +28,11 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 ## Site
 
 #### [邪恶十六进制](http://www.evil0x.com/)
+
 安全与攻击网站，包括但不限于Web，物联网，Wifi攻击
 
 #### [稀土资源](https://xituqu.com/resource)
+
 很多资源，在百度盘上，需要关注他们的公众号获取密码
 
 ---
@@ -38,9 +40,12 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 ## Services
 
 #### [Host1Plus](https://www.host1plus.com/)
+
 海外的VPS服务提供商，只要2刀就可以提供一个256M的VPS，用于shadowsock足够了
 
 最大的优点是支持支付宝
+
+**稳定性比较低**，刚使用了一周，down掉了一个小时并重启
 
 #### [Pivotal](https://pivotal.io/)
 Cloud Foundry服务提供商，注册就提供2G内存使用，可以部署非常多的小应用上去。
