@@ -2,6 +2,7 @@
 
 Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.github.io/mdwiki)项目的页面，感谢他们。
 字体可能有点小，推荐缩放到125% - 140%
+全站使用service worker缓存，有时候你需要刷新以看见最新的文章
 
 ## Info
 
@@ -14,6 +15,14 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 如果针对内容，你发现了问题/想要提出建议，或者希望寻求一定的帮助，欢迎联系我
 
 ## Learning Log
+
+### 2017-2-25 20:05:35
+
+将gogs server迁移到host1plus上面，后面不准备用阿里云了
+
+继续在完善discoverer framwork，在考虑是否集成SSDP协议
+
+购买了fornever.org域名，和国外域名商对比之后，万网居然算是最实惠的
 
 ### 2017-2-19 11:00:51
 
@@ -29,6 +38,6 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 ## Contact
 
-邮箱 <mrls@live.cn>
+邮箱 <mrls@live.cn> <theo.sun@qq.com> <admin@fornever.org>
 
 手机 15680437825
