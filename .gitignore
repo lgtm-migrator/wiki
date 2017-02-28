@@ -30,4 +30,4 @@ node_modules
 
 # build
 **/navigation.md
-**/sw.js
+**/wiki.appcache

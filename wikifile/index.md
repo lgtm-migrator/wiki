@@ -2,7 +2,7 @@
 
 Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.github.io/mdwiki)项目的页面，感谢他们。
 字体可能有点小，推荐缩放到125% - 140%
-全站使用service worker缓存，有时候你需要刷新以看见最新的文章
+全站使用HTML5标准缓存(现已移出web标准)，有时候你需要刷新以看见最新的文章
 
 ## Info
 

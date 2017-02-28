@@ -103,7 +103,7 @@
 
 #### 活动图图示
 
-![alt](../img/activitydiagram.png)
+![alt](../../img/activitydiagram.png)
 
 ### 结构视图
 
