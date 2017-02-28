@@ -94,7 +94,7 @@ const writeAppcacheFile = () => {
   writeAppcacheLine("CACHE MANIFEST");
   writeAppcacheLine(`# version ${new Date()}`);
   writeAppcacheLine('config.json');
-  
+  writeAppcacheLine(targetNavigationFilePath);
   getFilesFromDir(tree).forEach(article => writeAppcacheLine(get_path_from(article)))
   getDirsFromDir(tree).forEach((dir) => {
     // if a directory not have any file, will be skiped
