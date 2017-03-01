@@ -16,7 +16,7 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 ## Learning Log
 
-### 2017-2-25 20:05:35
+**2017-2-25 20:05:35**
 
 将gogs server迁移到host1plus上面，后面不准备用阿里云了
 
@@ -24,11 +24,11 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 购买了fornever.org域名，和国外域名商对比之后，万网居然算是最实惠的
 
-### 2017-2-19 11:00:51
+**2017-2-19 11:00:51**
 
 这一个多月，在研究Spring Cloud，Cloud Foundry，微服务，CI
 
-用Spring Cloud()组织了一个简单的，含有生产者消费者服务发现的App，本地运行没有问题，但是在部署到CF上时，出现了一些问题，待以后解决
+用Spring Cloud组织了一个简单的，含有生产者消费者服务发现的App，本地运行没有问题，但是在部署到CF上时，出现了一些问题，待以后解决
 
 在CF上部署了Python，Node，Java，Static File和二进制文件
 
