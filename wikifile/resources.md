@@ -4,7 +4,7 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 ## Web
 
-#### [Caddy -- The HTTP/2 web server with automatic HTTPS](https://caddyserver.com/)
+### [Caddy -- The HTTP/2 web server with automatic HTTPS](https://caddyserver.com/)
 
 基于Go集成Let's Encrypt的Web服务器
 
@@ -12,18 +12,18 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 提供linux守护进程文件
 
-#### [Requests -- HTTP for Humans](http://www.python-requests.org/en/master/)
+### [Requests -- HTTP for Humans](http://www.python-requests.org/en/master/)
 
 简化的Python HTTP请求方式
 
 这里有一个[教程](http://blog.csdn.net/iloveyin/article/details/21444613)
 
 
-#### [BootCDN -- 国内的免费cdn服务](http://www.bootcdn.cn/)
+### [BootCDN -- 国内的免费cdn服务](http://www.bootcdn.cn/)
 
 常用类库的免费CDN服务，支持https
 
-#### [Gogs -- Go git service](https://gogs.io)
+### [Gogs -- Go git service](https://gogs.io)
 
 快速搭建一个私有的git服务器
 
@@ -31,7 +31,7 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 ## Site
 
-#### [邪恶十六进制](http://www.evil0x.com/)
+### [邪恶十六进制](http://www.evil0x.com/)
 
 安全与攻击网站，包括但不限于Web，物联网，Wifi攻击
 
@@ -39,7 +39,11 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 ## Services
 
-#### [Host1Plus](https://www.host1plus.com/)
+### [Coding.net 国内免费私有Git仓库](https://coding.net/)
+
+学生/小团队可以尝试使用
+
+### [Host1Plus](https://www.host1plus.com/)
 
 海外的VPS服务提供商，只要2刀就可以提供一个256M的VPS，用于shadowsock足够了
 
@@ -47,7 +51,7 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 **稳定性比较低**
 
-#### [Pivotal](https://pivotal.io/)
+### [Pivotal](https://pivotal.io/)
 
 Cloud Foundry服务提供商，注册就提供2G内存使用，可以部署非常多的小应用上去。
 
@@ -65,15 +69,15 @@ CF真的是很好用的云平台，得入此门，万念皆空
 
 一些好用的工具
 
-#### [PM2 -- NodeJS守护进程](https://www.npmjs.com/package/pm2)
+### [PM2 -- NodeJS守护进程](https://www.npmjs.com/package/pm2)
 
 NodeJS实现的守护进程，提供部署，检测，自动重启和日志功能。不止nodejs可以使用。
 
-#### [UptimeRobot -- Downtime Happens. Get Notified!](https://uptimerobot.com/)
+### [UptimeRobot -- Downtime Happens. Get Notified!](https://uptimerobot.com/)
 
 简单易用的服务器状态检测工具，free版提供50条检测规则，提醒以及公开页面
 
-#### [VS code -- 足够重量级的编辑器](https://code.visualstudio.com)
+### [VS code -- 足够重量级的编辑器](https://code.visualstudio.com)
 
 用来调试nodejs很方便
 
@@ -81,17 +85,17 @@ NodeJS实现的守护进程，提供部署，检测，自动重启和日志功�
 
 方便集成各种插件，乃至build，package都支持
 
-#### [Httpie -- HTTPie is a command line HTTP client with an intuitive UI](https://httpie.org/)
+### [Httpie -- HTTPie is a command line HTTP client with an intuitive UI](https://httpie.org/)
 
 命令行中快速调试Web API
 
-#### [nvm-windwos -- windows下nodejs版本管理](https://github.com/coreybutler/nvm-windows)
+### [nvm-windwos -- windows下nodejs版本管理](https://github.com/coreybutler/nvm-windows)
 
 Windwos下的node版本管理工具，有安装包，可用性好
 
 win7-win10可用，win7好像有一些问题
 
-#### [MARP -- Markdown Presentation Writer](https://yhatt.github.io/marp/)
+### [MARP -- Markdown Presentation Writer](https://yhatt.github.io/marp/)
 
 使用markdown编写presentation，并可导出为PDF，用作演示
 
@@ -101,15 +105,14 @@ win7-win10可用，win7好像有一些问题
 
 ## Games
 
-#### [FF10/10-2](http://baike.baidu.com/link?url=nQgnVhJb-_NfC8rxHADdsEUZRVBovyz78bH-mQhQK5qFwd-1a9vNwFpQwmgy6jnnPAgneh3mIjEX93laEupqxq)
+### [FF10/10-2](http://baike.baidu.com/link?url=nQgnVhJb-_NfC8rxHADdsEUZRVBovyz78bH-mQhQK5qFwd-1a9vNwFpQwmgy6jnnPAgneh3mIjEX93laEupqxq)
 
 最终幻想10，经典
 
-#### [Hand of fate -- 加入动作元素的地下城游戏](http://t.cn/RcdZ1mu)
+### [Hand of fate -- 加入动作元素的地下城游戏](http://t.cn/RcdZ1mu)
 
 有些新意，可玩度不错
 
-
-#### [Hacknet -- 黑客模拟](#)
+### [Hacknet -- 黑客模拟](#)
 
 模拟黑客入侵过程，敲键盘的感觉真棒
