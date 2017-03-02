@@ -11,8 +11,7 @@ const binary_search = (arr = [], des) => {
   let low = 0;
   let high = arr.length - 1;
 
-  while (true) {
-    if (high > arr.length - 1 && low > high) break;
+  while (low <= high) {
     let middle = (high + low) >> 1;
     // if middle value equal to destination
     if (des == arr[middle]) return middle;
