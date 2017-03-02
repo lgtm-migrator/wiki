@@ -8,7 +8,7 @@ JShell是Java的REPL，由[JEP222](http://openjdk.java.net/jeps/222)提出，将
 
 先在terminal中输入```docker ps```，如果显示出运行的容器，那么docker已经安装正确了
 
-> 如果你的docker只能在root权限下运行，请尝试将docker组分配给你的用户，并重启shell
+Note: 如果你的docker只能在root权限下运行，请尝试将linux的docker group分配给你的用户，并重启shell
 
 ## 拉取openjdk9 image
 
@@ -18,7 +18,7 @@ JShell是Java的REPL，由[JEP222](http://openjdk.java.net/jeps/222)提出，将
 docker pull openjdk:9
 ```
 
-> 如果pull image的速率太慢，或者根本无法和docker hub建立连接，请尝试使用国内的docker加速器，在[DaoCloud](https://www.daocloud.io/mirror#accelerator-doc)注册一个账号，然后使用它的加速器
+Note: 如果pull image的速率太慢，或者根本无法和docker hub建立连接，请尝试使用国内的docker加速器，在[DaoCloud](https://www.daocloud.io/mirror#accelerator-doc)注册一个账号，然后使用它的加速器
 
 ## 启动一个容器
 

@@ -6,6 +6,8 @@
 
 以及，你需要将[travis-ci](https://github.com/travis-ci/travis.rb#installation)的cli配置完成，你可能需要先安装[Ruby](https://www.ruby-lang.org/en/downloads/)，然后再用gem安装travis cli
 
+Note: CLI并不是必须的。如果用户熟悉travis-ci，可以手动创建yml，然后在travis-ci网站上启用该项目即可
+
 ```bash
 $ gem install travis -v 1.8.6 --no-rdoc --no-ri
 ```
@@ -15,6 +17,8 @@ $ gem install travis -v 1.8.6 --no-rdoc --no-ri
 在github上创建一个空的项目，clone下来并创建相应项目
 
 本文档用nodejs项目做示例
+
+---
 
 在项目根目录下创建两个文件
 
@@ -33,8 +37,8 @@ $ gem install travis -v 1.8.6 --no-rdoc --no-ri
 }
 ```
 
-Note: travis-ci的测试，在默认情况下会执行```npm test```
-而cloudfoundry在没有指定command的情况下，默认会执行```npm start```
+Note: 针对nodejs，travis-ci的测试，在默认情况下会执行```npm test```
+而cloud foundry在没有指定command的情况下，启动时会执行```npm start```
 
 * **index.js**
 

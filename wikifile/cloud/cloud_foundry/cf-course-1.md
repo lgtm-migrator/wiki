@@ -190,22 +190,23 @@ manifest.yml记录着一个cf app的元信息
 ```
 ---
 applications:
--   name: spring-boot-demo 
-    # app的名字，使用cf apps时会显示出来
+-   # app的名字，使用cf apps时会显示出来
+    name: spring-boot-demo
 
-    random-route: true 
     # 使用随机的路由(URL)。
     # 默认情况cf会申请以name为开头的url，但是url是唯一的，如果多个人做这个教程的话，会因为url申请不下来而导致失败
     # 使用随机的后缀以区分不同的实验者
+    random-route: true
 
-    memory: 400M
     # 内存限制，简单的Spring Boot内存占用在300M左右
+    memory: 400M
 
-    path: target/demo-0.0.1-SNAPSHOT.jar
     # maven构建的jar包路径，如果版本和名字不一样，需要修改
+    path: target/demo-0.0.1-SNAPSHOT.jar
 
-    buildpack: java_buildpack
     # 使用java构建包，主要是包含一个java环境
+    buildpack: java_buildpack
+    
 ```
 
 ## cf push - 打包上传

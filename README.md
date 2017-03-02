@@ -8,4 +8,4 @@
 
 使用nano-server做测试，以前使用静态服务器反代，现在部署于CloudFoundry
 
-
+网页使用HTML5缓存机制，初次加载会加载所有文档
