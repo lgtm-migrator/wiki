@@ -2,8 +2,8 @@ language: node_js
 node_js: 
   - "6"
 deploy:
+- provider: cloudfoundry
   edge: true
-  provider: cloudfoundry
   api: https://api.run.pivotal.io
   username: mrls@live.cn
   password:
@@ -12,3 +12,9 @@ deploy:
   space: development
   on:
     repo: Soontao/wiki
+- provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  local_dir: wikifile
+  on:
+    branch: master
