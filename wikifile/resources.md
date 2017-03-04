@@ -51,6 +51,12 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 **稳定性比较低**
 
+### [金山大米云](https://dami.ksyun.com)
+
+99RMB = 2 core + 4G mem + 1M 带宽 + 公网IP
+
+绝对是最具性价比的云
+
 ### [Pivotal](https://pivotal.io/)
 
 Cloud Foundry服务提供商，注册就提供2G内存使用，可以部署非常多的小应用上去。
