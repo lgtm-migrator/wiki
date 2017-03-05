@@ -116,15 +116,15 @@ deploy:
 ```
 ---
 applications:
-- 
+-
   # application name
   name: node-travis-cf-demo
 
   # random route, avoid can not request a route
   random-route: true
-  
+
   # refer spec buildpack
-  buildpack: nodejs_buildpack 
+  buildpack: nodejs_buildpack
 
   # memory limit
   memory: 100M

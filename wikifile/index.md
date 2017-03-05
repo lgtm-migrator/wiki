@@ -2,11 +2,11 @@
 
 Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.github.io/mdwiki)项目的页面，感谢他们。
 字体可能有点小，推荐缩放到125% - 140%
-全站使用HTML5标准缓存(现已移出web标准)，有时候你需要刷新以看见最新的文章
+全站使用HTML5缓存，会在第一次访问加载所有文档，有时候你需要刷新以看见最新的文章
 
 ## Info
 
-此Wiki存放着一些教程和文档
+此网站存放着一些教程和文档
 
 不仅仅是软件工程方面，还有一些大学课程的笔记
 
@@ -16,13 +16,27 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 ## Learning Log
 
+**2017-3-5 09:59:22**
+
+购买了一个金山云，实在是太便宜了，4G+2Core每月只要99
+
+用node写了一个简单的webhook服务器，用于持续部署
+
+在牛客网上刷题，网络和算法比较薄弱，把一些编程题放在了snippets仓库里
+
+为discoverer写了一个micro service sample
+
+---
+
 **2017-2-25 20:05:35**
 
 将gogs server迁移到host1plus上面，后面不准备用阿里云了
 
-继续在完善discoverer framwork，在考虑是否集成SSDP协议
+继续在完善discoverer framework，在考虑是否集成SSDP协议
 
 购买了fornever.org域名，和国外域名商对比之后，万网居然算是最实惠的
+
+---
 
 **2017-2-19 11:00:51**
 
@@ -38,6 +52,6 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 ## Contact
 
-邮箱 <mrls@live.cn> <theo.sun@qq.com> <admin@fornever.org>
+邮箱 <theo.sun@outlook.com>
 
 手机 15680437825
