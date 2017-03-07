@@ -57,6 +57,10 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 绝对是最具性价比的云
 
+### [Cloudinary](https://cloudinary.com/)
+
+OSS对象存储，对免费账户有2GB的空间，并且对于多种语言有良好的支持
+
 ### [Pivotal](https://pivotal.io/)
 
 Cloud Foundry服务提供商，注册就提供2G内存使用，可以部署非常多的小应用上去。
