@@ -24,7 +24,7 @@ rm -rf init caddy_linux_amd64.tar.gz
 
 ## 静态文件服务器
 
-如果只是简单的静态服务器，直接运行caddy.exe(或者./caddy)就可以了
+如果只是简单的静态服务器，直接下载运行caddy.exe(或者./caddy)就可以了
 
 默认情况下，当前目录为Web文件目录，端口为80(Linux下需要root权限)
 
