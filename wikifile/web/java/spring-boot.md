@@ -8,7 +8,7 @@
 
 Group -- com.example
 Artifact -- demo
-Dependencies -- Web JPA
+Dependencies -- Web JPA h2
 
 然后点击Generate Project，保存文件，解压缩该文件
 
@@ -28,11 +28,13 @@ Root Directory选择刚刚解压的目录
 
 ## 数据库配置
 
-省略
+如果在pom中加入了嵌入式/内存数据库，那么久不用配置那么多
 
 ## 创建Rest服务
 
-省略
+在一个类上添加一个@RestController
+
+然后在一个方法上添加@RequestMapping映射即可
 
 ## 运行
 
@@ -42,4 +44,4 @@ Root Directory选择刚刚解压的目录
 
 这份wiki被省略
 
-示例可参看[这里](https://github.com/Soontao/dbtest)，导入maven项目就可以了
+示例可参看[这里](https://github.com/Soontao/dbtest)，导入maven项目就可以了，有什么问题请email我

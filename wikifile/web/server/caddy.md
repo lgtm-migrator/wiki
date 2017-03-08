@@ -8,16 +8,28 @@ Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署L
 
 到[Caddy官网](https://caddyserver.com/download)下载二进制文件 
 
-解压缩到caddy目录下
+也可以运行以下脚本
+
+```bash
+curl https://getcaddy.com | sudo bash
+wget https://github.com/mholt/caddy/releases/download/v0.9.5/caddy_linux_amd64.tar.gz
+tar -zxvf caddy_linux_amd64.tar.gz init/linux-sysvinit/caddy
+sudo mv init/linux-sysvinit/caddy /etc/init.d/caddy
+sudo chmod 755 /etc/init.d/caddy
+sudo chown root:root /etc/init.d/caddy
+rm -rf init caddy_linux_amd64.tar.gz
+# maybe you need to create /etc/caddy/Caddyfile manually
+# you can use "sudo service caddy start" to start caddy server
+```
 
 ## 静态文件服务器
 
 如果只是简单的静态服务器，直接运行caddy.exe(或者./caddy)就可以了
 
-默认情况下，当前目录为Web文件目录，端口为80(Linux下可能需要Root权限)
+默认情况下，当前目录为Web文件目录，端口为80(Linux下需要root权限)
 
-```
-[sudo] ./caddy -port 80 -root .
+```bash
+sudo ./caddy -port 80 -root .
 ```
 
 这样caddy目录下的所有文件都可以被访问了
@@ -42,7 +54,7 @@ subname.domain.com {
 
 然后运行
 
-```
+```bash
 sudo ./caddy -conf 'Caddyfile'
 ```
 
