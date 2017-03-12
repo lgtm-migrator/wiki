@@ -16,6 +16,20 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 ## Learning Log
 
+**2017-3-12 12:09:25**
+
+在服务器部署了一个[Typecho博客](https://blog.fornever.org/)，很清新
+
+尝试关闭服务器的80端口，看看是不是可以不用备案
+
+深入研究了一下http over tls，至少目前https是可以放心的了
+
+csymicrosoft彻底不可用了
+
+试用了一下caddy提供的quic，建立连接确实很快，现阶段有两个问题，1.容易崩溃，2.传输静态文件会有问题
+
+---
+
 **2017-3-5 09:59:22**
 
 购买了一个金山云，实在是太便宜了，4G+2Core每月只要99
