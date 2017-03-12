@@ -22,6 +22,8 @@ rm -rf init caddy_linux_amd64.tar.gz
 # you can use "sudo service caddy start" to start caddy server
 ```
 
+Attention: if you can not start caddy server when you reinstall it, make sure your /etc/caddy/ssl directory owner is www-data
+
 ## 静态文件服务器
 
 如果只是简单的静态服务器，直接下载运行caddy.exe(或者./caddy)就可以了
