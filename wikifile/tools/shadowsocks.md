@@ -18,7 +18,7 @@ shadowsocks是一个代理工具，用来翻墙
 
 ```bash
 host: 191.101.15.116
-port: 443
+port: 8443
 encrypt: RC4-MD5
 password: password
 ```
