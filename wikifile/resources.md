@@ -113,6 +113,18 @@ win7-win10可用，win7好像有一些问题
 
 ---
 
+## Hardware
+
+### [360云路由](https://item.jd.com/10116594217.html)
+
+我自己都不敢相信自己会推荐360的硬件，直到我买了一台
+
+路由性能和界面不错，配置非常容易，信号也不错，总之确实是挺不错的，价廉物美
+
+当然，如果要更高级的功能，我还是推荐你去TB买一个OpenWRT的路由
+
+---
+
 ## Games
 
 ### [FF10/10-2](http://baike.baidu.com/link?url=nQgnVhJb-_NfC8rxHADdsEUZRVBovyz78bH-mQhQK5qFwd-1a9vNwFpQwmgy6jnnPAgneh3mIjEX93laEupqxq)

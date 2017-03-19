@@ -16,6 +16,20 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 ## Learning Log
 
+**2017-3-19 20:31:50**
+
+把wiki的gh-page分支移除
+
+周末抽空玩儿了一个教<御剑情缘>的游戏，我想，正是因为付出了时间，所以一件事情才有意义
+
+在网上看见一个关于唐诗的NLP项目[poetry_analyzer](https://github.com/MrQianJinSi/poetry_analyzer)，打算将其用现代Web页面展现
+
+把Vue.JS的Guide走了一遍，在学了三遍之后，我想我大概明白了vue，笑
+
+Harvard共享了一个[CBDB中國歷代人物傳記資料庫](http://cbdb.fas.harvard.edu/)数据库，我将其做成API，在这里[cbdb_api](https://github.com/Soontao/cbdb_api)
+
+---
+
 **2017-3-12 12:09:25**
 
 在服务器部署了一个[Typecho博客](https://blog.fornever.org/)，很清新
