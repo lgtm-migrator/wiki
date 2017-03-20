@@ -1,8 +1,10 @@
-# VS Code 插件推荐
+# 插件推荐
 
-Note: 我使用VS Code已经很长时间了，是一步一步看着vs code从非常难用，变成了如今拥有非常多插件的一个轻量级的IDE，以下是我这么长时间以来，一直在使用的vsc插件
+Note: 一些编辑器的IDE的插件
 
 ## VS-Code插件
+
+Note: 我使用VS Code已经很长时间了，是一步一步看着vs code从非常难用，变成了如今拥有非常多插件的一个轻量级的IDE，以下是我这么长时间以来，一直在使用的vsc插件
 
 * [Cloudfoundry Manifest YML Support](https://marketplace.visualstudio.com/items?itemName=Pivotal.vscode-manifest-yaml) -- CF manifest.yml的自动补全
 * [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner) -- 快速运行任意语言
