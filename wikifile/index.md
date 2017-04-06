@@ -16,6 +16,18 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 ## Learning Log
 
+**2017-4-6 11:01:07**
+
+买了一个ipad mini2，也有可能是机子太老了，也有可能是ios本身的问题，动画完成之前不让操作确实很难受，不过用来看书看视频还不错
+
+创建了一个全唐诗的API，放在[这里](https://github.com/Soontao/Tang-Poetry-Api)
+
+尝试把Access和Sqlite迁移到Mysql，但是总会有各种各样的问题，主要在于编码问题
+
+位于vultr的shadowsocks服务器出现了问题，疑似被黑，怀疑是docker或者daocloud的漏洞，reinstall以后关闭不相干的端口
+
+---
+
 **2017-3-19 20:31:50**
 
 把wiki的gh-page分支移除

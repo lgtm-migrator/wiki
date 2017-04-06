@@ -130,7 +130,7 @@ for line in table:
 
 ## Update
 
-我将查询成绩的api放在了github上,[点击这里](https://github.com/Soontao/uestc-score-query)访问源码
+我将查询成绩的api放在了github上,[点击这里](https://github.com/Soontao/uestc-score-query)访问源码，这个library用beautiful soup部分替换了pyquery
 
 ## 结语
 

@@ -16,4 +16,4 @@ sudo apt-get install python-pip
 curl https://bootstrap.pypa.io/get-pip.py | sudo python
 ```
 
-完了，如果以后还有其它方法，以后再补吧
+完了，如果还有其它方法，以后再补吧
