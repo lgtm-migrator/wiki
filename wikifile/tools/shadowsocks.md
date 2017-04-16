@@ -10,21 +10,35 @@ shadowsocks是一个代理工具，用来翻墙
 
 我偏向于，让SS客户端开启代理服务器，然后chrome使用swichy sharp插件，选择性的代理，这样我可以操作某一些指定的域名经过代理，某一些域名直接访问
 
+当然，使用Windows客户端，可以自动下载一个gfwlist，选择性使用ss代理
+
 ## 服务器？
 
 有客户端，自然有服务端，你可能需要一个在国外的服务器，运行服务端程序即可，[这里有ss的搭建教程](https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
 
-当然，国外的服务器不是人人都有，也不是人人都会ssh什么的，能看到这里，算是有缘人，以下是我的ss服务器配置
+当然，国外的服务器不是人人都有，以下是我的ss服务器配置
 
 ```bash
-host: 191.101.15.116
+host: vps3.fornever.org
 port: 8443
 encrypt: RC4-MD5
-password: password
+password: sspassword
 ```
 
 如果还是不会配置的话，Call me
 
+## 客户端
+
+各个系统可以到[这里](https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients)寻找相应的ss客户端
+
+Windows的客户端可以点击[这里](https://proxy.fornever.org/ss.exe)下载，双击运行之后，配置运行即可
+
+## SOCKS5代理
+
+如果不想安装shadowsocks客户端的话，可以试着在Chrome上安装SwitchyOmega
+
+然后配置一个代理到ksyun.fornever.org:8888，类型是socks5
+
 ## 其他
 
-我的服务器每月只有500G流量，上网绝对足够了，看电影什么的就算了吧
+服务器每月只有500G流量，上网绝对足够了，看电影什么的就算了吧
