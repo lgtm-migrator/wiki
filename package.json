@@ -12,5 +12,17 @@
     "directory-tree": "^1.2.0",
     "lodash": "^4.17.4",
     "nano-server": "0.5.3"
+  },
+  "keywords": [
+    "wiki"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Theo Sun",
+    "email": "theo.sun@outlook.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soontao/wiki"
   }
 }

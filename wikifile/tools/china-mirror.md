@@ -39,7 +39,7 @@ yarn config set registry https://registry.npm.taobao.org/
 
 ## package manager
 
-[mirrors.ustc.edu.cn/](http://mirrors.ustc.edu.cn/), 是中国科技大学的镜像网站, 里面包含了很多linux发行版的镜像, 以及很多包管理器的镜像. 
+[mirrors.ustc.edu.cn](http://mirrors.ustc.edu.cn/), 是中国科技大学的镜像网站, 里面包含了很多linux发行版的镜像, 以及很多包管理器的镜像.
 
 在[这个网址](http://mirrors.ustc.edu.cn/help/)可以看到如何配置各个包管理器的源
 
