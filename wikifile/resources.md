@@ -35,6 +35,8 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 安全与攻击网站，包括但不限于Web，物联网，Wifi攻击
 
+文章更新比较慢
+
 ---
 
 ## Services
@@ -50,6 +52,14 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 最大的优点是支持支付宝
 
 **稳定性比较低**
+
+### **推荐** **[Vultr](https://www.vultr.com/)**
+
+之前提供2.5刀512M内存, 现在2.5刀的plan缺货, 但是5刀/1G的plan也比国内的便宜
+
+就算不用来搭建VPN, 用作普通的服务器性能也很好
+
+唯一的问题就是 -- 只支持Paypal和信用卡, 但是相信我, 这个服务商值得花费你一点时间去注册Paypal
 
 ### [金山大米云](https://dami.ksyun.com)
 
@@ -86,6 +96,8 @@ NodeJS实现的守护进程，提供部署，检测，自动重启和日志功�
 ### [UptimeRobot -- Downtime Happens. Get Notified!](https://uptimerobot.com/)
 
 简单易用的服务器状态检测工具，free版提供50条检测规则，提醒以及公开页面
+
+**很多时候会误报, 不久以后会移除这个服务**
 
 ### [VS code -- 足够重量级的编辑器](https://code.visualstudio.com)
 
@@ -125,16 +137,48 @@ win7-win10可用，win7好像有一些问题
 
 ---
 
+## Videos
+
+### [孤单又灿烂的神 - 鬼怪](http://www.6vhao.com/rj/2016-12-10/28239.html)
+
+真的好看, 金高银超可爱
+
+![](./img/sunshine.jpg)
+
+---
+
 ## Games
 
 ### [FF10/10-2](http://baike.baidu.com/link?url=nQgnVhJb-_NfC8rxHADdsEUZRVBovyz78bH-mQhQK5qFwd-1a9vNwFpQwmgy6jnnPAgneh3mIjEX93laEupqxq)
 
-最终幻想10，经典
+最终幻想10，经典, 已上架Steam
+
+尤娜桑超美
+
+以及最好听的BGM, 素敌
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id=540418&auto=0&height=66"></iframe>
 
 ### [Hand of fate -- 加入动作元素的地下城游戏](http://t.cn/RcdZ1mu)
 
 有些新意，可玩度不错
 
+融合了卡牌, 地下城, 动作几个要素. 动作部分其实不是很好, 但也算及格了
+
 ### [Hacknet -- 黑客模拟](#)
 
-模拟黑客入侵过程，敲键盘的感觉真棒
+模拟黑客入侵过程，敲键盘的感觉真棒, 已上架Steam
+
+
+
+### [浅塘](#)
+
+一个很好玩儿的手机游戏, Android/IOS都有, 类似于华容道的玩儿法, 有一千多关, 足以打发地铁公交上的时间了
+
+### [Out There](#)
+
+太空探索生存类游戏, 作为一个从冬眠仓醒来的人, 努力回到地球. 好玩儿
+
+真的很容易死啊, 到了目的地才发现这还是个N周目游戏.
+
+IOS/Steam上架

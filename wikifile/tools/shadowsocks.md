@@ -35,7 +35,7 @@ Windows的客户端可以点击[这里](https://proxy.fornever.org/ss.exe)下载
 
 ## SOCKS5代理
 
-如果不想安装shadowsocks客户端的话，可以试着在Chrome上安装SwitchyOmega
+如果不想安装shadowsocks客户端的话，可以试着在Chrome上安装SwitchyOmega/或者直接在windows配置全局的代理也可以
 
 然后配置一个代理到ksyun.fornever.org:8888，类型是socks5
 

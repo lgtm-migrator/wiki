@@ -23,7 +23,7 @@ Note: 在国内, 因为种种原因, 通过maven/npm/yarn/apt的下载速度很�
 
 npm/yarn作为前端必备工具, 在国内也是慢的要死
 
-依旧是使用[Taobao的镜像](https://npm.taobao.org/), 运行如下代买即可
+依旧是使用[Taobao的镜像](https://npm.taobao.org/), 运行如下命令即可
 
 `For NPM`
 
