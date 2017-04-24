@@ -64,7 +64,7 @@ Note: **下列命令国内是可以使用的，如果cli总是提示error，尝�
 
 使用```cf api```指定api地址
 
-```
+```bash
 λ cf api api.run.pivotal.io
 Setting api endpoint to api.run.pivotal.io...
 OK
@@ -79,7 +79,7 @@ Not logged in. Use 'cf login' to log in.
 
 因为我有两个space，只有一个space登录的话不会这么长
 
-```
+```bash
 λ cf login
 API endpoint: https://api.run.pivotal.io
 
@@ -187,7 +187,7 @@ manifest.yml记录着一个cf app的元信息
 
 同样，在项目根路径下创建一个名为```manifest.yml```的文件，包含如下内容
 
-```
+```yaml
 ---
 applications:
 -   # app的名字，使用cf apps时会显示出来
@@ -206,7 +206,6 @@ applications:
 
     # 使用java构建包，主要是包含一个java环境
     buildpack: java_buildpack
-    
 ```
 
 ## cf push - 打包上传

@@ -8,7 +8,7 @@ Note: 在国内, 因为种种原因, 通过maven/npm/yarn/apt的下载速度很�
 
 首先就是找到Maven的安装位置, 修改conf目录中的```settings.xml```, 将mirrors节点做如下修改
 
-```
+```xml
 <mirrors>
    <mirror>
         <id>nexus-aliyun</id>
@@ -27,13 +27,13 @@ npm/yarn作为前端必备工具, 在国内也是慢的要死
 
 `For NPM`
 
-```
+```bash
 npm config set registry https://registry.npm.taobao.org/
 ```
 
 `For YARN`
 
-```
+```bash
 yarn config set registry https://registry.npm.taobao.org/
 ```
 
@@ -63,7 +63,7 @@ yarn config set registry https://registry.npm.taobao.org/
 
 `/etc/apt/source.list`
 
-```
+```text
 deb http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 
