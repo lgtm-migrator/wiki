@@ -18,9 +18,20 @@ shadowsocks是一个代理工具，用来翻墙
 
 当然，国外的服务器不是人人都有，以下是我的ss服务器配置
 
-```bash
+日本
+
+```text
 host: vps3.fornever.org
 port: 8443
+encrypt: RC4-MD5
+password: sspassword
+```
+
+洛杉矶
+
+```text
+host: 191.101.226.42
+port: 8388
 encrypt: RC4-MD5
 password: sspassword
 ```
@@ -35,9 +46,17 @@ Windows的客户端可以点击[这里](https://proxy.fornever.org/ss.exe)下载
 
 ## SOCKS5代理
 
-如果不想安装shadowsocks客户端的话，可以试着在Chrome上安装SwitchyOmega/或者直接在windows配置全局的代理也可以
+如果不想安装shadowsocks客户端的话，可以试着在Chrome上安装SwitchyOmega
 
 然后配置一个代理到ksyun.fornever.org:8888，类型是socks5
+
+## gfwlist
+
+用于过滤需要代理的服务器
+
+```text
+https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+```
 
 ## 其他
 
