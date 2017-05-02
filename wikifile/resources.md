@@ -12,13 +12,6 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 提供linux守护进程文件
 
-### [Requests -- HTTP for Humans](http://www.python-requests.org/en/master/)
-
-简化的Python HTTP请求方式
-
-这里有一个[教程](http://blog.csdn.net/iloveyin/article/details/21444613)
-
-
 ### [BootCDN -- 国内的免费cdn服务](http://www.bootcdn.cn/)
 
 常用类库的免费CDN服务，支持https
@@ -37,6 +30,10 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 文章更新比较慢
 
+### [DevDocs](https://devdocs.io/)
+
+一些文档，做成了渐进式应用PWA，可以离线查看，体验不错，在网络不好的时候也可以用
+
 ---
 
 ## Services
@@ -51,7 +48,7 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 最大的优点是支持支付宝
 
-**稳定性比较低**
+**稳定性比较低，但是很实惠**
 
 ### **推荐** **[Vultr](https://www.vultr.com/)**
 
@@ -61,6 +58,8 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 唯一的问题就是 -- 只支持Paypal和信用卡, 但是相信我, 这个服务商值得花费你一点时间去注册Paypal
 
+**日本的服务器用来搭建ss的话，无法访问google scholar，如果要访问google scholar，推荐使用host1plus的LA机房**
+
 ### [金山大米云](https://dami.ksyun.com)
 
 99RMB = 2 core + 4G mem + 1M 带宽 + 公网IP
@@ -69,7 +68,11 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 ### [Cloudinary](https://cloudinary.com/)
 
-OSS对象存储，对免费账户有2GB的空间，并且对于多种语言有良好的支持
+OSS对象存储，对免费账户有2GB的空间，并且对于多种语言有良好的SDK
+
+除此之外，CD还可以对图片做一些处理，例如模糊/裁剪/压缩等等，非常好用
+
+现在我的网页图片通常是放在CD上面
 
 ### [Pivotal](https://pivotal.io/)
 
@@ -80,8 +83,6 @@ Cloud Foundry服务提供商，注册就提供2G内存使用，可以部署非�
 和travis-ci搭配使用，效果很好
 
 CF真的是很好用的云平台，得入此门，万念皆空
-
-> PS: 看你的地址栏的域名，如果是*.cfapps.io，那么这个应用多半部署在CF上
 
 ---
 
@@ -117,12 +118,6 @@ Windwos下的node版本管理工具，有安装包，可用性好
 
 win7-win10可用，win7好像有一些问题
 
-### [MARP -- Markdown Presentation Writer](https://yhatt.github.io/marp/)
-
-使用markdown编写presentation，并可导出为PDF，用作演示
-
-也可直接在编辑界面演示
-
 ---
 
 ## Hardware
@@ -134,6 +129,14 @@ win7-win10可用，win7好像有一些问题
 路由性能和界面不错，配置非常容易，信号也不错，总之确实是挺不错的，价廉物美
 
 当然，如果要更高级的功能，我还是推荐你去TB买一个OpenWRT的路由
+
+### [迅雷下载宝](http://xzb.xunlei.com/)
+
+用来当作nas是很好的，支持千兆网络，samba以及dlan，授权的话不支持多用户，作为家庭使用非常棒
+
+价格也不高，150-200即可入手
+
+**没有自带储存**
 
 ---
 
