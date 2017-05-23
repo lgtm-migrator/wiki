@@ -22,4 +22,18 @@ For IDEA Community
 
 ## Eclipse
 
-* Spring Tool Suite
+* [Spring Tool Suite](https://spring.io/tools/sts)
+
+## Chrome插件
+
+* [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?utm_source=chrome-app-launcher-info-dialog) -- 简单的本地服务器，用于访问静态文件
+
+* [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?utm_source=chrome-app-launcher-info-dialog) -- 简单但是很实用的插件，可以将浏览器中json格式文件format为可读的形式
+
+* [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?utm_source=chrome-app-launcher-info-dialog) -- Github增强，在github页面显示类似资源管理器的文件树，快速访问文件
+
+* [Intelli-Octo](https://chrome.google.com/webstore/detail/intelli-octo/hbkpjkfdheainjkkebeoofkpgddnnbpk?utm_source=chrome-app-launcher-info-dialog) -- Github增强，在github文件页面，实现一部分的IntelliSense，聊胜于无
+
+* [GitHub Hovercard](https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk?utm_source=chrome-app-launcher-info-dialog) -- Github增强，在Github Link上悬停时会显示相关信息
+
+* [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?utm_source=chrome-app-launcher-info-dialog) -- 相当好的api调试工具
