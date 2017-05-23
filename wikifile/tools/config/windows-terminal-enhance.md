@@ -14,14 +14,19 @@ Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于�
 
 如果只是需要一个自动补全的bash，可以使用git自带的git bash，实际也是cygwin
 
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1495519614/Cygwin_X11_rootless_WinXP_mhpadm.png)
+
 ### [cmder](http://cmder.net/)
 
 很漂亮的一个替代品，支持一个实例多个tab，但是启动太慢了
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1495519836/main_bkwrcb.jpg)
 
 ### [clink](https://mridgers.github.io/clink/)
 
 基于现有的cmd增强，实现了补全和bash常用的快捷键，但是ssh连接remote会有一些异常问题，但是大多数时候工作正常。
 
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1495519908/clink_areirq.png)
 
 ## 推荐？
 
