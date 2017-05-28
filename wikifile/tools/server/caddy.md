@@ -1,12 +1,12 @@
 # Caddy Server
 
-Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署Let's Encrypt，也就是轻易从HTTP切换到HTTPS协议
+Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署Let's Encrypt
 
 配置文件十分简单，性能也还不错，推荐个人应用全部使用Caddy
 
 ## 安装
 
-到[Caddy官网](https://caddyserver.com/download)下载二进制文件 
+到[Caddy官网](https://caddyserver.com/download)下载二进制文件
 
 也可以运行以下脚本
 
@@ -44,15 +44,16 @@ sudo ./caddy -port 80 -root .
 
 在caddy目录下创建Caddyfile文件，写下反向代理配置（如果文件不与caddy二进制文件同目录，后面的-conf参数需要修改Caddyfile的路径）
 
-```
-subname.domain.com {
-    proxy / localhost:PORT
+```text
+blog.domain.org {
+    proxy / localhost:8080 {
+        transparent
+        websocket
+    }
 }
 ```
 
-将subname.domain.com下的所有连接全部反向代理到本机的PORT端口
-
-例如本网站，就是利用caddy反向代理wiki.xxxxx.xxx到了本地的3000端口。
+将blog.domain.org下的所有请求，全部反向代理到本机的8080端口
 
 然后运行
 
@@ -60,7 +61,25 @@ subname.domain.com {
 sudo ./caddy -conf 'Caddyfile'
 ```
 
-即可使用二级域名访问
+即可使用二级域名访问(**前提是你的二级域名也指向了这个服务器**)
+
+---
+
+*websocket*
+
+```text
+header_upstream Connection {>Connection}
+header_upstream Upgrade {>Upgrade}
+```
+
+*transparent*
+
+```text
+header_upstream Host {host}
+header_upstream X-Real-IP {remote}
+header_upstream X-Forwarded-For {remote}
+header_upstream X-Forwarded-Proto {scheme}
+```
 
 
 ## FastCGI PHP
@@ -69,7 +88,7 @@ sudo ./caddy -conf 'Caddyfile'
 
 然后在Caddyfile中配置如下几行
 
-```
+```text
 domain.com {
     root /var/wp
     fastcgi / /var/run/php5-fpm.sock php
@@ -94,7 +113,7 @@ domain.com {
 
 linux下
 
-```
+```bash
 sudo nohup ./caddy -conf 'Caddyfile' &
 ```
 

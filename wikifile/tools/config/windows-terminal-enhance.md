@@ -28,6 +28,12 @@ Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于�
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1495519908/clink_areirq.png)
 
+### [Hyper](https://hyper.is/)
+
+使用JS编写的terminal，对于我来说很难用，但是外观很好看
+
+![](http://res.cloudinary.com/digf90pwi/video/upload/ac_none,c_scale,q_46,w_1870/v1495944961/hyperapp_drlltm.gif)
+
 ## 推荐？
 
 我平时使用git bash和clink比较多，git bash最大的问题就在于启动很麻烦，clink在功能和速度之间做了权衡，体验比较好。
