@@ -32,7 +32,7 @@ Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于�
 
 使用JS编写的terminal，对于我来说很难用，但是外观很好看
 
-![](http://res.cloudinary.com/digf90pwi/video/upload/ac_none,c_scale,q_46,w_1870/v1495944961/hyperapp_drlltm.gif)
+![](https://res.cloudinary.com/digf90pwi/video/upload/v1495944961/hyperapp_drlltm.gif)
 
 ## 推荐？
 

@@ -94,12 +94,6 @@ CF真的是很好用的云平台，得入此门，万念皆空
 
 NodeJS实现的守护进程，提供部署，检测，自动重启和日志功能。不止nodejs可以使用。
 
-### [UptimeRobot -- Downtime Happens. Get Notified!](https://uptimerobot.com/)
-
-简单易用的服务器状态检测工具，free版提供50条检测规则，提醒以及公开页面
-
-**很多时候会误报, 不久以后会移除这个服务**
-
 ### [VS code -- 足够重量级的编辑器](https://code.visualstudio.com)
 
 用来调试nodejs很方便
@@ -117,6 +111,14 @@ NodeJS实现的守护进程，提供部署，检测，自动重启和日志功�
 Windwos下的node版本管理工具，有安装包，可用性好
 
 win7-win10可用，win7好像有一些问题
+
+
+### [QuickLook -- Bring OS X “Quick Look” feature to Window](https://github.com/xupefei/QuickLook)
+
+外观比起mac上的quicklook差远了，但是很实用，支持的文件也很多
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/q_100/v1495957684/sample_q03yva.gif)
+
 
 ---
 
@@ -179,7 +181,9 @@ win7-win10可用，win7好像有一些问题
 
 模拟黑客入侵过程，敲键盘的感觉真棒, 已上架Steam
 
+### [地下城堡2](#)
 
+简单的地下城游戏，可以玩儿很久
 
 ### [浅塘](#)
 
