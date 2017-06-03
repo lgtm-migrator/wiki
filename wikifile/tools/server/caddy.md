@@ -107,7 +107,7 @@ domain.com {
 
 **另外需要注意，首先需要修改DNS，让域名指向Caddy部署的服务器，因为启动Caddy的时候会，验证域名是否指向本机**
 
-如果只想使用http协议的话，在域名前加上'http://'即可
+如果只想使用http协议的话，在域名前加上```http://```即可
 
 ## 后台运行
 
@@ -123,7 +123,7 @@ sudo nohup ./caddy -conf 'Caddyfile' &
 
 ## 官方示例
 
-在https://github.com/caddyserver/examples/tree/master/markdown有几个官方的配置文件，包括wp，dokuwiki等
+在```https://github.com/caddyserver/examples/tree/master/markdown```有几个官方的配置文件，包括wp，dokuwiki等
 
 ## 其他
 
