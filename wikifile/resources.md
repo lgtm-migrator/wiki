@@ -140,7 +140,7 @@ sudo apt-cache search shellinabox
 sudo apt-get install openssl shellinabox
 ```
 
-*修改配置*
+修改配置
 
 ```bash
 sudo vim /etc/default/shellinabox
@@ -180,6 +180,8 @@ sudo vim /etc/default/shellinabox
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1495521112/68d8f7a6700246dcb51aa6e891b8203d_faeieg.jpg)
 
+第二季不好看了，可能是腻了
+
 ---
 
 ## Games
@@ -190,9 +192,7 @@ sudo vim /etc/default/shellinabox
 
 尤娜桑超美
 
-以及最好听的BGM, 素敌
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="https://music.163.com/outchain/player?type=2&id=540418&auto=0&height=66"></iframe>
+以及最好听的BGM, [素敌](https://music.163.com/#/song?id=540418)
 
 ### [Hand of fate -- 加入动作元素的地下城游戏](http://t.cn/RcdZ1mu)
 
