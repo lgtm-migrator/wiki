@@ -37,6 +37,16 @@ npm config set registry https://registry.npm.taobao.org/
 yarn config set registry https://registry.npm.taobao.org/
 ```
 
+## pypi
+
+*~/.pip/pip.conf*
+
+```text
+[global]
+index-url = https://mirrors.ustc.edu.cn/pypi/web/simple
+format = columns
+```
+
 ## package manager
 
 [mirrors.ustc.edu.cn](http://mirrors.ustc.edu.cn/), 是中国科技大学的镜像网站, 里面包含了很多linux发行版的镜像, 以及很多包管理器的镜像.

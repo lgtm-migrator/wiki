@@ -94,17 +94,30 @@ CF真的是很好用的云平台，得入此门，万念皆空
 
 NodeJS实现的守护进程，提供部署，检测，自动重启和日志功能。不止nodejs可以使用。
 
+同时推荐使用[pm2-auto-pull](https://github.com/pm2-hive/pm2-auto-pull)工具，每隔一段时间自动pull，配合watch使用感觉良好
+
+```bash
+# Install
+$ pm2 install pm2-auto-pull
+## Configure auto pull interval
+$ pm2 set pm2-auto-pull:interval 60000
+```
+
 ### [VS code -- 足够重量级的编辑器](https://code.visualstudio.com)
 
-用来调试nodejs很方便
-
-各种代码提示
+用来调试nodejs很方便，各种代码提示
 
 方便集成各种插件，乃至build，package都支持
+
+Python/Java/Go都有相应的插件，并且效果都不错，当作轻量级的IDE都可以
 
 ### [Httpie -- HTTPie is a command line HTTP client with an intuitive UI](https://httpie.org/)
 
 命令行中快速调试Web API
+
+```bash
+http :80
+```
 
 ### [nvm-windwos -- windows下nodejs版本管理](https://github.com/coreybutler/nvm-windows)
 
@@ -112,13 +125,26 @@ Windwos下的node版本管理工具，有安装包，可用性好
 
 win7-win10可用，win7好像有一些问题
 
-
 ### [QuickLook -- Bring OS X “Quick Look” feature to Window](https://github.com/xupefei/QuickLook)
 
 外观比起mac上的quicklook差远了，但是很实用，支持的文件也很多
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/q_100/v1495957684/sample_q03yva.gif)
+### [ShellInaBox -- run shell in your browser](https://github.com/shellinabox/shellinabox)
 
+使用http协议传送ssh终端，默认端口是4200
+
+项目会生成自签发ssl证书，如果要自己反向代理，修改配置文件，添加一个参数```--disable-ssl```
+
+```bash
+sudo apt-cache search shellinabox
+sudo apt-get install openssl shellinabox
+```
+
+*修改配置*
+
+```bash
+sudo vim /etc/default/shellinabox
+```
 
 ---
 
@@ -138,8 +164,6 @@ win7-win10可用，win7好像有一些问题
 
 价格也不高，150-200即可入手
 
-**没有自带储存**
-
 ---
 
 ## Videos
@@ -149,7 +173,6 @@ win7-win10可用，win7好像有一些问题
 真的好看, 金高银超可爱
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,q_62,w_1084/v1495520236/1664314_jogwyw.jpg)
-
 
 ### [花间提壶方大厨](http://baike.baidu.com/item/%E8%8A%B1%E9%97%B4%E6%8F%90%E5%A3%B6%E6%96%B9%E5%A4%A7%E5%8E%A8/19289610)
 
