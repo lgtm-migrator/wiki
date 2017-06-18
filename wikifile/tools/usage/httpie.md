@@ -26,27 +26,25 @@
 
 然后使用pip安装httpie
 
+```bash
+pip install httpie
 ```
-[sudo] pip instal httpie
-```
-
-
 
 ## GET
 
-```
+```bash
 http :3000/api/echo
 ```
 
 或者指明get方法
 
-```
+```bash
 http get :3000/api/echo
 ```
 
 如果使用query string
 
-```
+```bash
 http :3000/api/echo param1==value1
 ```
 
@@ -54,7 +52,7 @@ http :3000/api/echo param1==value1
 
 GET请求示例
 
-```
+```bash
 > http :3000/api/echo
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -78,16 +76,15 @@ X-Powered-By: Express
 
 ```
 
-
 ## POST
 
-```
+```bash
 http :3000/api/echo param1=value1 param2=value2
 ```
 
 或者也可指明方法
 
-```
+```bash
 http post :3000/api/echo param1=value1 param2=value2
 ```
 
@@ -95,7 +92,7 @@ http post :3000/api/echo param1=value1 param2=value2
 
 POST请求示例
 
-```
+```bash
 > http :3000/api/echo param1=value1 param2=value2
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -115,14 +112,19 @@ X-Powered-By: Express
 
 命令详解
 
-```
+```bash
 > http [METHOD] URL [REQUEST_ITEM ...]
+```
+
+例如
+
+```bash
+http GET :8080 body1=bodyv1 query1==queryv1 header1:headerv1
 ```
 
 在url中如果没有指定主机名，那么host就是localhost
 
-例如:3000/api/echo,请求的就是http://localhost:3000/api/echo
-
+例如:3000/api/echo,请求的就是```http://localhost:3000/api/echo```
 
 ## 相关网站
 
