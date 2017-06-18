@@ -18,7 +18,7 @@ caddy server中有相应的linux daemon配置文件，可以放入相应的文�
 
 从[官网](http://www.zentao.net/download.html)下载开源版的源码包，[8.2.6版本点此下载](http://dl.cnezsoft.com/zentao/8.2.6/ZenTaoPMS.8.2.6.zip)
 
-```
+```bash
 wget http://dl.cnezsoft.com/zentao/8.2.6/ZenTaoPMS.8.2.6.zip
 unzip ZenTaoPMS.8.2.6.zip
 ```

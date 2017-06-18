@@ -11,3 +11,7 @@ MYSQL内部有一个wait timeout变量，当一个mysql连接超过这个时间�
 1. 提高server的wait timeout
 1. 每隔一段时间向服务器发送一个"select 1;"查询，重新开始超时计数
 1. 使用连接池
+
+## Update
+
+Node使用mysql连接池的时候，使用query方法会自动回收连接

@@ -26,3 +26,23 @@ Python包管理器
 ```bash
 curl https://bootstrap.pypa.io/get-pip.py | sudo python
 ```
+
+## Caddy
+
+Nice Web Server powered by Golang
+
+Works on Ubuntu/Debian
+
+```bash
+curl https://getcaddy.com | sudo bash
+wget https://caddyserver.com/download/linux/amd64
+tar -zxvf amd64 init/linux-sysvinit/caddy
+sudo mv init/linux-sysvinit/caddy /etc/init.d/caddy
+sudo chmod 755 /etc/init.d/caddy
+sudo chown root:root /etc/init.d/caddy
+sudo mkdir /etc/caddy
+sudo mkdir /etc/ssl/caddy
+sudo touch /etc/caddy/Caddyfile
+sudo chown www-data:www-data /etc/ssl/caddy -R
+rm -rf init amd64
+```
