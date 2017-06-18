@@ -12,13 +12,16 @@ Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署L
 
 ```bash
 curl https://getcaddy.com | sudo bash
-wget https://github.com/mholt/caddy/releases/download/v0.9.5/caddy_linux_amd64.tar.gz
-tar -zxvf caddy_linux_amd64.tar.gz init/linux-sysvinit/caddy
+wget https://caddyserver.com/download/linux/amd64
+tar -zxvf amd64 init/linux-sysvinit/caddy
 sudo mv init/linux-sysvinit/caddy /etc/init.d/caddy
 sudo chmod 755 /etc/init.d/caddy
 sudo chown root:root /etc/init.d/caddy
-rm -rf init caddy_linux_amd64.tar.gz
-# maybe you need to create /etc/caddy/Caddyfile manually
+sudo mkdir /etc/caddy
+sudo mkdir /etc/ssl/caddy
+sudo touch /etc/caddy/Caddyfile
+sudo chown www-data:www-data /etc/ssl/caddy -R
+rm -rf init amd64
 # you can use "sudo service caddy start" to start caddy server
 ```
 
