@@ -6,7 +6,7 @@ cmd命令行通常不是那么好用，没有自动补全，也不能使用Ctrl 
 
 ## List
 
-### [Cygwin](https://www.cygwin.com/)
+### [Cygwin/Git Bash](https://www.cygwin.com/)
 
 Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于各种版本的Microsoft Windows上，运行类UNIX系统。Cygwin的主要目的是通过重新编译，将POSIX系统（例如Linux、BSD，以及其他Unix系统）上的软件移植到Windows上。Cygwin移植工作在Windows NT上比较好，在Windows 95和Windows 98上，相对差劲一些。目前Cygwin由Red Hat等负责维护。
 

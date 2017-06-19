@@ -136,8 +136,7 @@ win7-win10可用，win7好像有一些问题
 项目会生成自签发ssl证书，如果要自己反向代理，修改配置文件，添加一个参数```--disable-ssl```
 
 ```bash
-sudo apt-cache search shellinabox
-sudo apt-get install openssl shellinabox
+sudo apt-get install shellinabox
 ```
 
 修改配置

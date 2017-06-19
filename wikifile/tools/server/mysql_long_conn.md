@@ -14,4 +14,4 @@ MYSQL内部有一个wait timeout变量，当一个mysql连接超过这个时间�
 
 ## Update
 
-Node使用mysql连接池的时候，使用query方法会自动回收连接
+Node使用mysql连接池的时候，使用query方法, 可以自动回收连接
