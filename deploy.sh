@@ -20,4 +20,6 @@ git pull
 
 npm run postinstall
 
-cp wikifile/ ~/sites/wiki/ -Rf
+rm -rf ~/sites/wiki
+
+cp wikifile/ ~/sites/wiki -R
