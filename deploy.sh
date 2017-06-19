@@ -14,6 +14,8 @@
 
 cd ~/repos/wiki/
 
+git stash
+
 git pull
 
 npm run postinstall
