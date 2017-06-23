@@ -14,6 +14,8 @@
 
 cd ~/repos/wiki/
 
+git clean -f
+
 git stash
 
 git pull

@@ -37,4 +37,3 @@ docker-compose down
 * 删除image
 
   ```docker-compose down --rmi local```
-
