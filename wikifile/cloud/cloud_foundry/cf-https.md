@@ -20,3 +20,7 @@ def before_request():
 标准的http header```X-Forwarded-Proto``` 由反向代理添加，用于识别客户端发起请求时使用的协议
 
 上述Python代码在请求之前先确认客户端协议，如果不是https就重定向。清楚原理之后，其它语言也就可以举一反三实现了
+
+## Other
+
+配合**Strict-Transport-Security**头，效果更好

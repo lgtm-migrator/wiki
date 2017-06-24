@@ -9,7 +9,7 @@
 Note: CLI并不是必须的。如果用户熟悉travis-ci，可以手动创建yml，然后在travis-ci网站上启用该项目即可
 
 ```bash
-$ gem install travis -v 1.8.6 --no-rdoc --no-ri
+gem install travis -v 1.8.6 --no-rdoc --no-ri
 ```
 
 ## 创建项目
@@ -72,7 +72,7 @@ Attention: 记得把**.travis.yml**中的node版本换成较新的版本
 
 如
 
-```
+```yaml
 language: node_js
 node_js:
 - 6.9.2
@@ -93,7 +93,7 @@ Encrypt Password? |yes|
 
 可以看到yml添加了cloud foundry的配置信息
 
-```
+```yaml
 language: node_js
 node_js:
 - 6.9.2
@@ -113,7 +113,7 @@ deploy:
 
 创建如下**manifest.yml**
 
-```
+```yaml
 ---
 applications:
 -
@@ -137,7 +137,7 @@ applications:
 
 最后的文件目录下有如下文件
 
-```
+```bash
 .gitignore
 .travis.yml
 index.js

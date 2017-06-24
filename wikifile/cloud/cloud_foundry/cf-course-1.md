@@ -1,4 +1,4 @@
-# Cloud Foundry 快速入门
+# Cloud Foundry快速入门
 
 ## What's that ?
 
@@ -53,8 +53,8 @@ Windows下载Installer - Windows 32/64 bit即可
 
 安装完毕之后，使用cmd/terminal测试一下
 
-```
-λ cf version
+```bash
+cf version
 cf version 6.19.0+b29b4e0-2016-06-08
 ```
 
@@ -65,7 +65,7 @@ Note: **下列命令国内是可以使用的，如果cli总是提示error，尝�
 使用```cf api```指定api地址
 
 ```bash
-λ cf api api.run.pivotal.io
+cf api api.run.pivotal.io
 Setting api endpoint to api.run.pivotal.io...
 OK
 
@@ -116,21 +116,13 @@ Space:          development
 
 首先，进入[spring initializr](https://start.spring.io/)，**在右边Dependencies输入并选择Web**，(其它比如group和artifact不建议更改，如果更改的话，后面的package和路径需要小心)
 
-<br>
-<p align="center">
-    <img src="../../img/springbootweb.png" />
-</p>
-<br>
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1498272440/springbootweb_oq0att.png)
 
-然后点下面的generate project
+然后点击下面的generate project
 
 将下载下来的压缩包解压，然后修改其中的DemoApplication.java
 
-<br>
-<p align="center">
-    <img src="../../img/springdemotree.png" />
-</p>
-<br>
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1498272440/springdemotree_wijwyt.png)
 
 建议直接复制代码，这个App在'/'路径下映射了一个方法，返回一个json字符串
 
@@ -150,36 +142,31 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 
-	@GetMapping("/")
-	public Map<String, String> home() {
-		return new HashMap<String, String>() {
-			{
-				put("hello", "cloud foundry");
-			}
-		};
-	}
+    @GetMapping("/")
+    public Map<String, String> home() {
+        return new HashMap<String, String>() {
+            {
+                put("hello", "cloud foundry");
+            }
+        };
+    }
 
 }
 ```
 
 然后在项目根目录下（有src文件夹），打开cmd，输入
 
-```
+```bash
 mvnw.cmd package
 ```
 
 如果构建成功(如下图)，就可以开始准备上传了
 
-<br>
-<p align="center">
-    <img src="../../img/mvnbuildsuccess.png" />
-</p>
-<br>
-
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1498272440/mvnbuildsuccess_u4fz9q.png)
 
 ## manifest.yml - 上传配置
 
@@ -253,7 +240,7 @@ buildpack: java_buildpack
 
 你可能会注意到一行信息
 
-```
+```bash
 Binding spring-boot-demo-unplumed-bn.cfapps.io to spring-boot-demo...
 ```
 
@@ -278,7 +265,7 @@ cf也可以和一些CI服务器集成，比如这个wiki就是放在github上，
 
 ## 参考项目结构
 
-```
+```bash
 demo
     │   .classpath
     │   .gitignore

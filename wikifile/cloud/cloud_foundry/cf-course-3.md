@@ -8,12 +8,11 @@
 
 **runtime.txt**
 
-```
+```bash
 python-3.5.2
 ```
 
 而对于node来说，直接在package.json里面配置engines就可以了
-
 
 **package.json**
 
@@ -39,7 +38,7 @@ python-3.5.2
 
 这些工作可以交给我们的构建工具来做，例如travis-ci
 
-```
+```yaml
 addons:
   apt:
     packages:
@@ -70,7 +69,7 @@ cf logs <yourappname> --recent
 
 **部署两个微服务的示例manifest.yml**
 
-```
+```yaml
 ---
 applications:
 - name: add-compute-service
