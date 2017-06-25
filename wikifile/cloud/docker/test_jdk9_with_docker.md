@@ -35,7 +35,7 @@ docker run -it --rm openjdk:9 jshell
 简单运行一个Hello World
 
 ```bash
-suntao@hostnamexx:~$ docker run -it --rm openjdk:9 jshell
+docker run -it --rm openjdk:9 jshell
 Feb 03, 2017 3:29:32 AM java.util.prefs.FileSystemPreferences$1 run
 INFO: Created user preferences directory.
 |  Welcome to JShell -- Version 9-Debian
