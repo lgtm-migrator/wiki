@@ -1,5 +1,7 @@
 # 如何在Caddy中使用PHP
 
+Note: Caddy是一个全功能的Web服务器, 所以自然是支持FastCGI的
+
 ## prepare caddy
 
 下载安装caddy server

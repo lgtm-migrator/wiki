@@ -1,8 +1,8 @@
-# shadowsocks -- ~~某科学的上网方法~~
+# ShadowSocks -- 某科学的上网方法
 
-shadowsocks是一个代理工具，用来翻墙
+shadowsocks是一个代理工具，用作安全代理
 
-[相关的教程](https://github.com/shadowsocks/shadowsocks/wiki)在这里，各个平台的客户端都用，但是据我使用，Android客户端可能有些问题，装了手机会很卡
+[相关的教程](https://github.com/shadowsocks/shadowsocks/wiki)在这里，各个平台的客户端都用，但是据我使用(2017年3月)，当前Android客户端可能有些问题，装了手机资源消耗比较大
 
 ## 如何使用
 
@@ -46,17 +46,15 @@ Windows的客户端可以点击[这里](https://proxy.fornever.org/ss.exe)下载
 
 ## SOCKS5代理
 
-如果不想安装shadowsocks客户端的话，可以试着在Chrome上安装SwitchyOmega
+如果不想安装ShadowSocks客户端的话，可以在Chrome上安装SwitchyOmega，这样在浏览器中就可以使用代理了
 
-然后配置一个代理到ksyun.fornever.org:8888，类型是socks5
+然后配置一个代理到```ksyun.fornever.org:8888```，类型是```Socks5```
 
 ## gfwlist
 
 用于过滤需要代理的服务器
 
-
-> https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
-
+```https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt```
 
 ## 其他
 

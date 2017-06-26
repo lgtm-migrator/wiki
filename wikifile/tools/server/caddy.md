@@ -1,8 +1,10 @@
 # Caddy Server
 
-Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署Let's Encrypt
+Caddy是一个用Go语言实现的Web服务器，亮点在于支持自动部署Let's Encrypt, 使得网站轻松切换到HTTPS
 
-配置文件十分简单，性能也还不错，推荐个人应用全部使用Caddy
+配置文件十分简单，性能也还不错，推荐个人应用使用Caddy
+
+Caddy当前可扩展的插件还不错, 所以如果要WAF之类的功能, 还是推荐NgX
 
 ## 安装
 
