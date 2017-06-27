@@ -67,6 +67,12 @@ format = columns
 }
 ```
 
+`DaoCloud`
+
+```bash
+curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://ac96d588.m.daocloud.io
+```
+
 重启docker即可生效
 
 ### ubuntu

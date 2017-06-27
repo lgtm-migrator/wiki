@@ -69,3 +69,9 @@ Note: Log out and log back in so that your group membership is re-evaluated.
 ```bash
 docker run --rm hello-world
 ```
+
+## MariaDB(Docker)
+
+```bash
+docker run -d --restart=always --name mariadb -v /data/mariadb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=changethispassword -p 3306:3306 -d mariadb:10.3
+```
