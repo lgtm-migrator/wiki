@@ -13,7 +13,7 @@ sudo apt-get install -y nodejs
 
 这样安装的话Node和NPM都装好了
 
-可以考虑使用中国镜像
+NPM可以考虑使用中国镜像
 
 ```bash
 npm config set registry https://registry.npm.taobao.org/
@@ -49,7 +49,7 @@ rm -rf init amd64
 
 ## Docker
 
-流行的容器Docker
+Popular container platform
 
 Works on Ubuntu/Debian
 
@@ -72,6 +72,42 @@ docker run --rm hello-world
 
 ## MariaDB(Docker)
 
+Run mariadb by docker, persist data in /data/mariadb, and expose 3306 port
+
 ```bash
 docker run -d --restart=always --name mariadb -v /data/mariadb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=changethispassword -p 3306:3306 -d mariadb:10.3
+```
+
+## [RQLITE](https://github.com/rqlite/rqlite)
+
+The lightweight, distributed relational database built on SQLite.
+
+RQLITE node server should open 36001 and 36002 ports(or your prefer ports, for outside), 36001 serve http layer, and 36002 serve tcp layer.
+
+For detail, port 36002 is used for raft discovery service, and 36001 for common sql service
+
+```bash
+# download install (for linux amd64)
+wget https://github.com/rqlite/rqlite/releases/download/v4.0.0/rqlited-v4.0.0-linux-amd64.tar.gz
+tar xvfz rqlited-v4.0.0-linux-amd64.tar.gz
+mv rqlited-v4.0.0-linux-amd64 rqlite
+cd rqlite
+```
+
+*start.sh*
+
+** make sure your pub_address could be access by outside server, and main_node_api is correct**
+
+```bash
+# start server
+export PUB_ADDRESS=2.node.rqlite.fornever.org
+export MAIN_NODE_API=ksyun.fornever.org:14001
+export NODE_ID=2
+./rqlited -http-addr 0.0.0.0:36001 -http-adv-addr $PUB_ADDRESS:36001 -raft-addr 0.0.0.0:36002 -raft-adv-addr=$PUB_ADDRESS:36002 -join $MAIN_NODE_API node.$NODE_ID
+```
+
+if you have pm2, it will be a nice process manager for **shell**
+
+```bash
+pm2 start start.sh --name "rqlite.node.2"
 ```
