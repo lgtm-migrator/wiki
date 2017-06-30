@@ -16,6 +16,7 @@ Note: Some projects of mine
 * [F_Blog -- 基于Python的简单博客](https://github.com/Soontao/flask_blog)
 * [SS-News -- UESTC-SS学院新闻爬虫/API](https://github.com/Soontao/uestc_ss_news_spider)
 * [stray birds -- 飞鸟集的一片](https://soontao.github.io/straybirds/)
+* [Monitor -- Notify you when your web sites are down](https://github.com/Soontao/monitor)
 
 ---
 
@@ -29,16 +30,18 @@ Note: Some projects of mine
 
 ## Tools
 
-* [UI5g -- Basic generator for sapui5/openui5, with gulp Edit](https://github.com/Soontao/ui5g)
+* [ui5g -- Basic generator for sapui5/openui5, with gulp Edit](https://github.com/Soontao/ui5g)
 * [ns-server -- Notification Sync Server](https://github.com/NotificationSync/ns-server)
 * [ns-notice -- Notification Sync Desktop Client](https://github.com/NotificationSync/ns-notice)
+* [send-mail -- The easiest way send email from cli](https://github.com/Soontao/send-mail)
+* [iconfinder -- remove iconfinder watermark](https://github.com/Soontao/iconfinder)
 
 ---
 
 ## Design
 
 * [Design Pattern -- 设计模式，typescript实现](https://github.com/Soontao/design_parttern_ts)
-* [AOP -- 面向切面编程演讲ppt及code](https://git.suntao.science/suntao/Aspect-Oriented-Programming)
+* [AOP -- 面向切面编程演讲ppt及code](https://git.fornever.org/suntao/Aspect-Oriented-Programming)
 
 ---
 
