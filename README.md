@@ -1,6 +1,6 @@
 # wiki
 
-[![Build Status](https://travis-ci.org/Soontao/wiki.svg?branch=master)](https://travis-ci.org/Soontao/wiki)
+[![Build Status](https://ci.fornever.org/buildStatus/icon?job=wiki)](https://ci.fornever.org/job/wiki/)
 
 使用MDWiki创建的Wiki网页
 

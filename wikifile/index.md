@@ -18,9 +18,15 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 **2017年7月8日**
 
-使用golang编写了一个API化MySQL数据库的[Server](https://github.com/Soontao/go-mysql-api)，说实话，Go无论是自带的Lib，还是第三方的Lib，都不是很好用，很多API太底层。语法也不是很简洁，与JS和Python相比其实要编写更多的代码，这是由于静态语言的特性决定的，没有办法。总体来说还是一个可用的语言。
+使用golang编写了一个API化MySQL数据库的[Server](https://github.com/Soontao/go-mysql-api)。
+
+说实话，Go无论是自带的Lib，还是第三方的Lib，都不是很好用，很多API太底层。语法也不是很简洁，与JS和Python相比其实要编写更多的代码，这是由于静态语言的特性决定的，没有办法，但是比Java和C#却好好很多。总体来说还是一个可用的语言。
 
 夏天好热啊，难过。
+
+引入了Jenkins做持续集成。
+
+RQlite真的很难用，各种各样问题。还是老老实实搭MySQL吧
 
 ---
 
