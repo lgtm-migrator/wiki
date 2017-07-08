@@ -16,6 +16,14 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 ## Learning Log
 
+**2017年7月8日**
+
+使用golang编写了一个API化MySQL数据库的[Server](https://github.com/Soontao/go-mysql-api)，说实话，Go无论是自带的Lib，还是第三方的Lib，都不是很好用，很多API太底层。语法也不是很简洁，与JS和Python相比其实要编写更多的代码，这是由于静态语言的特性决定的，没有办法。总体来说还是一个可用的语言。
+
+夏天好热啊，难过。
+
+---
+
 **2017年6月17日**
 
 忙于SAP的工作，其实还好，写了一个SAP UI5的项目生成器，然后对一个除水印的项目加上了简单的UI
