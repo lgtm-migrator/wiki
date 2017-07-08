@@ -78,6 +78,12 @@ Run mariadb by docker, persist data in /data/mariadb, and expose 3306 port
 docker run -d --restart=always --name mariadb -v /data/mariadb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=changethispassword -p 3306:3306 -d mariadb:10.3
 ```
 
+and phpmyadmin
+
+```bash
+docker run -d --restart=always --name phpmyadmin -P --link mariadb:db phpmyadmin/phpmyadmin
+```
+
 ## [RQLITE](https://github.com/rqlite/rqlite)
 
 The lightweight, distributed relational database built on SQLite.
