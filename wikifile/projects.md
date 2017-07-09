@@ -22,6 +22,7 @@ Note: Some projects of mine
 
 ## API
 
+* [go-mysql-api -- apify mysql database](https://github.com/Soontao/go-mysql-api)
 * [mysql-api -- easily make mysql db api](https://github.com/Soontao/mysql-api)
 * [uestc_score_query -- UESTC成绩查询](https://github.com/Soontao/uestc-score-query)
 * [Tang-Poetry -- 全唐诗API](https://github.com/Soontao/Tang-Poetry-Api)

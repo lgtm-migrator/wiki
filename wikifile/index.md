@@ -1,7 +1,6 @@
 # About
 
-Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.github.io/mdwiki)项目的页面，感谢他们。
-字体可能有点小，推荐缩放到125% - 140%
+Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.github.io/mdwiki)项目的维基。
 全站使用HTML5缓存，会在第一次访问加载所有文档，有时候你需要刷新以看见最新的文章
 
 ## Info
@@ -20,7 +19,7 @@ Note: 欢迎来到我的维基，这是一个基于[MDWiki](http://dynalon.githu
 
 使用golang编写了一个API化MySQL数据库的[Server](https://github.com/Soontao/go-mysql-api)。
 
-说实话，Go无论是自带的Lib，还是第三方的Lib，都不是很好用，很多API太底层。语法也不是很简洁，与JS和Python相比其实要编写更多的代码，这是由于静态语言的特性决定的，没有办法，但是比Java和C#却好好很多。总体来说还是一个可用的语言。
+说实话，Go无论是自带的Lib，还是第三方的Lib，都不是很好用，很多API太底层。语法也不是很简洁，与JS和Python相比，golang需要编写更多的代码，这是由于静态语言的特性决定的，但是比Java和C#，冗余代码已经减少很多。总体来说还是可圈可点的语言。
 
 夏天好热啊，难过。
 

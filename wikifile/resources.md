@@ -145,6 +145,12 @@ sudo apt-get install shellinabox
 sudo vim /etc/default/shellinabox
 ```
 
+### [Navicat -- the best db management tool](https://www.navicat.com.cn/)
+
+这是我用过的最棒的数据库管理工具，非常全面和易用。唯一的缺点可能是比较贵
+
+You could download it from [here](https://download.fornever.org/Navicat/)
+
 ---
 
 ## Hardware
