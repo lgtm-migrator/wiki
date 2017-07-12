@@ -18,18 +18,18 @@ const getDirsFromDir = node => _.filter(node.children, item => !item.extension &
 const upper = str => capitalize.words(str)
 
 const writeNavigationLine = (line) => {
-  if (fs.existsSync(targetNavigationFilePath)) 
+  if (fs.existsSync(targetNavigationFilePath))
     fs.appendFileSync(targetNavigationFilePath, (line || "") + os.EOL)
-  else 
+  else
     fs.writeFileSync(targetNavigationFilePath, (line || "") + os.EOL);
-  }
+}
 
 const writeAppcacheLine = (line) => {
-  if (fs.existsSync(targetAppcacheFilePath)) 
+  if (fs.existsSync(targetAppcacheFilePath))
     fs.appendFileSync(targetAppcacheFilePath, (line || "") + os.EOL)
-  else 
+  else
     fs.writeFileSync(targetAppcacheFilePath, (line || "") + os.EOL);
-  }
+}
 
 /**
  * make a markdown format link
@@ -38,9 +38,9 @@ const writeAppcacheLine = (line) => {
  * @returns {string}
  */
 const makeLink = (item) => {
-  if (item.extension) 
+  if (item.extension)
     return `[${getMdTitle(item.path)}](${item.path.replace(/\\/g, '/')})`
-  else 
+  else
     return upper(`[${item.name}]()`)
 }
 
@@ -56,7 +56,7 @@ const getMdTitle = filepath => {
     .toString();
   const firstline = file.split('\n')[0];
   const result = firstline.split('#')[1]
-  if (!result) 
+  if (!result)
     throw new Error(`file ${filepath} should have a title in first line`)
   return result.trim()
 }
@@ -65,12 +65,17 @@ const writeNavigationFile = () => {
   // start write new navigation
   writeNavigationLine("# wiki")
   writeNavigationLine()
-  getFilesFromDir(tree).forEach(item => item.name == 'navigation.md'
-    ? writeNavigationLine()
-    : writeNavigationLine(makeLink(item)) & writeNavigationLine())
+  getFilesFromDir(tree).forEach(item => {
+    if (item.name == 'navigation.md' || item.name == 'README.md') {
+      writeNavigationLine()
+    }
+    else {
+      writeNavigationLine(makeLink(item)) & writeNavigationLine()
+    }
+  })
   getDirsFromDir(tree).forEach((dir) => {
     // if a directory not have any file, will be skiped
-    if (!dir.extension && dir.children.length < 1) 
+    if (!dir.extension && dir.children.length < 1)
       return
     writeNavigationLine(makeLink(dir)) & writeNavigationLine()
     getFilesFromDir(dir).forEach(article => {
@@ -79,7 +84,7 @@ const writeNavigationFile = () => {
     getDirsFromDir(dir).forEach((dir, idx, arr) => {
       writeNavigationLine(`* # ${upper(dir.name)}`)
       getFilesFromDir(dir).forEach(article => writeNavigationLine(`* ${makeLink(article)}`))
-      if (arr.length - 1 != idx) 
+      if (arr.length - 1 != idx)
         writeNavigationLine('---')
     })
     writeNavigationLine()
@@ -109,7 +114,7 @@ const writeAppcacheFile = () => {
   getFilesFromDir(tree).forEach(article => writeAppcacheLine(get_path_from(article)))
   getDirsFromDir(tree).forEach((dir) => {
     // if a directory not have any file, will be skiped
-    if (!dir.extension && dir.children.length < 1) 
+    if (!dir.extension && dir.children.length < 1)
       return
     getFilesFromDir(dir).forEach(article => writeAppcacheLine(get_path_from(article)))
     getDirsFromDir(dir).forEach((dir, idx, arr) => getFilesFromDir(dir).forEach(article => writeAppcacheLine(get_path_from(article))))
