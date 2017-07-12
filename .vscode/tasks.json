@@ -6,16 +6,30 @@
   "isShellCommand": true,
   "showOutput": "always",
   "suppressTaskName": true,
-  "tasks": [{
+  "tasks": [
+    {
       "taskName": "install",
-      "args": ["install"]
+      "args": [
+        "install"
+      ]
     },
     {
       "taskName": "build",
       "args": [
-        "run", "postinstall"
+        "run",
+        "postinstall"
       ],
       "isBuildCommand": true
+    },
+    {
+      "taskName": "buildReadme",
+      "options": {
+        "cwd": "${workspaceRoot}/wikifile"
+      },
+      "args": [
+        "run",
+        "readme"
+      ]
     }
   ]
 }
