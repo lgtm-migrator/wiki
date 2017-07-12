@@ -4,9 +4,17 @@ Note: 一些常用到的命令, 作一个记录
 
 ## Linux
 
-* docker run -rm --restart=always -p HOST_PORT:CONTAINER_PORT image
+* docker run -d --restart=always -p HOST_EXPOSE_PORT:CONTAINER_PORT image
 
   运行docker容器
+
+* docker exec -u 0 *container_name* bash
+
+  以Root用户进入容器
+
+* echo 'Asia/Shanghai' > /etc/timezone
+
+  修改Linux的市区, 在某一些Java应用中比较重要, container中的时区一般是UTC
 
 ## Windows
 
