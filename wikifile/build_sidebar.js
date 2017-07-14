@@ -3,13 +3,16 @@ var glob = require('glob')
 var path = require('path')
 var fs = require('fs')
 var _ = require('lodash')
+const capitalize = require('capitalize')
+
+const upper = str => capitalize.words(str)
 
 function read_md_title_and_introduce(path) {
   var title = ''
   var intro = ''
   var file = fs.readFileSync(path).toString();
   var firstline = file.split('\n')[0];
-  title = firstline.split('#')[1].trim()
+  title = upper(firstline.split('#')[1].trim())
   idx0 = file.indexOf('\n')
   idx1 = file.indexOf('##')
   var intro_block = file.substring(idx0, idx1)
@@ -19,8 +22,9 @@ function read_md_title_and_introduce(path) {
 
 
 if (require.main == module) {
-  var readme_file_path = path.normalize(__dirname + '/README.md')
-  var readme_file_str = '# WIKI\n'
+  var readme_file_path = path.normalize(__dirname + '/_sidebar.md')
+
+  var readme_file_str = ''
 
   glob(__dirname + '/**/*.md', { ignore: ["**/navigation.md", "**/README.md", "**/_sidebar.md"] }, function (err, files) {
     var tree = {}
@@ -32,14 +36,14 @@ if (require.main == module) {
     var sg = _.groupBy(second_level_md, v => v.split('/')[0])
     var tg = _.groupBy(third_level_md, v => v.split('/')[0])
     _.forEach(tg, (path_array, second_path) => {
-      readme_file_str += `\n## ${second_path}\n`
+      readme_file_str += `\n* ${upper(second_path)}\n`
       if (sg[second_path]) {
         readme_file_str += '\n'
-        _.forEach(sg[second_path], md => readme_file_str += `* #### [${read_md_title_and_introduce(__dirname + '/' + md).title}](${md})\n`)
+        _.forEach(sg[second_path], md => readme_file_str += `\t* [${read_md_title_and_introduce(__dirname + '/' + md).title}](${md})\n`)
       } var ti = _.groupBy(tg[second_path], v => v.split('/')[1])
       _.forEach(ti, (path_array, third_path) => {
-        readme_file_str += `\n### ${third_path}\n\n`
-        _.forEach(path_array, md => readme_file_str += `* #### [${read_md_title_and_introduce(__dirname + '/' + md).title}](${md})\n`)
+        readme_file_str += `\n\t* ${third_path}\n\n`
+        _.forEach(path_array, md => readme_file_str += `\t\t* [${read_md_title_and_introduce(__dirname + '/' + md).title}](${md})\n`)
       })
 
     })

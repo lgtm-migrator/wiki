@@ -6,7 +6,9 @@ cmd命令行通常不是那么好用，没有自动补全，也不能使用Ctrl 
 
 ## List
 
-### [Cygwin/Git Bash](https://www.cygwin.com/)
+### Cygwin/Git Bash
+
+[link](https://www.cygwin.com/)
 
 Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于各种版本的Microsoft Windows上，运行类UNIX系统。Cygwin的主要目的是通过重新编译，将POSIX系统（例如Linux、BSD，以及其他Unix系统）上的软件移植到Windows上。Cygwin移植工作在Windows NT上比较好，在Windows 95和Windows 98上，相对差劲一些。目前Cygwin由Red Hat等负责维护。
 
@@ -16,19 +18,25 @@ Cygwin是许多自由软件的集合，最初由Cygnus Solutions开发，用于�
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1495519614/Cygwin_X11_rootless_WinXP_mhpadm.png)
 
-### [cmder](http://cmder.net/)
+### cmder
+
+[link](http://cmder.net/)
 
 很漂亮的一个替代品，支持一个实例多个tab，但是启动太慢了
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1495519836/main_bkwrcb.jpg)
 
-### [clink](https://mridgers.github.io/clink/)
+### clink
+
+[link](https://mridgers.github.io/clink/)
 
 基于现有的cmd增强，实现了补全和bash常用的快捷键，但是ssh连接remote会有一些异常问题，但是大多数时候工作正常。
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1495519908/clink_areirq.png)
 
-### [Hyper](https://hyper.is/)
+### Hyper
+
+[link](https://hyper.is/)
 
 使用JS编写的terminal，对于我来说很难用，但是外观很好看
 

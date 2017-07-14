@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node node_modules/nano-server/nano-server 3000 ./wikifile",
     "postinstall": "cd wikifile && node build.js",
-    "readme": "cd wikifile && node build_readme.js"
+    "readme": "cd wikifile && node build_readme.js",
+    "sidebar": "cd wikifile && node build_sidebar.js"
   },
   "dependencies": {
     "capitalize": "^1.0.0",

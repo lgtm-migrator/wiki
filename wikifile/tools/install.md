@@ -84,7 +84,7 @@ and phpmyadmin
 docker run -d --restart=always --name phpmyadmin -P --link mariadb:db phpmyadmin/phpmyadmin
 ```
 
-## [RQLITE](https://github.com/rqlite/rqlite)
+## RQLITE
 
 The lightweight, distributed relational database built on SQLite.
 
