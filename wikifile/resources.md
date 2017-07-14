@@ -48,9 +48,9 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 最大的优点是支持支付宝
 
-**稳定性比较低，但是很实惠**
+**稳定性比较低, SS不定时会断掉，但是很实惠**
 
-### **推荐** **[Vultr](https://www.vultr.com/)**
+### **[Vultr](https://www.vultr.com/)**
 
 之前提供2.5刀512M内存, 现在2.5刀的plan缺货, 但是5刀/1G的plan也比国内的便宜
 
@@ -89,6 +89,10 @@ CF真的是很好用的云平台，得入此门，万念皆空
 ## Tools
 
 一些好用的工具
+
+### [PotPlayer](https://potplayer.daum.net/)
+
+合格的多媒体播放器
 
 ### [PM2 -- NodeJS守护进程](https://www.npmjs.com/package/pm2)
 
@@ -150,6 +154,14 @@ sudo vim /etc/default/shellinabox
 这是我用过的最棒的数据库管理工具，非常全面和易用。唯一的缺点可能是比较贵
 
 You could download it from [here](https://download.fornever.org/Navicat/)
+
+### [Docsify -- A magical documentation site generator.](https://docsify.js.org/#/)
+
+动态MD文档生成器, 对于单文件md文档支持比较好
+
+对于多文件md, 配置略微繁琐
+
+可用, 界面也不错
 
 ---
 

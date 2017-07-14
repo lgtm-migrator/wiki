@@ -14,6 +14,8 @@ Note: 我使用VS Code已经很长时间了，是一步一步看着vs code从非
 * [beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify) -- 代码格式化
 * npm Intellisense -- NPM自动补全，包括ES5和ES6的形式
 * path Autocomplete -- 路径自动补全
+* XML Tools -- 对于XML的支持
+* Spelling Checker -- 单词拼写检测
 
 ## IDEA插件
 
