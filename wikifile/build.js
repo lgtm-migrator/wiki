@@ -66,7 +66,7 @@ const writeNavigationFile = () => {
   writeNavigationLine("# wiki")
   writeNavigationLine()
   getFilesFromDir(tree).forEach(item => {
-    if (item.name == 'navigation.md' || item.name == 'README.md') {
+    if (item.name == 'navigation.md' || item.name == 'README.md' || item.name == "_sidebar.md") {
       writeNavigationLine()
     }
     else {
