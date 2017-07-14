@@ -80,7 +80,7 @@ Not logged in. Use 'cf login' to log in.
 因为我有两个space，只有一个space登录的话不会这么长
 
 ```bash
-λ cf login
+$ cf login
 API endpoint: https://api.run.pivotal.io
 
 Email> myemail@emailserver.cn
@@ -181,8 +181,8 @@ applications:
     name: spring-boot-demo
 
     # 使用随机的路由(URL)。
-    # 默认情况cf会申请以name为开头的url，但是url是唯一的，如果多个人做这个教程的话，会因为url申请不下来而导致失败
-    # 使用随机的后缀以区分不同的实验者
+    # 默认情况cf会申请以name为开头的url
+    # 使用随机的后缀以避免url冲突
     random-route: true
 
     # 内存限制，简单的Spring Boot内存占用在300M左右
@@ -204,12 +204,6 @@ applications:
 Using manifest file \home\xxx\demo\manifest.yml
 
 Creating app spring-boot-demo in org mrls-org / space development as mrls@live.cn...
-OK
-
-Creating route spring-boot-demo-unplumed-bn.cfapps.io...
-OK
-
-Binding spring-boot-demo-unplumed-bn.cfapps.io to spring-boot-demo...
 OK
 
 # infos
@@ -238,7 +232,7 @@ buildpack: java_buildpack
 #0   running   2017-01-26 03:41:18 PM   36.1%   227.5M of 400M   136.8M of 1G
 ```
 
-你可能会注意到一行信息
+请注意这一行信息
 
 ```bash
 Binding spring-boot-demo-unplumed-bn.cfapps.io to spring-boot-demo...
@@ -252,9 +246,9 @@ Binding spring-boot-demo-unplumed-bn.cfapps.io to spring-boot-demo...
 
 ## 其它
 
-以上差不多就是整个上传流程了，除了java之外，cf还支持所有主流的语言，包括node，go，python等
+以上差不多就是整个上传流程了, 除了java之外, cf还支持所有主流的语言, 包括node go python等
 
-cf也可以和一些CI服务器集成，比如这个wiki就是放在github上，使用travis-ci build，然后打包上传到CF
+cf也可以与一些CI服务器集成, 例如travis ci以及circle ci.
 
 以下是一些你可能需要的命令
 
@@ -262,85 +256,3 @@ cf也可以和一些CI服务器集成，比如这个wiki就是放在github上，
 * 使用```cf app spring-boot-demo```查看这个应用的详细信息
 * 使用```cf delete spring-boot-demo```删除刚刚建立的应用
 * 使用```cf org <your-organization-name>```获取账户下某一个organization的限制信息
-
-## 参考项目结构
-
-```bash
-demo
-    │   .classpath
-    │   .gitignore
-    │   .project
-    │   manifest.yml
-    │   mvnw
-    │   mvnw.cmd
-    │   pom.xml
-    │
-    ├───.mvn
-    │   └───wrapper
-    │           maven-wrapper.jar
-    │           maven-wrapper.properties
-    │
-    ├───.settings
-    │       org.eclipse.core.resources.prefs
-    │       org.eclipse.jdt.core.prefs
-    │       org.eclipse.m2e.core.prefs
-    │
-    ├───src
-    │   ├───main
-    │   │   ├───java
-    │   │   │   └───com
-    │   │   │       └───example
-    │   │   │               DemoApplication.java
-    │   │   │
-    │   │   └───resources
-    │   │       │   application.properties
-    │   │       │
-    │   │       ├───static
-    │   │       └───templates
-    │   └───test
-    │       └───java
-    │           └───com
-    │               └───example
-    │                       DemoApplicationTests.java
-    │
-    └───target
-        │   demo-0.0.1-SNAPSHOT.jar
-        │   demo-0.0.1-SNAPSHOT.jar.original
-        │
-        ├───classes
-        │   │   application.properties
-        │   │
-        │   └───com
-        │       └───example
-        │               DemoApplication$1.class
-        │               DemoApplication.class
-        │
-        ├───generated-sources
-        │   └───annotations
-        ├───generated-test-sources
-        │   └───test-annotations
-        ├───maven-archiver
-        │       pom.properties
-        │
-        ├───maven-status
-        │   └───maven-compiler-plugin
-        │       ├───compile
-        │       │   └───default-compile
-        │       │           createdFiles.lst
-        │       │           inputFiles.lst
-        │       │
-        │       └───testCompile
-        │           └───default-testCompile
-        │                   createdFiles.lst
-        │                   inputFiles.lst
-        │
-        ├───surefire-reports
-        │       com.example.DemoApplicationTests.txt
-        │       TEST-com.example.DemoApplicationTests.xml
-        │
-        └───test-classes
-            └───com
-                └───example
-                        DemoApplicationTests.class
-
-```
