@@ -103,7 +103,7 @@
 
 #### 活动图图示
 
-![alt](../../img/activitydiagram.png)
+![alt](https://res.cloudinary.com/digf90pwi/image/upload/v1500038033/activitydiagram_k06kxp.png)
 
 ### 结构视图
 
