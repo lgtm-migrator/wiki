@@ -10,7 +10,7 @@ GOPATH = %USERPROFILE%/go
 
 ## Error
 
-一定要捕捉error, 否则根本不知道哪里出错了
+可以考虑使用`panic`,`recover`实现try catch，否则总是根据多值返回判断，太不优雅了。
 
 ## 依赖
 
@@ -30,4 +30,4 @@ gopm get -g [package_name]
 
 方法和struct type中的属性, 只有首字母大写才可以被外包访问
 
-特别是在JSON序列化得时候会发现什么都没有, 多半是首字母小写了
+特别是在JSON序列化得时，如果发现什么都没有, 多半是首字母小写了

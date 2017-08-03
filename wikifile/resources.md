@@ -98,13 +98,13 @@ OSS对象存储，对免费账户有2GB的空间，并且对于多种语言有�
 
 [link](https://pivotal.io/)
 
-Cloud Foundry服务提供商，注册就提供2G内存使用，可以部署非常多的小应用上去。
+Cloud Foundry服务提供商，注册就提供2G内存使用(受到限制)，可以部署非常多的小应用上去
 
 唯一的弱点是，在大陆访问可能延迟有些高，但是用于CI&CD的测试是完全足够了
 
 和travis-ci搭配使用，效果很好
 
-CF真的是很好用的云平台，得入此门，万念皆空
+如果试用账号赠送的费用消费完毕，就会停止服务
 
 ---
 
@@ -235,17 +235,11 @@ You could download it from [here](https://download.fornever.org/Navicat/)
 
 真的好看, 金高银超可爱
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,q_62,w_1084/v1495520236/1664314_jogwyw.jpg)
-
 ### 花间提壶方大厨
 
 [link](http://baike.baidu.com/item/%E8%8A%B1%E9%97%B4%E6%8F%90%E5%A3%B6%E6%96%B9%E5%A4%A7%E5%8E%A8/19289610)
 
 超治愈超甜的古装剧，女主超可爱
-
-![](https://res.cloudinary.com/digf90pwi/image/upload/v1495521112/68d8f7a6700246dcb51aa6e891b8203d_faeieg.jpg)
-
-第二季不好看了，可能是腻了
 
 ---
 

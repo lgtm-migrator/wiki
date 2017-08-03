@@ -35,7 +35,7 @@ Note: 如果出现注册\登陆\上传异常，请使用代理服务器，例如
 
 **Pivotal**是由EMC和VMware联合成立的一家新公司
 
-Pivotal提供CloudFoundry平台，并提供**为免费账户提供2GB内存使用**
+Pivotal提供CloudFoundry平台，并提供**免费账户有2GB内存限制**，在赠送费用使用完毕之后，会停止服务.
 
 所以，在开始我们的Course之前，先注册一个账户吧。
 

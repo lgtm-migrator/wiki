@@ -30,13 +30,13 @@ password: sspassword
 洛杉矶
 
 ```text
-host: 191.101.226.42
+host: vps4.fornever.org
 port: 8388
 encrypt: RC4-MD5
 password: sspassword
 ```
 
-如果还是不会配置的话，Call me
+如果还是不会配置的话，Contact me
 
 ## 客户端
 

@@ -41,3 +41,15 @@ For IDEA Community
 * [GitHub Hovercard](https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk?utm_source=chrome-app-launcher-info-dialog) -- Github增强，在Github Link上悬停时会显示相关信息
 
 * [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?utm_source=chrome-app-launcher-info-dialog) -- 相当好的api调试工具
+
+## Jenkins插件
+
+* [embeddable-build-status](https://wiki.jenkins.io/display/JENKINS/Embeddable+Build+Status+Plugin) -- 轻松显示类似于TravisCI/CircleCI的badge
+
+* [Gogs plugin](https://wiki.jenkins.io/display/JENKINS/Gogs+Webhook+Plugin) -- GOGS Webhook集成
+
+* [PegDown Formatter Plugin](https://wiki.jenkins.io/display/JENKINS/PegDown+Formatter+Plugin) -- 简单支持markdown
+
+* [Simple Theme Plugin](https://wiki.jenkins.io/display/JENKINS/Simple+Theme+Plugin) -- 支持第三方css
+
+* [SSH plugin](https://wiki.jenkins.io/display/JENKINS/SSH+plugin) -- 远程ssh控制
