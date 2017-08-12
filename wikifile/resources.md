@@ -193,7 +193,7 @@ sudo vim /etc/default/shellinabox
 
 You could download it from [here](https://download.fornever.org/Navicat/)
 
-### Docsify -- A magical documentation site generator.
+### Docsify -- A magical documentation site generator
 
 [link](https://docsify.js.org/#/)
 

@@ -84,36 +84,37 @@ and phpmyadmin
 docker run -d --restart=always --name phpmyadmin -P --link mariadb:db phpmyadmin/phpmyadmin
 ```
 
-## RQLITE
+## ShellInaBox
 
-The lightweight, distributed relational database built on SQLite.
-
-RQLITE node server should open 36001 and 36002 ports(or your prefer ports, for outside), 36001 serve http layer, and 36002 serve tcp layer.
-
-For detail, port 36002 is used for raft discovery service, and 36001 for common sql service
+host ssh client in web page
 
 ```bash
-# download install (for linux amd64)
-wget https://github.com/rqlite/rqlite/releases/download/v4.0.0/rqlited-v4.0.0-linux-amd64.tar.gz
-tar xvfz rqlited-v4.0.0-linux-amd64.tar.gz
-mv rqlited-v4.0.0-linux-amd64 rqlite
-cd rqlite
+sudo apt-get install shellinabox
 ```
 
-*start.sh*
+## shadowsocks-libev
 
-** make sure your pub_address could be access by outside server, and main_node_api is correct**
+install shadowsocks lib
 
 ```bash
-# start server
-export PUB_ADDRESS=2.node.rqlite.fornever.org
-export MAIN_NODE_API=ksyun.fornever.org:14001
-export NODE_ID=2
-./rqlited -http-addr 0.0.0.0:36001 -http-adv-addr $PUB_ADDRESS:36001 -raft-addr 0.0.0.0:36002 -raft-adv-addr=$PUB_ADDRESS:36002 -join $MAIN_NODE_API node.$NODE_ID
+sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
+sudo apt-get update
+sudo apt install shadowsocks-libev
+# edit server/client config
+sudo vim /etc/shadowsocks-libev/config.json
 ```
 
-if you have pm2, it will be a nice process manager for **shell**
+## golang
+
+install golang 1.8
 
 ```bash
-pm2 start start.sh --name "rqlite.node.2"
+wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz
+tar -zxvf go1.8.3.linux-amd64.tar.gz
+rm go1.8.3.linux-amd64.tar.gz
+mv go .bin_go
+mkdir .go_path
+echo 'export GOROOT=$HOME/.bin_go' >> $HOME/.profile
+echo 'export GOHOME=$HOME/.go_path' >> $HOME/.profile
+echo 'export PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> $HOME/.profile
 ```
