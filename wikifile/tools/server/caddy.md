@@ -84,7 +84,6 @@ header_upstream X-Forwarded-For {remote}
 header_upstream X-Forwarded-Proto {scheme}
 ```
 
-
 ## FastCGI PHP
 
 支持各种fastcgi，以wordpress为例，安装php5fpm，然后下载caddy
@@ -92,10 +91,12 @@ header_upstream X-Forwarded-Proto {scheme}
 然后在Caddyfile中配置如下几行
 
 ```text
+
 domain.com {
     root /var/wp
     fastcgi / /var/run/php5-fpm.sock php
 }
+
 ```
 
 括号中的第一行指定wordpress路径，第二行配置了fastcgi，根据不同情况，可以选择unix socket或者一般的socket
@@ -127,6 +128,21 @@ sudo nohup ./caddy -conf 'Caddyfile' &
 ## 官方示例
 
 在```https://github.com/caddyserver/examples/tree/master/markdown```有几个官方的配置文件，包括wp，dokuwiki等
+
+## 使用自签发证书
+
+在某些情况下，无法启用自动的Lets Encrypt，可以使用自签发证书
+
+```text
+
+site.com {
+    proxy / 127.0.0.1:8080 {
+        transparent
+    }
+    tls self_signed
+}
+
+```
 
 ## 其他
 
