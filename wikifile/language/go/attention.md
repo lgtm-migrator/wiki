@@ -8,6 +8,8 @@ Note: Golang的一些注意事项
 
 GOPATH = %USERPROFILE%/go
 
+**可以使用vendor或者其他路径为GOPATH**
+
 ## Error
 
 可以考虑使用`panic`,`recover`实现try catch，否则总是根据多值返回判断，太不优雅了。
@@ -20,6 +22,13 @@ GOPATH = %USERPROFILE%/go
 
 ```bash
 gopm get -g [package_name]
+```
+
+**使用govendor保存依赖的源文件，也可以加快构建的速度**
+
+```bash
+govendor init
+govendor add +external
 ```
 
 ## 包
