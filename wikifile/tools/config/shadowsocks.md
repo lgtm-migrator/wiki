@@ -52,12 +52,10 @@ Windows的客户端可以点击[这里](https://download.fornever.org/shadowsock
 
 然后配置一个代理到```ksyun.fornever.org:8888```，类型是```Socks5```
 
-拓扑结构是
+拓扑结构:
 
 ```text
-
 pc (as socks5 client) -> socks5 server (as ss client) -> shadowsocks server
-
 ```
 
 ### 相关配置
@@ -71,7 +69,6 @@ pc (as socks5 client) -> socks5 server (as ss client) -> shadowsocks server
 *config*
 
 ```json
-
 {
         "server":"sshost",
         "server_port":"ssport",
@@ -83,7 +80,6 @@ pc (as socks5 client) -> socks5 server (as ss client) -> shadowsocks server
         "fast_open":false,
         "workers":4
 }
-
 ```
 
 ## gfwlist
