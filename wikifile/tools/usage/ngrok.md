@@ -10,7 +10,9 @@ choose your system version, osx is `ngrok-darwin-amd64`, most linux is `ngrok-li
 
 and please download `.ngrok` too.
 
-`self_signed.cer` is optional.
+or directly download `ngrok.windows.zip`
+
+`self_signed.cer` is optional for self signed https cert.
 
 ## use
 
@@ -58,6 +60,10 @@ Web Interface                 127.0.0.1:4040
 Avg Conn Time                 0.00ms
 ```
 
+## aditional
+
+Server配置了on-demand获取证书，第一次访问浏览器可能会显示不安全，过一段时间拿到授信证书就好了
+
 ## simple way
 
 download [ngrok.windows.zip](https://download.fornever.org/ngrok-clients/ngrok.windows.zip), unzip and double click `run-ngrok.bat`.
@@ -72,8 +78,6 @@ vultr vps (infrastructure) -> caddy (http(s) reverse proxy) -> docker (applicati
 
 ## other
 
-不要用于production，请仅用于测试
+dont use it in production, only for test.
 
-服务器在日本，延迟在亚秒级
-
-https是自签发证书，将`self_signed.cer`放置在系统的`收受信任的根颁发机构`，使浏览器信任
+ngrok server is at Japan, rtt less than one second.

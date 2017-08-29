@@ -23,3 +23,21 @@ Note: Check some docker related command from [here](../../tools/usage/commands.m
 实际体验也不错，而且还提供国内Docker Hub的镜像
 
 服务器比较少的话，没什么意义
+
+## cmd
+
+push image to registry:
+
+```bash
+
+docker push theosun/testproject:latest
+
+```
+
+stop and remove container
+
+```bash
+
+docker rm -f container_name
+
+```

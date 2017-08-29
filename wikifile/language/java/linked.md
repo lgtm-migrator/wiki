@@ -1,6 +1,8 @@
 # java的链式调用
 
-受到js的启发，其实有些java库已经用过了
+受到js的启发，其实有些java库已经用过了。
+
+常被用在Builder模式中。
 
 ## Source
 

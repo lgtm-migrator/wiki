@@ -35,6 +35,7 @@ docker run -it --rm openjdk:9 jshell
 简单运行一个Hello World
 
 ```bash
+
 docker run -it --rm openjdk:9 jshell
 Feb 03, 2017 3:29:32 AM java.util.prefs.FileSystemPreferences$1 run
 INFO: Created user preferences directory.
@@ -43,6 +44,7 @@ INFO: Created user preferences directory.
 
 jshell> System.out.println("hello jshell");
 hello jshell
+
 ```
 
 ## 删除image
@@ -50,6 +52,7 @@ hello jshell
 当你玩儿够了之后，可以删除image
 
 ```bash
+
 > docker rmi openjdk:9
 Untagged: openjdk:9
 Untagged: openjdk@sha256:a84088fbcb075deda5d13153bc3000d609a705a6ad7894593eacc5deaf55060e
@@ -61,4 +64,5 @@ Deleted: sha256:c0288fcb728d526bccc668465b3f8a77307a7db854361729357722b9b5107cbf
 Deleted: sha256:668b26d3526e9d6792e3b0e33c304f9bd258704029013072b69aa591a92cb8af
 Deleted: sha256:0a976cda24e7438afe17e77b743a74392102ad319ceb184fdc1fbfd7089a5153
 Deleted: sha256:56729f7b7db9056dceaff40a3ccb06f7f57217a5cbf05c5ed9cebd39ce57b6fc
+
 ```

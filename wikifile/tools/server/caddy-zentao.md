@@ -38,17 +38,18 @@ sudo chown www-data:www-data /var/www/zentao -R
 
 视情况配置Caddyfile，如果是已经配置为服务的caddy，使用喜欢的编辑器打开/etc/caddy/Caddyfile，将以下行添加到其中。
 
-```
+```text
+
 :9936 {
   root /var/www/zentao/www
   fastcgi / /var/run/php5-fpm.sock php
 }
-```
 
+```
 
 ## 安装zentao
 
-进入http://ip:9936/install.php
+进入`/install.php`
 
 输入数据库配置以及管理员账号即可
 

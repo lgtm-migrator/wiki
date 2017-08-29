@@ -68,14 +68,14 @@ sudo ./caddy -conf 'Caddyfile'
 
 ---
 
-*websocket*
+*websocket* proxy
 
 ```text
 header_upstream Connection {>Connection}
 header_upstream Upgrade {>Upgrade}
 ```
 
-*transparent*
+*transparent* proxy
 
 ```text
 header_upstream Host {host}
@@ -100,6 +100,8 @@ domain.com {
 ```
 
 括号中的第一行指定wordpress路径，第二行配置了fastcgi，根据不同情况，可以选择unix socket或者一般的socket
+
+php7是ok的，已验证过
 
 更多高级配置请参看官方文档
 
@@ -143,6 +145,25 @@ site.com {
 }
 
 ```
+
+## 针对wildcard按需获取证书
+
+Lets Encrypt当前不支持wildcard证书(2017年8月29日)，可以使用下述方式按需获取证书
+
+```text
+
+*.site.com {
+    root /
+    tls {
+        max_certs 10240
+    }
+}
+
+```
+
+第一次访问`asubdomain.site.com`，caddy使用自签发证书，并且会触发去获取lets enctype证书。
+
+稍等一会儿就会换上lets encrypt的证书了。
 
 ## 其他
 

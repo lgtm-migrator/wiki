@@ -55,11 +55,9 @@ def registeAdvice(pattern,advice):
 
 ```
 
-
 ## RUN
 
 测试一下
-
 
 ```python
 # -*- coding: utf-8 -*-
@@ -87,16 +85,15 @@ print (aop.getProxy(add)(1,3))
 
 测试结果
 
-```
-> python aop-test.py                                                                    
+```bash
+> python aop-test.py
 2016-09-15 12:22:08.872135
 func printDate be invoke
 param is  (datetime.datetime(2016, 9, 15, 12, 22, 8, 872135),) 
 func add be invoke
-param is  (1, 3) 
-4 
+param is  (1, 3)
+4
 ```
-
 
 ## 结语
 

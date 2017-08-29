@@ -35,3 +35,7 @@ import numpy, scipy, matplotlib
 ```
 
 如果没有Error的话, 就是安装成功了
+
+## Another way
+
+也尝试直接使用Conca包管理器来安装，See [here](https://conda.io/docs/)
