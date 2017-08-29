@@ -1,4 +1,4 @@
-# NGROK
+# Ngrok proxy
 
 ngrok is a reverse proxy that creates a secure tunnel from a public endpoint to a locally running web service. ngrok captures and analyzes all traffic over the tunnel for later inspection and replay.
 
@@ -56,6 +56,18 @@ Forwarding                    https://test1323.ngrok.vps3.fornever.org -> 127.0.
 Web Interface                 127.0.0.1:4040
 # Conn                        0
 Avg Conn Time                 0.00ms
+```
+
+## simple way
+
+download [ngrok.windows.zip](https://download.fornever.org/ngrok-clients/ngrok.windows.zip), unzip and double click `run-ngrok.bat`.
+
+## arch
+
+`ngrokd` is deployed in docker container
+
+```bash
+vultr vps (infrastructure) -> caddy (http(s) reverse proxy) -> docker (application container) -> your host (localhost port)
 ```
 
 ## other
