@@ -8,8 +8,6 @@ download my compiled clients from [here](https://download.fornever.org/ngrok-cli
 
 choose your system version, osx is `ngrok-darwin-amd64`, most linux is `ngrok-linux-amd64`.
 
-and please download `.ngrok` too.
-
 or directly download `ngrok.windows.zip`
 
 `self_signed.cer` is optional for self signed https cert.
@@ -19,7 +17,7 @@ or directly download `ngrok.windows.zip`
 expose your host 1323 port to global
 
 ```bash
-ngrok-windows-amd64.exe -config=.ngrok 1323
+ngrok-windows-amd64.exe 1323
 ```
 
 result
@@ -43,7 +41,7 @@ open [http://localhost:4040](http://localhost:4040) to see requests trace.
 选择一个你喜欢的次级域名
 
 ```bash
-ngrok -config=.ngrok -subdomain=test1323 1323
+ngrok-windows-amd64.exe -subdomain=test1323 1323
 ```
 
 result
