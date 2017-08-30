@@ -6,7 +6,7 @@ Note: 在国内, 因为种种原因, 通过maven/npm/yarn/apt的下载速度很�
 
 这里有一篇[文章](https://yq.aliyun.com/articles/46991), 详细的讲述了如何配置镜像
 
-首先就是找到**Maven的安装路径**, 修改conf目录中的```settings.xml```, 将mirrors节点做如下修改
+首先就是找到**Maven的安装路径**, 修改**conf目录**中的```settings.xml```, 将mirrors节点做如下修改
 
 ```xml
 <mirrors>
@@ -37,11 +37,19 @@ npm config set registry https://registry.npm.taobao.org/
 yarn config set registry https://registry.npm.taobao.org/
 ```
 
+### electron
+
+`For electron project`
+
+```bash
+set ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
+```
+
 ## pypi
 
 pip是python的包管理器，可惜通常情况下，下载速度都太慢了，可以换用ustc的镜像
 
-*~/.pip/pip.conf*
+`~/.pip/pip.conf`
 
 ```text
 [global]
@@ -81,7 +89,7 @@ curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://ac96d588
 
 `/etc/apt/source.list`
 
-```text
+```conf
 deb http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 deb-src http://mirrors.ustc.edu.cn/ubuntu/ xenial main restricted universe multiverse
 
