@@ -64,7 +64,7 @@ Server配置了on-demand获取证书，第一次访问浏览器可能会显示�
 
 ## simple way
 
-download [ngrok.windows.zip](https://download.fornever.org/ngrok-clients/ngrok.windows.zip), unzip and double click `run-ngrok.bat`.
+download [ngrok.windows.zip](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/ngrok.windows.zip), unzip and double click `run-ngrok.bat`.
 
 ## arch
 
