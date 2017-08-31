@@ -10,6 +10,14 @@ GOPATH = %USERPROFILE%/go
 
 **可以使用vendor或者其他路径为GOPATH**
 
+## Build
+
+使用ldflags，可以减小二进制文件的体积
+
+```bash
+go build  -ldflags="-s -w"
+```
+
 ## Error
 
 可以考虑使用`panic`,`recover`实现try catch，否则总是根据多值返回判断，太不优雅了。
