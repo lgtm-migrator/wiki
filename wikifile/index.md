@@ -2,6 +2,8 @@
 
 Note: 欢迎来到我的维基页面
 
+![](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,h_600,w_1024/v1504269701/185624-105_sakvsp.jpg)
+
 ## Info
 
 此网站存放着一些教程和文档
@@ -13,6 +15,12 @@ Note: 欢迎来到我的维基页面
 如果针对内容，你发现了问题/想要提出建议，或者希望寻求一定的帮助，欢迎联系我
 
 ## Learning Log
+
+### 2017年9月1日
+
+尝试Electron，Vue，ElementUI
+
+使用Golang进行网络编程
 
 ### 2017年8月3日
 

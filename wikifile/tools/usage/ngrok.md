@@ -1,16 +1,16 @@
 # Ngrok proxy
 
-ngrok is a reverse proxy that creates a secure tunnel from a public endpoint to a locally running web service. ngrok captures and analyzes all traffic over the tunnel for later inspection and replay.
+Note: ngrok is a reverse proxy that creates a secure tunnel from a public endpoint to a locally running web service. ngrok captures and analyzes all traffic over the tunnel for later inspection and replay.
+
+<video src="https://demo-sap.oss-eu-central-1.aliyuncs.com/2017-09-01_20-14-36.mp4" style="width: 100%;" controls="controls" autoplay></video>
 
 ## install
 
-download my compiled clients from [here](https://download.fornever.org/ngrok-clients/)
+if os is *windows*, download [ngrok.windows.zip](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/ngrok.windows.zip), unzip and double click `run-ngrok.bat`.
 
-choose your system version, osx is `ngrok-darwin-amd64`, most linux is `ngrok-linux-amd64`.
+The other OSs download clients from [here](https://download.fornever.org/ngrok-clients/)
 
-or directly download `ngrok.windows.zip`
-
-`self_signed.cer` is optional for self signed https cert.
+choose your system version, OSx is `ngrok-darwin-amd64`, most linux is `ngrok-linux-amd64`.
 
 ## use
 

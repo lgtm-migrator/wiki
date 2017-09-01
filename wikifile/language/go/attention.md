@@ -8,7 +8,7 @@ Note: Golang的一些注意事项
 
 GOPATH = %USERPROFILE%/go
 
-**可以使用vendor或者其他路径为GOPATH**
+**可以使用vendor，或者其他路径为GOPATH**
 
 ## Build
 

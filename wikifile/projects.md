@@ -1,6 +1,6 @@
 # Projects
 
-Note: Some projects of mine
+Note: Some projects
 
 ## Framework
 
@@ -32,6 +32,7 @@ Note: Some projects of mine
 
 ## Tools
 
+* [image-tool -- 一个处理图像的小工具, 基于Electron, Vue.js和Element UI](https://github.com/Soontao/image-tool)
 * [ui5g -- Basic generator for sapui5/openui5, with gulp Edit](https://github.com/Soontao/ui5g)
 * [ns-server -- Notification Sync Server](https://github.com/NotificationSync/ns-server)
 * [ns-notice -- Notification Sync Desktop Client](https://github.com/NotificationSync/ns-notice)

@@ -4,6 +4,8 @@ Note: 在国内, 因为种种原因, 通过maven/npm/yarn/apt的下载速度很�
 
 ## Maven
 
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504269471/3d114bace0a104fd19fb42433316dac5_wnrxy3.png)
+
 这里有一篇[文章](https://yq.aliyun.com/articles/46991), 详细的讲述了如何配置镜像
 
 首先就是找到**Maven的安装路径**, 修改**conf目录**中的```settings.xml```, 将mirrors节点做如下修改
@@ -20,6 +22,8 @@ Note: 在国内, 因为种种原因, 通过maven/npm/yarn/apt的下载速度很�
 ```
 
 ## npm/yarn
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504269378/7155aa40d0d8bd4619cd63e30dd68dcd_w7urk7.jpg)
 
 npm/yarn作为前端必备工具, 在国内也是慢的要死
 
@@ -39,6 +43,8 @@ yarn config set registry https://registry.npm.taobao.org/
 
 ### electron
 
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504269521/e5d5c1fa84d291555ac48667bfd83cf5_gkngzy.jpg)
+
 `For electron project`
 
 ```bash
@@ -46,6 +52,8 @@ set ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
 ```
 
 ## pypi
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504269379/8ecffe876081e72639603dae6ad548fb_mrc1de.jpg)
 
 pip是python的包管理器，可惜通常情况下，下载速度都太慢了，可以换用ustc的镜像
 
@@ -67,6 +75,8 @@ format = columns
 
 ### Docker
 
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504269550/070b1f147c314a8974002d0ff7eade31_gp7uzc.png)
+
 `/etc/docker/daemon.json`
 
 ```json
@@ -84,6 +94,8 @@ curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://ac96d588
 重启docker即可生效
 
 ### ubuntu
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504269573/82a46fab2706ee355cafa991319f240a_j1fmhw.jpg)
 
 以16.04为例
 
