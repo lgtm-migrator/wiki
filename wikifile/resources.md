@@ -12,7 +12,7 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 提供linux守护进程文件
 
-[这里](./tools/server/caddy.md)有一份教程
+[这里](/#!tools/server/caddy.md)有一份教程
 
 ### BootCDN -- 国内的免费cdn服务
 
@@ -20,7 +20,9 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 ### Gogs -- Go git service
 
-快速搭建一个私有的git服务器
+![](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,w_129/v1504360134/favicon_ncyoxp.png)
+
+快速搭建一个带有web页面的git服务器
 
 ---
 
@@ -40,7 +42,11 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 ## Services
 
-### Coding.net 国内免费私有Git仓库
+### Coding.net
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,w_176/v1504360240/5ee8025c9dc63a6ff53153705d0e7ce8_qsgrie.png)
+
+国内免费私有Git仓库
 
 学生/小团队可以尝试使用
 
@@ -52,7 +58,7 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 **稳定性比较低, SS不定时会断掉，但是很实惠**
 
-### **Vultr**
+### Vultr
 
 之前提供2.5刀512M内存, 现在2.5刀的plan缺货, 但是5刀/1G的plan也比国内的便宜
 
@@ -115,13 +121,14 @@ $ pm2 set pm2-auto-pull:interval 60000
 
 方便集成各种插件，乃至build，package都支持
 
-Python/Java/Go都有相应的插件，并且效果都不错，当作轻量级的IDE都可以
+Python/Java/Go都有相应的插件，并且质量都不错，可以胜任为轻量级IDE
 
 ### Httpie -- HTTPie is a command line HTTP client with an intuitive UI
 
-命令行中快速调试Web API
+命令行中快速调试Web API，[这里](/#!tools/usage/httpie.md)有一份教程
 
 ```bash
+# request to http://localhost:80
 http :80
 ```
 
@@ -129,7 +136,7 @@ http :80
 
 Windwos下的node版本管理工具，有安装包，可用性好
 
-win7-win10可用，win7好像有一些问题
+win7-win10可用，win7有一些问题
 
 ### QuickLook -- Bring OS X “Quick Look” feature to Window
 
@@ -179,9 +186,11 @@ You could download it from [here](https://download.fornever.org/Navicat/)
 
 ### 迅雷下载宝
 
-用来当作nas是很好的，支持千兆网络，samba以及dlan，授权的话不支持多用户，作为家庭使用非常棒
+用来当作nas是很好的，支持千兆网络，samba以及dlan，授权的话不支持多用户，家庭使用非常棒
 
 价格也不高，150-200即可入手
+
+**需要自备硬盘**
 
 ---
 
@@ -190,6 +199,8 @@ You could download it from [here](https://download.fornever.org/Navicat/)
 ### 孤单又灿烂的神 - 鬼怪
 
 真的好看, 金高银超可爱
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,w_477/v1495520236/1664314_jogwyw.jpg)
 
 ### 花间提壶方大厨
 

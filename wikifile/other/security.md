@@ -1,4 +1,4 @@
-# 一些关于安全的琐碎
+# 关于安全
 
 Some points about security
 
@@ -36,7 +36,7 @@ Attention: 执行一部分即可降低密码相关安全风险。
 
   为不同网站/应用随机生成密码，记住一个管理工具的密码即可
 
-  这里有一个[使用chrome随机密码](/#!tools/config/chrome-pass-gen.md)的教程
+  这里有一个[使用chrome随机密码](/#!tools/config/generated-passwd.md)的教程
 
 ## PC/Windows
 
