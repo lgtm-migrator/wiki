@@ -26,6 +26,19 @@ Note: Check some docker related command from [here](../../tools/usage/commands.m
 
 ## cmd
 
+common
+
+```bash
+# list images
+docker images
+# rm image
+docker rmi <image-name>
+# list containers
+docker ps
+# list all containers (with stoped)
+docker ps -a
+```
+
 push image to registry:
 
 ```bash

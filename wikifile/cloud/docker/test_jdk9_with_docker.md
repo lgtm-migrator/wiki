@@ -2,6 +2,8 @@
 
 JShell是Java的REPL，由[JEP222](http://openjdk.java.net/jeps/222)提出，将在JDK9中被实现
 
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504342122/2017-09-02_16-47-48_aetwgh.gif)
+
 ## 确认Docker
 
 示例所使用的Docker版本是1.12.3，理论上其它版本也能支持

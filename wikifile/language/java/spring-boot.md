@@ -2,7 +2,7 @@
 
 ## 创建项目
 
-先访问 http://start.spring.io/ 创建一个Spring Boot项目 
+先访问 [https://start.spring.io/](https://start.spring.io/) 创建一个Spring Boot项目
 
 在这里，我们选择如下配置
 

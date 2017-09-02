@@ -2,7 +2,7 @@
 
 Note: ngrok is a reverse proxy that creates a secure tunnel from a public endpoint to a locally running web service. ngrok captures and analyzes all traffic over the tunnel for later inspection and replay.
 
-<video src="https://demo-sap.oss-eu-central-1.aliyuncs.com/2017-09-01_20-14-36.mp4" style="width: 100%;" controls="controls" autoplay></video>
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504341255/2017-09-02_16-31-29_znicui.gif)
 
 ## install
 
