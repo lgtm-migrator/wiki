@@ -57,4 +57,8 @@ find installer at `build` directory
 
 ## sample
 
+image-tool
+
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504353841/2017-09-02_20-00-45_x6v4jy.gif)
+
 see [here](https://github.com/Soontao/image-tool), it's a simple image process tool.
