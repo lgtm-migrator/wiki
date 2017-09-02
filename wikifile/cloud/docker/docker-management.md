@@ -14,7 +14,7 @@ Note: Check some docker related command from [here](../../tools/usage/commands.m
 
 可以直接用Docker部署，简单方便
 
-![](https://res.cloudinary.com/digf90pwi/image/upload/c_scale,q_44,w_1366/v1498371160/shipyard_ercjhu.png)
+![](https://res.cloudinary.com/digf90pwi/image/upload/v1504324424/2017-09-02_11-48-02_eb4x0z.gif)
 
 ## DaoCloud
 
@@ -29,15 +29,11 @@ Note: Check some docker related command from [here](../../tools/usage/commands.m
 push image to registry:
 
 ```bash
-
 docker push theosun/testproject:latest
-
 ```
 
 stop and remove container
 
 ```bash
-
 docker rm -f container_name
-
 ```

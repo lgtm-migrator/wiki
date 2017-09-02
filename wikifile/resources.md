@@ -12,6 +12,8 @@ Note: 资源推荐页面。以下都是我自己用过，并且使用体验很�
 
 提供linux守护进程文件
 
+[这里](./tools/server/caddy.md)有一份教程
+
 ### BootCDN -- 国内的免费cdn服务
 
 常用类库的免费CDN服务，支持https
