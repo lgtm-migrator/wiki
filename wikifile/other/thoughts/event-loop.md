@@ -154,9 +154,19 @@ http
 
 尽量保证线程的纯粹性，避免线程间同步。需要同步的话就复杂了，js可没有synchronized关键字
 
+## AIO的底层实现
+
+nodejs使用的是libuv，是libeio/libev/IOCP的封装，这三者都是通过线程池与阻塞IO实现了AIO。
+
+nginx使用的是linux内核的aio，只有在IO结束之后，才会从内核态回调，实现的原理是利用CPU与IO设备异步工作的特性。linux自带的aio无法使用缓存。windows下nginx与nodejs类似。
+
+> 很多人会将AIO理解成磁盘IO的异步方案，会将AIO狭隘化为类epoll接口在磁盘IO的特殊化，其实AIO应该是横架于整个内核的接口，它把所有的IO包括(本地设备，网络，管道等)以统一的异步接口提供给用户程序，每个子系统都针对接口实现自己的异步方案，而同步IO(Synchronous IO)只是在内核内部的”AIO+Blocking”.
+
 ## references
 
 1. [Nginx Vs Apache: Nginx Basic Architecture and Scalability](http://www.thegeekstuff.com/2013/11/nginx-vs-apache/?utm_source=tuicool)
 1. [Which is correct Node.js architecture?](https://stackoverflow.com/questions/36766696/which-is-correct-node-js-architecture)
 1. [web服务器apache架构与原理](http://www.cnblogs.com/fnng/archive/2012/11/08/2761713.html)
 1. [Java 中 BIO、NIO、AIO 模型的对比](http://patchouli-know.com/2017/03/18/java-bio-nio-aio/)
+1. [初探Node.js的异步I/O实现](http://www.infoq.com/cn/articles/nodejs-asynchronous-io)
+1. [Nginx基础. eventfd, 异步IO 与epoll的相互协作](http://blog.csdn.net/u012062760/article/details/48732555)
