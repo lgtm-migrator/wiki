@@ -32,3 +32,4 @@ node_modules
 **/navigation.md
 **/wiki.appcache
 **/_sidebar.md
+.vscode

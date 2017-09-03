@@ -113,17 +113,44 @@ http
 
 与之类似，nginx也要避免阻塞操作，但其实大部分情况下，我们只需要使用它的模块即可，这些模块都是严格异步的。
 
-如果编写一个lua模块，采用阻塞操作，无疑，nginx的worker也会整个阻塞掉，所以编写模块的时候一定要小心。
+如果编写一个lua模块，采用阻塞操作，无疑，nginx的worker会整个阻塞掉，因此编写nginx模块一定要注意API的使用。
 
 ---
 
-so，那么加入多线程可以吗？
+so，对于nodejs来说，加入多线程可以吗？
 
-简单的加入多线程是不可行的，Developer会直接开始多线程编程。
+混合模型理论是可行的
 
-混合模型理论是可行的，即底层开启多个线程，每个线程跑event loop，相关的handler依旧交给某一个线程来处理，这样可以避免某一个event loop阻塞过久导致整个进程阻塞，但是每个handler依旧需要考虑同步和一致性的问题。
+第一种方式，底层开启多个线程，每个线程跑event loop，相关的handler依旧交给某一个线程来处理，这样可以避免某一个event loop阻塞过久导致整个进程阻塞，但是每个handler依旧需要考虑同步和一致性的问题。
 
-加入多线程，handler和event loop都会变得复杂，没有太大意义。
+第二种方式，使用web worker API
+
+```javascript
+var http = require("http")
+var Worker = require('webworker-threads').Worker
+
+var port = 8080
+
+// machine learning operation
+var doML = function() {
+  onmessage = e => {
+    var rt = e.data
+    // do ml algorithm
+    postMessage(rt)
+  }
+}
+
+var worker = new Worker(doML)
+
+http
+  .createServer((req, res) => {
+    worker.postMessage(req.body.dataset) // 伪代码
+    worker.onMessage(msg => {
+      res.end(`result: ${msg}`)
+    })
+  })
+  .listen(port, () => console.log(`server started at ${port}`))
+```
 
 ## references
 
