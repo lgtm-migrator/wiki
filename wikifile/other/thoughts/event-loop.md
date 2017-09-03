@@ -105,9 +105,11 @@ http
   .listen(port, () => console.log(`server started at ${port}`))
 ```
 
-在http handler中我们加了一个耗时操作，它可能是一个knn算法，可能是在parse xlsx文件，whatever，它阻塞了程序一段时间。那么在这一段时间内，这个node server完全挂掉了，并发能力降为1。(当然，由于网络允许排队，所以请求并不会断掉)
+在http handler中我们加了一个耗时操作，它可能是一个knn算法，可能是在parse xlsx文件，whatever，它阻塞了程序一段时间。这一段时间内，这个node server可以被视作死掉了，并发能力骤降。
 
-原理并不难理解，js本身是阻塞的，当event loop在resource就绪之后，call http handler，整个线程的控制权交给了handler(还记得吗，nodejs只有单线程的work thread)，那么直到它完成，其它所有操作都被阻塞掉。
+原理并不难理解，js代码块本身是阻塞的，当event loop在resource就绪之后，去调用相应的callback，整个线程的控制权交给了handler(还记得吗，nodejs主要逻辑是单线程的)，那么直到它完成，其它所有操作都被阻塞掉。
+
+需要明确的是，由于libuv的封装，底层其实是有多个线程去做IO操作的，相关的net/file IO还是活跃的，只是node的主逻辑线程被阻塞，没有办法去消费这些事件。
 
 ---
 
@@ -149,6 +151,8 @@ http
   })
   .listen(port, () => console.log(`server started at ${port}`))
 ```
+
+尽量保证线程的纯粹性，避免线程间同步。需要同步的话就复杂了，js可没有synchronized关键字
 
 ## references
 
