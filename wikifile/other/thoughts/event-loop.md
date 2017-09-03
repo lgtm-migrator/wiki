@@ -144,10 +144,8 @@ var worker = new Worker(doML)
 
 http
   .createServer((req, res) => {
+    worker.onMessage(msg => res.end(`result: ${msg}`) )
     worker.postMessage(req.body.dataset) // 伪代码
-    worker.onMessage(msg => {
-      res.end(`result: ${msg}`)
-    })
   })
   .listen(port, () => console.log(`server started at ${port}`))
 ```
@@ -157,3 +155,4 @@ http
 1. [Nginx Vs Apache: Nginx Basic Architecture and Scalability](http://www.thegeekstuff.com/2013/11/nginx-vs-apache/?utm_source=tuicool)
 1. [Which is correct Node.js architecture?](https://stackoverflow.com/questions/36766696/which-is-correct-node-js-architecture)
 1. [web服务器apache架构与原理](http://www.cnblogs.com/fnng/archive/2012/11/08/2761713.html)
+1. [Java 中 BIO、NIO、AIO 模型的对比](http://patchouli-know.com/2017/03/18/java-bio-nio-aio/)
