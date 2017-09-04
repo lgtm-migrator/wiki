@@ -89,3 +89,35 @@ applications:
   env:
     C_SERVER_URL: https://username:password@discover-theo.cfapps.io
 ```
+
+## services
+
+```bash
+# show services name, plan and description
+cf marketplace
+# create service instance
+cf create-service postgresql v9.4-dev psql
+# show all services instances
+cf services
+# delete a service instance
+cf delete-service demo
+```
+
+manifest.yml
+
+```yaml
+---
+applications:
+-
+    name: spring-boot-demo
+
+    memory: 500M
+
+    path: target/demo-1.0.0.war
+
+    buildpack: java_buildpack
+
+    services:
+    - psql
+
+```
