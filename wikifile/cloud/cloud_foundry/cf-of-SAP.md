@@ -15,7 +15,7 @@ Yap, SAP提供有限而不限时长的Cloud Foundry内存，申请过程也比�
 
 注册完毕之后，开始准备与CF建立连接
 
-<video controls src="https://res.cloudinary.com/digf90pwi/video/upload/v1504531682/2017-09-04_21-24-12_pfw7cg.mp4"> </video>
+<video controls width="100%" src="https://res.cloudinary.com/digf90pwi/video/upload/v1504531682/2017-09-04_21-24-12_pfw7cg.mp4"> </video>
 
 打开terminal，利用**CF Cli**与CF建立连接
 
@@ -113,7 +113,7 @@ cf create-service postgresql v9.6-dev psql
 cf push
 ```
 
-<video controls src="https://res.cloudinary.com/digf90pwi/video/upload/v1504535928/2017-09-04_22-34-05_suuwu2.mp4"> </video>
+<video width="100%" controls src="https://res.cloudinary.com/digf90pwi/video/upload/v1504535928/2017-09-04_22-34-05_suuwu2.mp4"> </video>
 
 如果成功的话，CLI在最后会列出应用的URL，访问即可。
 
