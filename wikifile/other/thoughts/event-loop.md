@@ -158,7 +158,7 @@ http
 
 nodejs使用的libuv，是libeio/libev/IOCP的封装，前两者通过线程池与阻塞IO实现AIO，后者是内核提供的异步IO。
 
-nginx最开始使用的是linux内核的aio，只有在IO结束之后，才会从内核态回调，实现的原理是利用CPU与IO设备异步工作的特性。linux自带的aio无法使用缓存。windows下nginx使用IOCP，也是OS内核提供的异步API。
+nginx直接使用epoll和IOCP。linux自带的aio可以配置开启。windows下nginx使用IOCP，是OS内核提供的异步API。
 
 > 很多人会将AIO理解成磁盘IO的异步方案，会将AIO狭隘化为类epoll接口在磁盘IO的特殊化，其实AIO应该是横架于整个内核的接口，它把所有的IO包括(本地设备，网络，管道等)以统一的异步接口提供给用户程序，每个子系统都针对接口实现自己的异步方案，而同步IO(Synchronous IO)只是在内核内部的”AIO+Blocking”.
 
