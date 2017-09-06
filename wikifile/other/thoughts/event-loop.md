@@ -156,11 +156,19 @@ http
 
 ## AIO的底层实现
 
-nodejs使用的libuv，是libeio/libev/IOCP的封装，前两者通过线程池与阻塞IO实现AIO，后者是内核提供的异步IO。
+nodejs使用的libuv，是libeio/libev/IOCP的封装，前两者通过多路复用与阻塞IO实现AIO，后者是内核提供的异步IO与提醒机制。
 
-nginx直接使用epoll和IOCP。linux自带的aio可以配置开启。windows下nginx使用IOCP，是OS内核提供的异步API。
+nginx则直接使用epoll和IOCP。linux自带的aio可以配置开启。windows下nginx使用IOCP，是OS内核提供的异步API。
 
 > 很多人会将AIO理解成磁盘IO的异步方案，会将AIO狭隘化为类epoll接口在磁盘IO的特殊化，其实AIO应该是横架于整个内核的接口，它把所有的IO包括(本地设备，网络，管道等)以统一的异步接口提供给用户程序，每个子系统都针对接口实现自己的异步方案，而同步IO(Synchronous IO)只是在内核内部的”AIO+Blocking”.
+
+## IOCP与EPoll
+
+由于OS的哲学不同，Windows倾向于提供更简明的API，而linux则提供了更灵活的API
+
+> Windows uses a notify on completion model (hence I/O Completion Ports). You start some operation asynchronously, and receive a notification when that operation has completed.
+
+> Linux applications (and most other Unix-alikes) generally use a notify on ready model. You receive a notification that the socket can be read from or written to without blocking. Then, you do the I/O operation, which will not block.
 
 ## references
 
@@ -170,3 +178,4 @@ nginx直接使用epoll和IOCP。linux自带的aio可以配置开启。windows下
 1. [Java 中 BIO、NIO、AIO 模型的对比](http://patchouli-know.com/2017/03/18/java-bio-nio-aio/)
 1. [初探Node.js的异步I/O实现](http://www.infoq.com/cn/articles/nodejs-asynchronous-io)
 1. [Nginx基础. eventfd, 异步IO 与epoll的相互协作](http://blog.csdn.net/u012062760/article/details/48732555)
+1. [Linux and I/O completion ports?](https://stackoverflow.com/questions/2794535/linux-and-i-o-completion-ports)
