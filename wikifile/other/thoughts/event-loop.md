@@ -156,19 +156,39 @@ http
 
 ## AIO的底层实现
 
-nodejs使用的libuv，是libeio/libev/IOCP的封装，前两者通过多路复用与阻塞IO实现AIO，后者是内核提供的异步IO与提醒机制。
+nodejs使用的libuv，是libeio/libev/IOCP的封装，前两者通过`线程池 + 阻塞IO`实现伪AIO，后者是内核提供的异步IO与提醒机制。
 
-nginx则直接使用epoll和IOCP。linux自带的aio可以配置开启。windows下nginx使用IOCP，是OS内核提供的异步API。
+nginx则直接使用epoll + aio和IOCP。windows下nginx使用IOCP，是OS内核提供的异步API。
 
 > 很多人会将AIO理解成磁盘IO的异步方案，会将AIO狭隘化为类epoll接口在磁盘IO的特殊化，其实AIO应该是横架于整个内核的接口，它把所有的IO包括(本地设备，网络，管道等)以统一的异步接口提供给用户程序，每个子系统都针对接口实现自己的异步方案，而同步IO(Synchronous IO)只是在内核内部的”AIO+Blocking”.
 
-## IOCP与EPoll
+## linux 下的AIO
+
+在linux下, 有两种异步IO.
+
+一种是由glibc实现的aio, 它是直接在用户空间用pthread进行模拟的伪异步IO;
+
+还有一种是内核实现的aio. 相关的系统调用是以 io_xxx 形式出现的.
+
+在nginx中, 采用的是内核实现的aio, 只有在内核中成功完成了磁盘操作, 内核才会通知进程, 进而使磁盘文件的处理与网络事件的处理同样高效.
+
+内核提供的aio能够同时提交多个io请求给内核, 当大量事件堆积到IO设备的队列中时, 内核将发挥出io调度算法的优势, 对到来的事件处理进行优化, 合并等.
+
+内核级别aio缺点是不支持缓存, 即使需要操作的文件块在linux文件缓存中已经存在, 也不会通过读取缓存来代替实际对磁盘的操作, 所以尽管相对于阻塞进程来说有了很大的好转, 但对于单个请求来说, 还是有可能降低实际的处理效率. 因为本可以从缓存中读的数据在使用异步IO后一定会从磁盘读取.
+
+所以异步IO并不是完美的. 如果大部分用户请求对文件的操作都会落到文件缓存中, 那么放弃异步IO可能是更好的选择.
+
+目前, Nginx仅支持读文件的异步IO, 因为正常写入文件往往是写入内存就返回, 相比于异步IO效率明显提高了.
+
+## IOCP与epoll
 
 由于OS的哲学不同，Windows倾向于提供更简明的API，而linux则提供了更灵活的API
 
 > Windows uses a notify on completion model (hence I/O Completion Ports). You start some operation asynchronously, and receive a notification when that operation has completed.
 
 > Linux applications (and most other Unix-alikes) generally use a notify on ready model. You receive a notification that the socket can be read from or written to without blocking. Then, you do the I/O operation, which will not block.
+
+在我看来，epoll + linux aio ≈ IOCP
 
 ## references
 
@@ -179,3 +199,5 @@ nginx则直接使用epoll和IOCP。linux自带的aio可以配置开启。windows
 1. [初探Node.js的异步I/O实现](http://www.infoq.com/cn/articles/nodejs-asynchronous-io)
 1. [Nginx基础. eventfd, 异步IO 与epoll的相互协作](http://blog.csdn.net/u012062760/article/details/48732555)
 1. [Linux and I/O completion ports?](https://stackoverflow.com/questions/2794535/linux-and-i-o-completion-ports)
+1. [Nginx基础. eventfd, 异步IO 与epoll的相互协作](http://blog.csdn.net/u012062760/article/details/48732555)
+1. [libuv 选型](https://yjhjstz.gitbooks.io/deep-into-node/content/chapter11/chapter11-4.html)
