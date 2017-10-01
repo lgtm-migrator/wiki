@@ -10,6 +10,16 @@
 
 Java反编译工具，可以将jar包反编译成`.java`文件，大部分情况下工作正常。
 
-方便好用。
+方便好用。1
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1501752131/20170803172157_mqoulb.png)
+
+## Lombok
+
+[https://projectlombok.org/](https://projectlombok.org/)
+
+利用注解和编译时插件，自动生成一些方法，简化Java类
+
+在[这里](https://projectlombok.org/download)下载后，双击jar包安装
+
+**安装IDE插件之后，依旧需要把lombok添加到项目依赖**

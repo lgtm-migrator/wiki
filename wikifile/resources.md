@@ -172,6 +172,18 @@ You could download it from [here](https://download.fornever.org/Navicat/)
 
 可用, 界面也不错
 
+### ShareX -- 开源截屏、录屏
+
+[Homepage](https://getsharex.com/)
+
+开源可用的截屏录屏软件，可以到处git，视频相对较大，但是还比较好用。
+
+推荐
+
+### windows步骤记录器
+
+录取步骤操作以及截屏，可用于复现错误操作
+
 ---
 
 ## Hardware
