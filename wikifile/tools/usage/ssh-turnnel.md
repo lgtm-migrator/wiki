@@ -1,5 +1,7 @@
 # SSH 隧道使用
 
+![](https://res.cloudinary.com/drxgh9gqs/image/upload/v1507862394/how-does-ssh-protocol-work-920x272-SWKuhzNV_ydqzlk.png)
+
 Note: SSH除了作为远程控制shell，自身提供相当强大的隧道功能
 
 ## SSH动态转发
