@@ -12,15 +12,17 @@ GOPATH = %USERPROFILE%/go
 
 ## Build
 
-使用ldflags，可以减小二进制文件的体积
+使用ldflags，可以减小二进制文件的体积，约减少三分之一
 
 ```bash
 go build  -ldflags="-s -w"
 ```
 
+jenkins对于golang的支持不是很好，需要自己编写相应的环境
+
 ## Error
 
-可以考虑使用`panic`,`recover`实现try catch，否则总是根据多值返回判断，太不优雅了。
+可以考虑使用`panic`,`recover`实现try catch，否则总是根据多值返回判断，不是很优雅。
 
 ## 依赖
 
@@ -42,6 +44,10 @@ govendor add +external
 ## 包
 
 一个路径一个包, 不同名的包考虑放在子目录或者其它地方
+
+包名尽量不要重合
+
+golang不支持循环依赖，对于包及文件的安排需尽早考虑
 
 ## 可见性
 

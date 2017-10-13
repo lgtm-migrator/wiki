@@ -1,4 +1,4 @@
-# 关于安全
+# Some points about security
 
 Some points about security
 
