@@ -104,7 +104,9 @@ Cloud Foundry服务提供商，注册就提供2G内存使用(受到限制)，可
 
 ### PM2 -- NodeJS守护进程
 
-NodeJS实现的守护进程，提供部署，检测，自动重启和日志功能。不止nodejs可以使用。
+NodeJS实现的守护进程，提供部署，检测，自动重启和日志功能。
+
+不止nodejs可以使用，python和shell都可以用。
 
 同时推荐使用[pm2-auto-pull](https://github.com/pm2-hive/pm2-auto-pull)工具，每隔一段时间自动pull，配合watch使用感觉良好
 
@@ -113,6 +115,15 @@ NodeJS实现的守护进程，提供部署，检测，自动重启和日志功�
 $ pm2 install pm2-auto-pull
 ## Configure auto pull interval
 $ pm2 set pm2-auto-pull:interval 60000
+```
+
+使重启后自动启动pm2，进而启动应用
+
+```bash
+# make linux daemon
+pm2 startup
+# save application infos
+pm2 save
 ```
 
 ### VS code -- 足够重量级的编辑器

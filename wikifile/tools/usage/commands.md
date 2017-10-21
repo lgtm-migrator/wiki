@@ -4,6 +4,10 @@ Note: 一些常用到的命令, 作一个记录
 
 ## Linux
 
+* `find -exec`
+
+  提供查找文件及对选中文件执行命令的功能
+
 * `docker run -d --restart=always -p HOST_EXPOSE_PORT:CONTAINER_PORT image`
 
   运行docker容器
