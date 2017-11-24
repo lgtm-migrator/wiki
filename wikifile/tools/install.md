@@ -97,9 +97,15 @@ sudo apt-get install shellinabox
 install shadowsocks lib
 
 ```bash
+# for ubuntu
 sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev
 sudo apt-get update
 sudo apt install shadowsocks-libev
+# for debian
+sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports main\n" > /etc/apt/sources.list.d/jessie-backports.list'
+sudo sh -c 'printf "deb http://deb.debian.org/debian jessie-backports-sloppy main" >> /etc/apt/sources.list.d/jessie-backports.list'
+sudo apt update
+sudo apt -t jessie-backports-sloppy install shadowsocks-libev
 # edit server/client config
 sudo vim /etc/shadowsocks-libev/config.json
 ```

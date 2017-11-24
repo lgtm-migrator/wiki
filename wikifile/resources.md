@@ -98,6 +98,12 @@ Cloud Foundry服务提供商，注册就提供2G内存使用(受到限制)，可
 
 一些好用的工具
 
+### CLOC
+
+[Link](https://github.com/AlDanial/cloc)
+
+Count Lines of Code， 计算项目代码行数，注释行数等
+
 ### PotPlayer
 
 合格的多媒体播放器
