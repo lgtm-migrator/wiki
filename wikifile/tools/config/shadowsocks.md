@@ -38,13 +38,28 @@ encrypt: RC4-MD5
 password: sspassword
 ```
 
-日本延迟小一些，但是不能访问Google Scholar
+**日本延迟小一些，但是不能访问Google Scholar**
 
 ## 客户端
 
 各个系统可以到[这里](https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients)寻找相应的ss客户端
 
 Windows的客户端可以点击[这里](https://download.fornever.org/shadowsocks.exe)下载，双击运行之后，配置运行即可
+
+[安卓客户端下载](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/shadowsocks-nightly-4.2.5.apk)
+
+Windows [二进制客户端](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/ss-go.zip)
+
+```json
+{
+    "server":"vps4.fornever.org",
+    "server_port":8388,
+    "local_port":1080,
+    "password":"sspassword",
+    "method": "RC4-MD5",
+    "timeout":600
+}
+```
 
 ## 基于SS的，SOCKS5代理
 
