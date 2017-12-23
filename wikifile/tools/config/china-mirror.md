@@ -47,8 +47,17 @@ yarn config set registry https://registry.npm.taobao.org/
 
 `For electron project`
 
+* CMD
+
 ```bash
 set ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
+```
+
+* BASH
+
+```bash
+export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
+export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
 ```
 
 ## pypi
