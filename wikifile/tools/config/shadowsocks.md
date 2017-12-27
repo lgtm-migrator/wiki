@@ -1,4 +1,4 @@
-# ShadowSocks -- 某科学的上网方法
+# ShadowSocks
 
 shadowsocks是一个代理工具，用作安全代理
 
@@ -49,6 +49,8 @@ Windows的客户端可以点击[这里](https://download.fornever.org/shadowsock
 [安卓客户端下载](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/shadowsocks-nightly-4.2.5.apk)
 
 Windows [二进制客户端](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/ss-go.zip)
+
+[IOS客户端OpenWingy](https://itunes.apple.com/cn/app/openwingy/id1294672758?mt=8)
 
 ```json
 {
