@@ -41,7 +41,7 @@ npm config set registry https://registry.npm.taobao.org/
 yarn config set registry https://registry.npm.taobao.org/
 ```
 
-### electron
+### electron and node sass
 
 ![](https://res.cloudinary.com/digf90pwi/image/upload/v1504269521/e5d5c1fa84d291555ac48667bfd83cf5_gkngzy.jpg)
 
@@ -50,6 +50,7 @@ yarn config set registry https://registry.npm.taobao.org/
 * CMD
 
 ```bash
+set SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/
 set ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
 ```
 
