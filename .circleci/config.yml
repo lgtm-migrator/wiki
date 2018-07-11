@@ -2,8 +2,9 @@ version: 2
 jobs:
   # build
   build:
+
     docker:
-      # specify the version you desire here
+
       - image: circleci/node:7.10
       
     working_directory: ~/repo
@@ -19,37 +20,22 @@ jobs:
           - v1-dependencies-
 
       - run:
-          name: "Install dependency"
+          name: Install dependency
           command: npm install
+
       - run: 
-          name: "Build"
+          name: Build
           command: npm run build
-          
+
       - store_artifacts:
           path: ~/repo/wikifile
+
+      - run:
+          name: Deploy
+          command: |
+            scp -rpC ~/repo/wikifile $SSH_USER@$SSH_HOST:sites
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-  deploy:  # deploy to wiki.fornever.org
-    machine:
-      enabled: true
-    steps:
-      - run:
-          name: Deploy Over SSH
-          command: |
-            scp -rpC ~/repo/wikifile $SSH_USER@$SSH_HOST:sites
-
-workflows:
-  version: 2
-  build-and-deploy:
-    jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
