@@ -30,6 +30,10 @@ jobs:
       - store_artifacts:
           path: ~/repo/wikifile
 
+      - add_ssh_keys:
+          fingerprints:
+            - "06:9a:b2:48:0c:33:a0:06:ee:61:27:37:49:e0:f8:b1"
+
       - run:
           name: Deploy
           command: |
