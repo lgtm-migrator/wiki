@@ -29,13 +29,10 @@ encrypt: RC4-MD5
 password: sspassword
 ```
 
-洛杉矶
+新加坡(SSR服务器)
 
 ```text
-host: vps4.fornever.org
-port: 8388
-encrypt: RC4-MD5
-password: sspassword
+ssr://dnBzMy5mb3JuZXZlci5vcmc6NjAwMDE6b3JpZ2luOmNoYWNoYTIwOnBsYWluOk5qWTJOalkyTnpnLz9vYmZzcGFyYW09Jmdyb3VwPVUxTlNMblp3Y3pN
 ```
 
 **日本延迟小一些，但是不能访问Google Scholar**

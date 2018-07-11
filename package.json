@@ -6,16 +6,20 @@
   "scripts": {
     "start": "node node_modules/nano-server/nano-server 3000 ./wikifile",
     "build": "cd wikifile && node build.js",
+    "watch": "watch \"npm run build\" wikifile --wait=3 -u",
     "postinstall": "npm build",
     "readme": "cd wikifile && node build_readme.js",
     "sidebar": "cd wikifile && node build_sidebar.js"
+  },
+  "devDependencies": {
+    "nano-server": "0.5.3",
+    "watch": "^1.0.2"
   },
   "dependencies": {
     "capitalize": "^1.0.0",
     "directory-tree": "^1.2.1",
     "glob": "^7.1.2",
-    "lodash": "^4.17.4",
-    "nano-server": "0.5.3"
+    "lodash": "^4.17.4"
   },
   "keywords": [
     "wiki"
