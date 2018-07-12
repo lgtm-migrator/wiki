@@ -1,3 +1,0 @@
-# Wiki Pages
-
-Welcome here

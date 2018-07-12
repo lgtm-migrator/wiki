@@ -33,3 +33,5 @@ node_modules
 **/wiki.appcache
 **/_sidebar.md
 .vscode
+*.lock
+*lock*

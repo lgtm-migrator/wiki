@@ -5,11 +5,9 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/nano-server/nano-server 3000 ./wikifile",
-    "build": "cd wikifile && node build.js",
+    "build": "node build/build.js",
     "watch": "watch \"npm run build\" wikifile --wait=3 -u",
-    "postinstall": "npm build",
-    "readme": "cd wikifile && node build_readme.js",
-    "sidebar": "cd wikifile && node build_sidebar.js"
+    "postinstall": "npm build"
   },
   "devDependencies": {
     "nano-server": "0.5.3",
