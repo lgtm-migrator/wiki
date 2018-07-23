@@ -29,25 +29,27 @@ encrypt: RC4-MD5
 password: sspassword
 ```
 
-新加坡(SSR服务器)
+新加坡(ShadowSocksR服务器, up to 2MB/s)
 
 ```text
 ssr://dnBzMy5mb3JuZXZlci5vcmc6NjAwMDE6b3JpZ2luOmNoYWNoYTIwOnBsYWluOk5qWTJOalkyTnpnLz9vYmZzcGFyYW09Jmdyb3VwPVUxTlNMblp3Y3pN
 ```
 
-**日本延迟小一些，但是不能访问Google Scholar**
+日本延迟小一些，但是不能访问Google Scholar
 
 ## 客户端
 
 各个系统可以到[这里](https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients)寻找相应的ss客户端
 
-Windows的客户端可以点击[这里](https://download.fornever.org/shadowsocks.exe)下载，双击运行之后，配置运行即可
+[Windows C#客户端](https://download.fornever.org/shadowsocks.exe)下载，双击运行之后，配置运行即可
 
 [安卓客户端下载](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/shadowsocks-nightly-4.2.5.apk)
 
-Windows [二进制客户端](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/ss-go.zip)
+Windows [Golang客户端](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/ss-go.zip)
 
 [IOS客户端OpenWingy](https://itunes.apple.com/cn/app/openwingy/id1294672758?mt=8)
+
+[ShadowsocksR Client](https://github.com/erguotou520/electron-ssr)
 
 ```json
 {
@@ -74,25 +76,25 @@ pc (as socks5 client) -> socks5 server (as ss client) -> shadowsocks server
 
 ### 相关配置
 
-*cmd*
+run
 
 ```bash
 /usr/bin/python  /usr/local/bin/sslocal -c /etc/shadowsocks.json -d restart
 ```
 
-*config*
+with config
 
 ```json
 {
-        "server":"sshost",
-        "server_port":"ssport",
-        "local_address":"0.0.0.0",
-        "local_port":"expose port",
-        "password":"sspassword",
-        "timeout":30,
-        "method":"rc4-md5",
-        "fast_open":false,
-        "workers":4
+    "server":"sshost",
+    "server_port":"ssport",
+    "local_address":"0.0.0.0",
+    "local_port":"expose port",
+    "password":"sspassword",
+    "timeout":30,
+    "method":"rc4-md5",
+    "fast_open":false,
+    "workers":4
 }
 ```
 
@@ -101,7 +103,3 @@ pc (as socks5 client) -> socks5 server (as ss client) -> shadowsocks server
 用于过滤需要代理的服务器
 
 ```https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt```
-
-## 其他
-
-服务器每月只有500G流量，上网绝对足够了，看电影什么的就算了吧

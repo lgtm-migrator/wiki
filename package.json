@@ -7,7 +7,7 @@
     "start": "node node_modules/nano-server/nano-server 3000 ./wikifile",
     "build": "node build/build.js",
     "watch": "watch \"npm run build\" wikifile --wait=3 -u",
-    "postinstall": "npm build"
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "nano-server": "0.5.3",
