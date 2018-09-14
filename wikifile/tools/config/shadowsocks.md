@@ -4,8 +4,6 @@ shadowsocks是一个代理工具，用作安全代理
 
 [相关的教程](https://github.com/shadowsocks/shadowsocks/wiki)在这里，各个平台的客户端都用
 
-(2017年3月)，当前Android客户端可能有些问题，手机资源占用比较厉害
-
 ## 如何使用
 
 安装客户端之后，将SS服务器的配置填进去即可
@@ -14,13 +12,27 @@ shadowsocks是一个代理工具，用作安全代理
 
 使用Windows客户端，可以自动下载一个gfwlist，选择性使用ss代理
 
-## 服务器？
+## 客户端
 
-有客户端，自然有服务端，你可能需要一个在国外的服务器，运行服务端程序即可，[这里有ss的搭建教程](https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
+各个系统可以到[这里](https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients)寻找相应的ss客户端
 
-当然，国外的服务器不是人人都有，以下是我的ss服务器配置
+[Windows C#客户端](https://download.fornever.org/shadowsocks.exe)下载，双击运行之后，配置运行即可
 
-日本
+[Android客户端下载](http://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/shadowsocks--universal-4.6.1.apk)
+
+[Windows Golang二进制客户端](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/ss-go.zip)
+
+[IOS客户端OpenWingy](https://itunes.apple.com/cn/app/openwingy/id1294672758?mt=8)
+
+[ShadowsocksR Desktop Client](https://github.com/erguotou520/electron-ssr)
+
+香港Shadowsocks(低延迟), 复制连接后在右上角从剪贴板导入
+
+```text
+ss://cmM0LW1kNTpzc3Bhc3N3b3Jk@hk01.fornever.org:8443#hk01
+```
+
+新加坡Shadowsocks
 
 ```text
 host: vps3.fornever.org
@@ -29,38 +41,15 @@ encrypt: RC4-MD5
 password: sspassword
 ```
 
-新加坡(ShadowSocksR服务器, up to 2MB/s)
+新加坡(ShadowSocksR服务器, up to 2MB/s), 复制后从剪贴板导入
 
 ```text
 ssr://dnBzMy5mb3JuZXZlci5vcmc6NjAwMDE6b3JpZ2luOmNoYWNoYTIwOnBsYWluOk5qWTJOalkyTnpnLz9vYmZzcGFyYW09Jmdyb3VwPVUxTlNMblp3Y3pN
 ```
 
-日本延迟小一些，但是不能访问Google Scholar
+## 服务器？
 
-## 客户端
-
-各个系统可以到[这里](https://github.com/shadowsocks/shadowsocks/wiki/Ports-and-Clients)寻找相应的ss客户端
-
-[Windows C#客户端](https://download.fornever.org/shadowsocks.exe)下载，双击运行之后，配置运行即可
-
-[安卓客户端下载](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/shadowsocks-nightly-4.2.5.apk)
-
-Windows [Golang客户端](https://oss-theo.oss-cn-shenzhen.aliyuncs.com/download/ss-go.zip)
-
-[IOS客户端OpenWingy](https://itunes.apple.com/cn/app/openwingy/id1294672758?mt=8)
-
-[ShadowsocksR Client](https://github.com/erguotou520/electron-ssr)
-
-```json
-{
-    "server":"vps4.fornever.org",
-    "server_port":8388,
-    "local_port":1080,
-    "password":"sspassword",
-    "method": "RC4-MD5",
-    "timeout":600
-}
-```
+有客户端，自然有服务端，你可能需要一个在国外的服务器，运行服务端程序即可，[这里有ss的搭建教程](https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
 
 ## 基于SS的，SOCKS5代理
 
