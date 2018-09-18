@@ -91,4 +91,6 @@ with config
 
 用于过滤需要代理的服务器
 
-```https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt```
+```text
+https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+```

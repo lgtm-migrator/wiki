@@ -6,7 +6,6 @@
 
 ![](https://on-img.com/chart_image/5a3b1775e4b0909c1a9b9643.png)
 
-
 ## PWA - 渐进式应用
 
 * 运行在浏览器，保存图标在桌面
@@ -33,16 +32,14 @@
 
 ![](http://on-img.com/chart_image/5a3c979ce4b0bf89b8536e54.png)
 
-| 技术                        | 独立APP | UI     | API        | 扩展性  | 易用性  |
-| ------------------------- | ----- | ------ | ---------- | ---- | ---- |
-| PWA                       | 否     | Web    | Web API    | 差    | 差    |
-| Hybrid (Cordova)          | 是     | Web    | Native API | 好    | 好    |
-| React Native/NativeScript | 是     | Native | Native API | 好    | 差    |
-
-
+| 技术                      | 独立APP | UI     | API        | 扩展性 | 易用性 |
+|:--------------------------|:--------|:-------|:-----------|:-------|:-------|
+| PWA                       | 否      | Web    | Web API    | 差     | 差     |
+| Hybrid (Cordova)          | 是      | Web    | Native API | 好     | 好     |
+| React Native/NativeScript | 是      | Native | Native API | 好     | 差     |
 
 * 基于Web的UI在不同性能的设备上表现不同 (差异很大)
-* 基于React Native的应用学习曲线很抖 (JS -> React -> React Native -> 特定组件库)
+* 基于React Native的应用学习曲线陡峭 (JS -> React -> React Native -> 特定组件库)
 * Hybrid (Cordova) 可以自由选择UI框架
 * PWA应用一定需要Web Host，以及HTTPS证书
 * NativeScript技术尚不成熟，开发工作量很大，插件很少，API也少

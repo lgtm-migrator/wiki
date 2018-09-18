@@ -4,8 +4,7 @@ TortoiseGit和TortoiseSVN差不多，都是版本控制的GUI接口
 
 ## 安装
 
-1. TortoiseGit只是图形接口，所以首先需要安装Git
-    在[Git官网](https://www.git-scm.com/download/)下载，然后一直下一步就行
+1. TortoiseGit只是图形接口，所以首先需要安装Git, 在[Git官网](https://www.git-scm.com/download/)下载，然后一直下一步就行
 1. 在[TortoiseGit官网](https://tortoisegit.org/download/),下载64位的TortoiseGit，安装即可
 1. 根据情况，你还可以选择一个语言包下载
 1. 推荐使用openssh客户端, 而不是putty的ssh客户端, 这样的话在命令行中的git也可以正常访问公私钥
