@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node node_modules/nano-server/nano-server 3000 ./wikifile",
     "build": "node build/build.js",
-    "watch": "watch \"npm run build\" wikifile --wait=3 -u"
+    "watch": "watch \"npm run build\" wikifile --wait=3 -u",
+    "precommit": "npm run build && git add -A"
   },
   "devDependencies": {
     "capitalize": "^1.0.0",
