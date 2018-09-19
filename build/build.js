@@ -7,6 +7,7 @@ const {
 const os = require('os')
 const _ = require('lodash');
 const capitalize = require('capitalize');
+const WIKI_DIR = join(__dirname, "../docs")
 
 const getFilesFromDir = node => _.filter(node.children, item => item.extension ?
   true :
@@ -45,7 +46,7 @@ const makeLink = (item) => {
   if (item.extension)
     return `[${getMdTitle(item.path)}](${
       relative(
-        join(__dirname,"../wikifile"), item.path).replace(/\\/g, '/')
+        WIKI_DIR, item.path).replace(/\\/g, '/')
       })`
   else
     return upper(`[${item.name}]()`)
@@ -101,7 +102,7 @@ const writeNavigationFile = () => {
 
 const get_path_from = (article) => {
   if (article) {
-    return relative(join(__dirname, "../wikifile"), article.path).replace(/\\/g, '/')
+    return relative(WIKI_DIR, article.path).replace(/\\/g, '/')
   }
   return "";
 }
@@ -114,7 +115,7 @@ const writeAppcacheFile = () => {
   writeAppcacheLine(`# version: ${(new Date()).toUTCString()}`);
   // cache specific files
   offline_resource.forEach(item => writeAppcacheLine(item));
-  writeAppcacheLine(relative(join(__dirname, "../wikifile"), targetNavigationFilePath));
+  writeAppcacheLine(relative(WIKI_DIR, targetNavigationFilePath));
   getFilesFromDir(tree).forEach(article => writeAppcacheLine(get_path_from(article)))
   getDirsFromDir(tree).forEach((dir) => {
     // if a directory not have any file, will be skiped
@@ -129,10 +130,10 @@ const writeAppcacheFile = () => {
   console.log('appcache generate finished')
 }
 
-const sourceBase = join(__dirname, "../wikifile")
+const sourceBase = WIKI_DIR
 const tree = dirTree(sourceBase, '.md')
-const targetNavigationFilePath = join(__dirname, "../wikifile", 'navigation.md');
-const targetAppcacheFilePath = join(__dirname, "../wikifile", 'wiki.appcache');
+const targetNavigationFilePath = join(WIKI_DIR, 'navigation.md');
+const targetAppcacheFilePath = join(WIKI_DIR, 'wiki.appcache');
 
 if (fs.existsSync(targetNavigationFilePath)) {
   fs.unlinkSync(targetNavigationFilePath);
