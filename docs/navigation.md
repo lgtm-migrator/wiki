@@ -62,10 +62,10 @@
 * [在对象中使用for of](language/javascript/use-for-of-in-object.md)
 ---
 * # Python
+* [关于GIL的思考](language/python/GIL-thought.md)
 * [面向切面编程原型](language/python/aop-proto.md)
 * [依赖注入原型](language/python/di-proto.md)
 * [分割Flask应用的另一种方法](language/python/flask-module.md)
-* [关于GIL的思考](language/python/GIL-thought.md)
 * [在windows下手动安装Scipy](language/python/install-scipy-on-windows.md)
 * [正确安装pip](language/python/pip-install.md)
 * [信息门户认证](language/python/reptile-demo.md)
