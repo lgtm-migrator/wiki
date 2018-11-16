@@ -62,10 +62,10 @@
 * [在对象中使用for of](language/javascript/use-for-of-in-object.md)
 ---
 * # Python
-* [关于GIL的思考](language/python/GIL-thought.md)
 * [面向切面编程原型](language/python/aop-proto.md)
 * [依赖注入原型](language/python/di-proto.md)
 * [分割Flask应用的另一种方法](language/python/flask-module.md)
+* [关于GIL的思考](language/python/GIL-thought.md)
 * [在windows下手动安装Scipy](language/python/install-scipy-on-windows.md)
 * [正确安装pip](language/python/pip-install.md)
 * [信息门户认证](language/python/reptile-demo.md)
@@ -111,7 +111,6 @@
 * [使用中国镜像](tools/config/china-mirror.md)
 * [启用Chrome随机密码功能](tools/config/password.md)
 * [Putty推荐配置](tools/config/putty.md)
-* [ShadowSocks](tools/config/shadowsocks.md)
 * [增强Windows的终端(cmd)](tools/config/terminal.md)
 * [TortoiseGit 的安装与Clone(版本库)](tools/config/ttsgit-install.md)
 ---
@@ -121,5 +120,4 @@
 * [Ngrok proxy](tools/usage/ngrok.md)
 * [npm私有仓库](tools/usage/npm.md)
 * [Python2.7 requests使用教程](tools/usage/requests.md)
-* [SSH 隧道使用](tools/usage/ssh-turnnel.md)
 
